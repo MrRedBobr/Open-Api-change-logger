@@ -1,3 +1,3 @@
-export function add(a: number, b: number): number {
-    return a + b;
-}
+export * from './change-log-diffs';
+export * from './change-log-render';
+export * from './generate-change-log';
