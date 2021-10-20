@@ -1,6 +1,6 @@
 {
   "name": "open-api-change-logger",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Open api V3 change logger.",
   "main": "lib/index.js",
   "typings": "lib",
