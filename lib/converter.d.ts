@@ -1,11 +1,9 @@
-import { ChangeLogDiffs } from "./change-log-diffs";
+import { OpenApiDiff } from "./open-api-diff";
 import { RendererConfigType } from "./types/renderer-config.type";
-export declare class ChangeLogRenderer {
+export declare class Converter {
     private readonly _changeLog;
     private readonly _config;
-    private _hbsTemplate;
-    constructor(diffs: ChangeLogDiffs, config: RendererConfigType);
-    readConfig(): void;
+    constructor(diffs: OpenApiDiff, config: RendererConfigType);
     private fixedName;
     private changeTypeFromName;
     private getSchemaObjectType;
@@ -15,6 +13,6 @@ export declare class ChangeLogRenderer {
     private pathChanges;
     private getPathRenderer;
     private renderParameters;
-    renderHtmlString(): string;
+    changes(): any;
 }
-//# sourceMappingURL=change-log-render.d.ts.map
+//# sourceMappingURL=converter.d.ts.map

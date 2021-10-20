@@ -1,7 +1,5 @@
 import {OpenApiDiff} from "./open-api-diff";
 import {RendererConfigType} from "./types/renderer-config.type";
-import fs from "fs";
-import path from "path";
 import {ChangeType, EnumProperty, GroupedPathsChangesType, Path, Properties, Schema} from "./types";
 import {
     ParameterObject,
@@ -9,7 +7,6 @@ import {
     ReferenceObject, RequestBodyObject,
     SchemaObject
 } from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
-import Handlebars, {HelperOptions} from "handlebars";
 import {FindPathChangesType} from "./types/find-path-changes.type";
 
 export class Converter {

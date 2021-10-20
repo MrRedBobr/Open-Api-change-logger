@@ -1,5 +1,5 @@
 import { OpenAPIObject } from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
-export declare class ChangeLogDiffs {
+export declare class OpenApiDiff {
     private _apiObjectDiffs;
     get apiObjectDiffs(): OpenAPIObject;
     private readonly _source;
@@ -23,4 +23,4 @@ export declare class ChangeLogDiffs {
     private apiVersionByChanges;
     hasChanges(): boolean;
 }
-//# sourceMappingURL=change-log-diffs.d.ts.map
+//# sourceMappingURL=open-api-diff.d.ts.map
