@@ -1,4 +1,4 @@
-import {ChangeLogDiffs} from "./change-log-diffs";
+import {OpenApiDiff} from "./open-api-diff";
 import {RendererConfigType} from "./types/renderer-config.type";
 import fs from "fs";
 import path from "path";
@@ -12,23 +12,13 @@ import {
 import Handlebars, {HelperOptions} from "handlebars";
 import {FindPathChangesType} from "./types/find-path-changes.type";
 
-export class ChangeLogRenderer {
-    private readonly _changeLog!: ChangeLogDiffs;
+export class Converter {
+    private readonly _changeLog!: OpenApiDiff;
     private readonly _config: RendererConfigType;
-    private _hbsTemplate!: string;
 
-    constructor(diffs: ChangeLogDiffs, config: RendererConfigType) {
+    constructor(diffs: OpenApiDiff,config: RendererConfigType) {
         this._changeLog = diffs;
         this._config = config;
-        this.readConfig();
-    }
-
-    readConfig(): void {
-        if(this._config.hbsTemplate) {
-            this._hbsTemplate = this._config.hbsTemplate;
-        } else {
-            this._hbsTemplate = fs.readFileSync(path.join(__dirname, '..', 'template', 'template.hbs'), 'utf8');
-        }
     }
 
     private fixedName(field: string): string {
@@ -426,24 +416,14 @@ export class ChangeLogRenderer {
         return params;
     }
 
-    renderHtmlString(): string {
-        Handlebars.registerHelper('includes', (value: string, str: string, options: HelperOptions) => {
-            if (value.includes(str)) {
-                return options.fn(this);
-            }
-            return options.inverse(this);
-        });
-
-        const hbs: HandlebarsTemplateDelegate = Handlebars.compile(this._hbsTemplate);
-
+    changes(): any {
         const { hbsTemplate, apiName, ...other }: RendererConfigType = this._config;
-
-        return hbs({
+        return {
             schemas: this.renderSchemas(),
             paths: this.getPathRenderer(),
             name: apiName,
             version: this._changeLog.version,
             ...other
-        });
+        }
     }
 }

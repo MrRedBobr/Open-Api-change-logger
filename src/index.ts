@@ -1,3 +1,3 @@
-export * from './change-log-diffs';
-export * from './change-log-render';
-export * from './generate-change-log';
+export * from './open-api-diff';
+export * from './converter';
+export * from './change-log';

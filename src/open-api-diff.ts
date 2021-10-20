@@ -2,7 +2,7 @@ import {OpenAPIObject} from "@nestjs/swagger/dist/interfaces/open-api-spec.inter
 import jsonDiff from "json-diff";
 import {ChangesGroups} from "./types";
 
-export class ChangeLogDiffs {
+export class OpenApiDiff {
     private _apiObjectDiffs!: OpenAPIObject;
     get apiObjectDiffs(): OpenAPIObject {
         return this._apiObjectDiffs;
