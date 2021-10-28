@@ -1,13 +1,21 @@
 {
   "name": "open-api-change-logger",
-  "version": "1.2.2",
-  "description": "Open api V3 change logger.",
+  "version": "1.2.3",
+  "description": "Generates an HTML page with api changes.",
   "main": "lib/index.js",
   "typings": "lib",
   "scripts": {
     "build": "tsc -p ."
   },
-  "keywords": [],
+  "keywords": [
+    "OpenApi",
+    "Swagger",
+    "changes",
+    "change log",
+    "diff",
+    "html",
+    "versioning"
+  ],
   "author": "mrredbobr",
   "license": "ISC",
   "devDependencies": {

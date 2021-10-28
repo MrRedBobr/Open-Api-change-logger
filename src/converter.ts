@@ -8,6 +8,8 @@ import {
     SchemaObject
 } from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
 import {FindPathChangesType} from "./types/find-path-changes.type";
+import {CreatedSchemasNames, DeletedSchemasNames, UpdatedSchemasNames} from "./helpers/schemas-name-filters";
+import {SchemaObjectType} from "./helpers/schema-object-type";
 
 export class Converter {
     private readonly _changeLog!: OpenApiDiff;
@@ -26,31 +28,20 @@ export class Converter {
         return field.includes('__deleted') || field.includes('__added') ? (field.includes('__deleted') ? 'Deleted' : 'Added') : '';
     }
 
-    private getSchemaObjectType(schema: SchemaObject): string {
-        let type: string = schema.type ?? '';
-        type = schema.type && schema.type === 'array' ? `[${(schema.items as SchemaObject)['type'] ?? (schema.items as ReferenceObject)['$ref']?.split('/').pop()}]` : type;
-        type = schema.type && schema.type === 'string' && schema.enum ? `enum` : type;
-        if (schema.allOf) {
-            const refTypeName: string = (schema.allOf[0] as ReferenceObject).$ref.split('/').pop() ?? '';
-            type = refTypeName;
-        }
-        return type;
-    }
-
     private renderSchemas(): {
         updated: Schema[];
         created: Schema[];
         deleted: Schema[];
     } {
-        const updatedSchemas: string[] = this._changeLog.schemasNames.filter((name: string) => !(name.includes('__added') || name.includes('__deleted')));
-        const deletedSchemas: string[] = this._changeLog.schemasNames.filter((name: string) => name.includes('__deleted'));
-        const addedSchemas: string[] =this._changeLog.schemasNames.filter((name: string) => name.includes('__added'));
+        const updatedSchemas: string[] = UpdatedSchemasNames(this._changeLog.schemasNames);
+        const deletedSchemas: string[] = DeletedSchemasNames(this._changeLog.schemasNames);
+        const addedSchemas: string[] = CreatedSchemasNames(this._changeLog.schemasNames);
 
         const updated: Schema[] = updatedSchemas.map((name: string) => {
             const schema: SchemaObject = this._changeLog.destination.components!.schemas![name] as SchemaObject;
             const diffSchema: SchemaObject & any = this._changeLog.apiObjectDiffs.components!.schemas![name];
 
-            const type: string = this.getSchemaObjectType(schema);
+            const type: string = SchemaObjectType(schema);
 
             return this.renderSchema('Update', type, name, name, schema, diffSchema);
         });
@@ -61,7 +52,7 @@ export class Converter {
             const schema: SchemaObject = this._changeLog.source.components!.schemas![fixedName] as SchemaObject;
             const diffSchema: SchemaObject & any = this._changeLog.apiObjectDiffs.components!.schemas![fixedName];
 
-            const type: string = this.getSchemaObjectType(schema);
+            const type: string = SchemaObjectType(schema);
 
             return this.renderSchema('Deleted', type, name, fixedName, schema, diffSchema);
         });
@@ -72,7 +63,7 @@ export class Converter {
             const schema: SchemaObject = this._changeLog.destination.components!.schemas![fixedName] as SchemaObject;
             const diffSchema: SchemaObject & any = this._changeLog.apiObjectDiffs.components!.schemas![fixedName];
 
-            const type: string = this.getSchemaObjectType(schema);
+            const type: string = SchemaObjectType(schema);
 
             return this.renderSchema('Added', type, name, fixedName, schema, diffSchema);
         });
@@ -142,8 +133,8 @@ export class Converter {
 
                 const type: string =
                     changeType !== 'Deleted'
-                        ? this.getSchemaObjectType(destinationSchemaProperties[key] as SchemaObject)
-                        : this.getSchemaObjectType(sourceSchemaProperties[key] as SchemaObject);
+                        ? SchemaObjectType(destinationSchemaProperties[key] as SchemaObject)
+                        : SchemaObjectType(sourceSchemaProperties[key] as SchemaObject);
 
                 newProperties[key] = {
                     changeType,
@@ -181,9 +172,9 @@ export class Converter {
     }
 
     private getPathRenderer(): GroupedPathsChangesType {
-        const updatedPaths: string[] = this._changeLog.paths.filter((name: string) => !(name.includes('__added') || name.includes('__deleted')));
-        const deletePaths: string[] = this._changeLog.paths.filter((name: string) => name.includes('__deleted'));
-        const createPaths: string[] = this._changeLog.paths.filter((name: string) => name.includes('__added'));
+        const updatedPaths: string[] = UpdatedSchemasNames(this._changeLog.paths);
+        const deletePaths: string[] = DeletedSchemasNames(this._changeLog.paths);
+        const createPaths: string[] = CreatedSchemasNames(this._changeLog.paths);
 
         // eslint-disable-next-line complexity
         const updated: Path[][] = updatedPaths.map((name: string): Path[] => {
@@ -378,7 +369,7 @@ export class Converter {
         const params: Properties = {};
 
         for (const [index, parameter] of parameters.entries()) {
-            const type: string = this.getSchemaObjectType(parameter.schema as SchemaObject);
+            const type: string = SchemaObjectType(parameter.schema as SchemaObject);
             if (Array.isArray(diffParameters[index]) && diffParameters[index]?.length > 1) {
                 let changeType: ChangeType = '';
                 if (diffParameters[index][0] === '+' || diffParameters[index][0] === '-') {
@@ -386,7 +377,7 @@ export class Converter {
                 }
                 params[parameter.name] = {
                     changeType,
-                    ...(diffParameters[index][1].schema?.type && { type: this.getSchemaObjectType(diffParameters[index][1].schema) }),
+                    ...(diffParameters[index][1].schema?.type && { type: SchemaObjectType(diffParameters[index][1].schema) }),
                     ...(diffParameters[index][1].schema?.enum && {
                         enum: diffParameters[index][1].schema.enum.map(
                             ([type, value]: [string, string]): EnumProperty => {
