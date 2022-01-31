@@ -6,7 +6,7 @@ import {
   PathParameter,
   PathParameterDiff,
   PathsDiffType,
-  SchemaPropertyDiff, SchemaPropertyType
+  SchemaPropertyDiff
 } from "./types";
 import {ChangeType} from "./types/change.type";
 import {EnumDiffType} from "./types/enum-diff.type";
@@ -36,7 +36,7 @@ export class PathsDiff {
     const paths_addresses: string[] = [...new Set<string>([...Object.keys(oldPaths), ...Object.keys(newPaths)])];
     const paths: PathsDiffType = {};
 
-    for (const path_address of paths_addresses.slice(4)) {
+    for (const path_address of paths_addresses) {
       const source: PathItemObject = oldPaths[path_address];
       const destination: PathItemObject = newPaths[path_address];
 
@@ -45,7 +45,7 @@ export class PathsDiff {
       } else if (source && !destination) {//delete
         paths[path_address] = this.pathItemDeleteOrCreate(source, 'DELETE');
       } else if (!source && destination) {//create
-        paths[path_address] = this.pathItemDeleteOrCreate(source, 'CREATE');
+        paths[path_address] = this.pathItemDeleteOrCreate(destination, 'CREATE');
       }
     }
     return paths;

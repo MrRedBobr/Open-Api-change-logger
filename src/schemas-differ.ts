@@ -38,12 +38,10 @@ export class SchemasDiffer {
         schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(sourceConverted, 'DELETE');
       }
       if(!source && destination) {//if schema created
-        const destinationConverted: Schema = SchemaConverter.property(source);
+        const destinationConverted: Schema = SchemaConverter.property(destination);
         schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(destinationConverted, 'CREATE');
       }
     }
-
-    fs.writeFileSync('file.json', JSON.stringify(schemasChanges, null, '  '));
     return schemasChanges;
   }
 
