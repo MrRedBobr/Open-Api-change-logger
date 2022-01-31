@@ -1,6 +1,5 @@
 import {ReferenceObject, SchemaObject} from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
-import {Schema} from "./types/schema.type";
-import {SchemaPropertyType} from "./types/schema-property.type";
+import {Schema, SchemaPropertyType} from "./types";
 
 export class SchemaConverter {
   public static properties(properties: Record<string, ReferenceObject | SchemaObject>, required?: string[]): SchemaPropertyType[] {

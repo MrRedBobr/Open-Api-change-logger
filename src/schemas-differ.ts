@@ -1,56 +1,58 @@
 import {ReferenceObject, SchemaObject} from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
 import {SchemaConverter} from "./schema-converter";
-import {Schema} from "./types/schema.type";
+import {Schema, SchemaDiffType, SchemaPropertyDiff, SchemaPropertyType, SchemasDifference} from "./types";
 import {EnumDiffType} from "./types/enum-diff.type";
 import {ChangeType} from "./types/change.type";
-import {SchemaDiffType} from "./types/schema-diff.type";
-import {SchemaPropertyType} from "./types/schema-property.type";
-import {SchemaPropertyDiff} from "./types/schema-property-diff.type";
 import * as fs from "fs";
 
 export class SchemasDiffer {
   sourceSchemas: Record<string, SchemaObject | ReferenceObject>;
   destinationSchemas: Record<string, SchemaObject | ReferenceObject>;
 
+  schemasDifference: SchemasDifference;
+
   constructor(source: Record<string, SchemaObject | ReferenceObject>, destination: Record<string, SchemaObject | ReferenceObject>) {
     this.sourceSchemas = source;
     this.destinationSchemas = destination;
 
-    this.differs();
+    this.schemasDifference = this.differs();
   }
 
 
-  differs(): void {
+  differs(): Record<string, SchemaDiffType> {
     const schemas: Set<string> = new Set<string>([...Object.keys(this.sourceSchemas), ...Object.keys(this.destinationSchemas)]);
 
-    const schemasChanges: Record<string, SchemaDiffType> = {};
+    const schemasChanges: SchemasDifference = {};
 
     for(const schemaName of schemas) {
       const source: SchemaObject | undefined = this.sourceSchemas[schemaName] as SchemaObject;
       const destination: SchemaObject | undefined = this.destinationSchemas[schemaName] as SchemaObject;
 
       if(source && destination){ //if schema updated or don't have change
-        schemasChanges[schemaName] = this.schemaUpdate(source, destination);
+        const sourceConverted: Schema = SchemaConverter.property(source);
+        const destinationConverted: Schema = SchemaConverter.property(destination);
+        schemasChanges[schemaName] = SchemasDiffer.schemaUpdate(sourceConverted, destinationConverted);
       }
       if(source && !destination) {//if schema deleted
-        schemasChanges[schemaName] = this.schemaDeleteOrUpdate(source, 'DELETE');
+        const sourceConverted: Schema = SchemaConverter.property(source);
+        schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(sourceConverted, 'DELETE');
       }
       if(!source && destination) {//if schema created
-        schemasChanges[schemaName] = this.schemaDeleteOrUpdate(destination, 'CREATE');
+        const destinationConverted: Schema = SchemaConverter.property(source);
+        schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(destinationConverted, 'CREATE');
       }
     }
 
-    console.log(schemas.size, Object.keys(schemasChanges).length);
-
     fs.writeFileSync('file.json', JSON.stringify(schemasChanges, null, '  '));
+    return schemasChanges;
   }
 
-  schemaUpdate(source: SchemaObject, destination: SchemaObject): SchemaDiffType {
-    const sourceConverted: Schema = SchemaConverter.property(source);
-    const destinationConverted: Schema = SchemaConverter.property(destination);
+  public static schemaUpdate(sourceConverted: Schema, destinationConverted: Schema): SchemaDiffType {
     let schemaDiff: SchemaDiffType = {
       type: sourceConverted.type!,
       deprecated: destinationConverted.deprecated ?? sourceConverted.deprecated,
+      ...(sourceConverted.$ref && {'$ref': sourceConverted.$ref}),
+      ...(destinationConverted.$ref && {'$ref': destinationConverted.$ref}),
       deleted: [],
       added: [],
       changeType: "DEFAULT",
@@ -59,17 +61,17 @@ export class SchemasDiffer {
     const type: string = sourceConverted.enum ? 'enum' : sourceConverted.type!;
 
     if(type === 'enum' && sourceConverted.enum && destinationConverted.enum) { //if type is enum
-      const diffEnum: EnumDiffType = this.diffForEnum(sourceConverted.enum, destinationConverted.enum);
-      schemaDiff = {
+      const diffEnum: EnumDiffType = SchemasDiffer.diffForEnum(sourceConverted.enum, destinationConverted.enum);
+      return {
         ...schemaDiff,
         changeType: diffEnum.added.length > 0 || diffEnum.deleted.length > 0 ? 'UPDATE' : 'DEFAULT',
         ...diffEnum,
       }
     }
     if(type === 'object' && sourceConverted.property && destinationConverted.property) {
-      const schemaPropertyDiff: SchemaPropertyDiff = this.diffForProperty(sourceConverted.property, destinationConverted.property)
+      const schemaPropertyDiff: SchemaPropertyDiff = SchemasDiffer.diffForProperty(sourceConverted.property, destinationConverted.property)
 
-      schemaDiff = {
+      return {
         ...schemaDiff,
         changeType: schemaPropertyDiff.added.length > 0 || schemaPropertyDiff.deleted.length > 0 ? 'UPDATE' : 'DEFAULT',
         ...schemaPropertyDiff,
@@ -79,9 +81,7 @@ export class SchemasDiffer {
     return schemaDiff;
   }
 
-  schemaDeleteOrUpdate(source: SchemaObject, changeType: ChangeType): SchemaDiffType {
-    const sourceConverted: Schema = SchemaConverter.property(source);
-
+  public static schemaDeleteOrUpdate(sourceConverted: Schema, changeType: ChangeType): SchemaDiffType {
     let schemaDiff: SchemaDiffType = {
       type: sourceConverted.type!,
       deprecated: sourceConverted.deprecated,
@@ -95,11 +95,11 @@ export class SchemasDiffer {
     if(type === 'enum' && sourceConverted.enum) { //if type is enum
       schemaDiff = {
         ...schemaDiff,
-        ...this.diffForEnum(sourceConverted.enum, []),
+        ...SchemasDiffer.diffForEnum(sourceConverted.enum, []),
       }
     }
     if(type === 'object' && sourceConverted.property) {
-      const schemaPropertyDiff: SchemaPropertyDiff = this.diffForProperty(sourceConverted.property, [])
+      const schemaPropertyDiff: SchemaPropertyDiff = SchemasDiffer.diffForProperty(sourceConverted.property, [])
 
       schemaDiff = {
         ...schemaDiff,
@@ -109,7 +109,7 @@ export class SchemasDiffer {
     return schemaDiff;
   }
 
-  diffForEnum(oldSchema: string[], newSchema: string[]): EnumDiffType {
+  public static diffForEnum(oldSchema: string[], newSchema: string[]): EnumDiffType {
     const values: string[] = [...new Set<string>([...oldSchema, ...newSchema])];
     return {
       added: values.filter((value: string) => !oldSchema.includes(value)),
@@ -118,7 +118,7 @@ export class SchemasDiffer {
     }
   }
 
-  diffForProperty(oldProperty: SchemaPropertyType[], newProperty: SchemaPropertyType[]): SchemaPropertyDiff {
+  public static diffForProperty(oldProperty: SchemaPropertyType[], newProperty: SchemaPropertyType[]): SchemaPropertyDiff {
     const oldNames: string[] = oldProperty.map(({ name }: SchemaPropertyType): string => name);
     const newNames: string[] = newProperty.map(({ name }: SchemaPropertyType): string => name);
     const generalNames: string[] = oldNames.filter((v: string) => newNames.includes(v));

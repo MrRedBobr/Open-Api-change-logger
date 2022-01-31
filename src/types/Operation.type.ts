@@ -1,9 +1,8 @@
-import {PathParameters} from "../pathParameters";
 import {Schema} from "./schema.type";
+import {PathParameter} from "./parameter.type";
 
 export type Operation = {
-  operationType: string,
-  pathParameters: PathParameters[],
+  pathParameters: PathParameter[],
   request: Schema[],
   response: Schema[],
 }

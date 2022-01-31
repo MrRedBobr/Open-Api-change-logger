@@ -1,4 +1,4 @@
-import { Path } from './path.type';
+import {Path} from './path.type';
 
 export type GroupedPathsChangesType = {
   created: Path[];

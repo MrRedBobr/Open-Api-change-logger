@@ -1,6 +1,6 @@
-import { ChangeType } from './change-type.type';
-import { PathType } from './path-type.type';
-import { Properties } from './properties.type';
+import {ChangeType} from './change-type.type';
+import {PathType} from './path-type.type';
+import {Properties} from './properties.type';
 
 export type Path = {
   changeType?: ChangeType;

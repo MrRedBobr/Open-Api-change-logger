@@ -1,14 +1,14 @@
 import {ParameterObject, ReferenceObject} from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
-import {pathParameter} from "./types/parameter.type";
 import {SchemaConverter} from "./schema-converter";
+import {PathParameter} from "./types";
 
-export class PathParameters {
-  private static param({ schema, name, in: placed, required, deprecated }: ParameterObject): pathParameter | undefined {
+export class PathParametersDiff {
+  private static param({ schema, name, in: placed, required, deprecated }: ParameterObject): PathParameter | undefined {
     if(!schema) {
       return undefined;
     }
 
-    const prop: pathParameter = {
+    const prop: PathParameter = {
       placed,
       name,
       ...SchemaConverter.property(schema),
@@ -19,7 +19,7 @@ export class PathParameters {
     return prop;
   }
 
-  public static parameters(parameters?: (ParameterObject | ReferenceObject)[]): pathParameter[] {
+  public static parameters(parameters?: (ParameterObject | ReferenceObject)[]): PathParameter[] {
     const headerParams: (ParameterObject)[] = parameters?.filter((param: ParameterObject | ReferenceObject) => {
       if('in' in param) {
         return param.in === "header";
@@ -49,10 +49,10 @@ export class PathParameters {
     }) as ParameterObject[] ?? [];
 
     return [
-      ...headerParams.map(this.param).filter(Boolean) as pathParameter[],
-      ...pathParams.map(this.param).filter(Boolean) as pathParameter[],
-      ...queryParams.map(this.param).filter(Boolean) as pathParameter[],
-      ...cookieParams.map(this.param).filter(Boolean) as pathParameter[],
+      ...headerParams.map(this.param).filter(Boolean) as PathParameter[],
+      ...pathParams.map(this.param).filter(Boolean) as PathParameter[],
+      ...queryParams.map(this.param).filter(Boolean) as PathParameter[],
+      ...cookieParams.map(this.param).filter(Boolean) as PathParameter[],
     ]
   }
 }

@@ -1,6 +1,5 @@
 import {Schema} from "./schema.type";
 
-export type SchemaPropertyType = {
-  required: boolean,
+export type RequestDiffType = {
   name: string,
 } & Schema;
