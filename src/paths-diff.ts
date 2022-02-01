@@ -5,12 +5,14 @@ import {
   OperationsChanges,
   PathParameter,
   PathParameterDiff,
-  PathsDiffType,
+  PathsDiffType, Schema,
   SchemaPropertyDiff
 } from "./types";
 import {ChangeType} from "./types/change.type";
 import {EnumDiffType} from "./types/enum-diff.type";
 import {SchemasDiffer} from "./schemas-differ";
+import {ResponsesTypeObject} from "./types/responsesTypeObject";
+import {ResponsesDiffObjectType} from "./types/responses-diff-object.type";
 
 export class PathsDiff {
   operationsKeys: string[] = [
@@ -41,7 +43,7 @@ export class PathsDiff {
       const destination: PathItemObject = newPaths[path_address];
 
       if (source && destination) {//update or no changes
-        paths[path_address] = this.pathItemUpdate(source, destination);
+        paths[path_address] = this.pathItemUpdate(source, destination, path_address);
       } else if (source && !destination) {//delete
         paths[path_address] = this.pathItemDeleteOrCreate(source, 'DELETE');
       } else if (!source && destination) {//create
@@ -51,7 +53,7 @@ export class PathsDiff {
     return paths;
   }
 
-  pathItemUpdate(oldPath: PathItemObject, newPath: PathItemObject): OperationsChanges {
+  pathItemUpdate(oldPath: PathItemObject, newPath: PathItemObject, s: string): OperationsChanges {
     const operationsNames: string[] = [...new Set<string>([...(oldPath ? Object.keys(oldPath) : []), ...Object.keys(newPath)])].filter((v: string) => this.operationsKeys.includes(v));
     const operations: OperationsChanges = {};
 
@@ -60,19 +62,25 @@ export class PathsDiff {
       const newOperation: Operation = OperationsConverter.convertingToNormal(newPath[operation as keyof PathItemObject] as OperationObject);
 
       const pathParameters: PathParameterDiff[] = this.parametersDiff(oldOperation.pathParameters ?? [], newOperation.pathParameters ?? []);
-      const request: SchemaPropertyDiff = SchemasDiffer.diffForProperty(oldOperation.request[0]?.property! ?? [], oldOperation.request[0]?.property! ?? []);
-      const response: SchemaPropertyDiff = SchemasDiffer.diffForProperty(oldOperation.response[0]?.property! ?? [], oldOperation.response[0]?.property! ?? []);
+      const request: SchemaPropertyDiff = this.requestDiff(oldOperation.request, newOperation.request);
+
+      const { responses, hasChanges } = this.responseDiff(oldOperation.response);
 
       const isUpdated: boolean =
         (request.added.length > 0 && request.deleted.length > 0)
-        || (response.added.length > 0 && response.deleted.length > 0)
-        || pathParameters.reduce((previousValue: boolean, currentValue: PathParameterDiff): boolean => (currentValue.added.length > 0 && currentValue.deleted.length > 0), false);
+        || hasChanges
+        || pathParameters.reduce(
+          (previousValue: boolean, currentValue: PathParameterDiff): boolean =>
+            (currentValue.added.length > 0 && currentValue.deleted.length > 0)
+          , false
+        );
 
       operations[operation] = {
         changeType: isUpdated ? 'UPDATE' : 'DEFAULT',
         pathParameters,
         request,
-        response,
+        responses,
+        deprecated: newOperation.deprecated,
       }
     }
     return operations;
@@ -86,14 +94,17 @@ export class PathsDiff {
       const oldOperation: Operation = OperationsConverter.convertingToNormal(oldPath[operation as keyof PathItemObject] as OperationObject);
 
       const pathParameters: PathParameterDiff[] = this.parametersDiff(oldOperation?.pathParameters, []);
-      const request: SchemaPropertyDiff = SchemasDiffer.diffForProperty(oldOperation.request[0]?.property! ?? [], []);
-      const response: SchemaPropertyDiff = SchemasDiffer.diffForProperty(oldOperation.response[0]?.property! ?? [], []);
+
+      const request: SchemaPropertyDiff = this.requestDiff(oldOperation.request, []);
+
+      const { responses, hasChanges } = this.responseDiff(oldOperation.response);
 
       operations[operation] = {
-        changeType: changeType,
+        changeType: hasChanges ? 'UPDATE' : changeType,
         pathParameters,
         request,
-        response,
+        responses,
+        deprecated: oldOperation.deprecated
       }
     }
 
@@ -144,7 +155,7 @@ export class PathsDiff {
     const type: string = oldParameter.enum ? 'enum' : oldParameter.type!;
 
     if (type === 'enum' && oldParameter.enum && newParameter.enum) { //if type is enum
-      const diffEnum: EnumDiffType = this.diffForEnum(oldParameter.enum, newParameter.enum);
+      const diffEnum: EnumDiffType = SchemasDiffer.diffForEnum(oldParameter.enum, newParameter.enum);
       return {
         ...schemaDiff,
         changeType: diffEnum.added.length > 0 || diffEnum.deleted.length > 0 ? 'UPDATE' : 'DEFAULT',
@@ -181,7 +192,7 @@ export class PathsDiff {
     const type: string = parameter.enum ? 'enum' : parameter.type!;
 
     if (type === 'enum' && parameter.enum) { //if type is enum
-      const diffEnum: EnumDiffType = this.diffForEnum(parameter.enum, []);
+      const diffEnum: EnumDiffType = SchemasDiffer.diffForEnum(parameter.enum, []);
       return {
         ...schemaDiff,
         ...diffEnum,
@@ -200,12 +211,71 @@ export class PathsDiff {
     return schemaDiff;
   }
 
-  diffForEnum(oldSchema: string[], newSchema: string[]): EnumDiffType {
-    const values: string[] = [...new Set<string>([...oldSchema, ...newSchema])];
-    return {
-      added: values.filter((value: string) => !oldSchema.includes(value)),
-      deleted: values.filter((value: string) => !newSchema.includes(value)),
-      enum: values,
+  requestDiff(oldRequest: Schema[], newRequest: Schema[]): SchemaPropertyDiff {
+    const oldReq: Schema|undefined = oldRequest[0];
+    const newReq: Schema|undefined = newRequest[0];
+
+    if(!oldReq || !newReq) {
+      return {
+        added: [],
+        deleted: [],
+      };
     }
+
+    if(oldReq?.$ref && newReq?.$ref) {
+      const equals: boolean = oldReq.$ref === newReq.$ref;
+
+      return {
+        added: equals ? [] : [newReq.$ref],
+        deleted: equals ? [] : [oldReq.$ref],
+        $ref: newReq.$ref,
+      }
+    }
+
+    const schemaPropertyDiff: SchemaPropertyDiff = SchemasDiffer.diffForProperty(oldReq.property ?? [], newReq.property ?? []);
+
+    return {
+      ...schemaPropertyDiff,
+      ...(oldReq?.$ref && { deleted: [oldReq.$ref, ...schemaPropertyDiff.deleted] }),
+      ...(newReq?.$ref && { added: [newReq.$ref, ...schemaPropertyDiff.added] }),
+    };
+  }
+
+  responseDiff(oldResponses: ResponsesTypeObject, newResponses?: ResponsesTypeObject): { responses: ResponsesDiffObjectType, hasChanges: boolean } {
+    const oldKeys: string[] = Object.keys(oldResponses);
+    const newKeys: string[] = Object.keys(newResponses ?? {});
+
+    const keys: string[] = [...new Set([...oldKeys, ...newKeys])];
+
+    const createdKeys: string[] = keys.filter((v: string) => !oldKeys.includes(v));
+    const deletedKeys: string[] = keys.filter((v: string) => !newKeys.includes(v) && newKeys.length > 0);
+
+    const responses: ResponsesDiffObjectType = {};
+    let hasChanges: boolean = false;
+
+    for(const key of keys) {
+      const oldResponse: Schema[] = oldResponses[key] ?? [];
+      const newResponse: Schema[] = newResponses ? newResponses[key] : [];
+      const diff: SchemaPropertyDiff = this.requestDiff(oldResponse, newResponse);
+
+      const changeType: ChangeType = createdKeys.includes(key)
+        ? 'CREATE'
+        : (
+          deletedKeys.includes(key)
+            ? 'DELETE'
+            : (diff.added.length > 0 || diff.deleted.length > 0 ? 'UPDATE' : 'DEFAULT')
+        )
+
+      if(hasChanges && changeType !== 'DEFAULT') {
+        hasChanges = true;
+      }
+
+      responses[key] = {
+        changeType: changeType,
+        ...diff,
+      }
+    }
+
+    return { responses, hasChanges };
   }
 }

@@ -7,18 +7,20 @@ import {
 import {PathParametersDiff} from "./pathParametersDiff";
 import {Operation, PathParameter, Schema} from "./types";
 import {SchemaConverter} from "./schema-converter";
+import {ResponsesTypeObject} from "./types/responsesTypeObject";
 
 export class OperationsConverter {
   public static convertingToNormal(operation?: OperationObject): Operation {
 
     const pathParameters: PathParameter[] = PathParametersDiff.parameters(operation?.parameters);
-    const request: any[] = OperationsConverter.request(operation?.requestBody);
-    const response: any [] = OperationsConverter.response(operation?.responses);
+    const request: Schema[] = OperationsConverter.request(operation?.requestBody);
+    const response: ResponsesTypeObject = OperationsConverter.response(operation?.responses);
 
     return {
       pathParameters,
       request,
       response,
+      deprecated: operation?.deprecated ?? false,
     }
   }
 
@@ -43,11 +45,11 @@ export class OperationsConverter {
     return contents;
   }
 
-  public static response(responses?:ResponsesObject): Schema[] {
-    if(!responses) return [];
+  public static response(responses?:ResponsesObject): ResponsesTypeObject {
+    if(!responses) return {};
 
     const responseCode: string[] = Object.keys(responses);
-    const response: any[] = [];
+    const response: ResponsesTypeObject = {};
 
     for (const code of responseCode) {
       const resp: ResponseObject | ReferenceObject | undefined = responses[code];
@@ -66,7 +68,7 @@ export class OperationsConverter {
             property.push(SchemaConverter.property(schema));
           }
         }
-        response.push({ code, property });
+        response[code] = property;
       }
     }
     return response;

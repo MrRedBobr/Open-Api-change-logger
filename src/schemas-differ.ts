@@ -3,7 +3,6 @@ import {SchemaConverter} from "./schema-converter";
 import {Schema, SchemaDiffType, SchemaPropertyDiff, SchemaPropertyType, SchemasDifference} from "./types";
 import {EnumDiffType} from "./types/enum-diff.type";
 import {ChangeType} from "./types/change.type";
-import * as fs from "fs";
 
 export class SchemasDiffer {
   sourceSchemas: Record<string, SchemaObject | ReferenceObject>;

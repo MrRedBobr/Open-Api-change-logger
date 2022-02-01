@@ -4,4 +4,5 @@ export type SchemaPropertyDiff = {
   added: string[],
   deleted: string[],
   property?: SchemaPropertyType[],
+  $ref?: string,
 }
