@@ -9,8 +9,7 @@ import dist from '../example-apis/dev.json';
 import {OpenAPIObject} from "@nestjs/swagger/dist/interfaces";
 import {PathsDiff} from "./paths-diff";
 import {SchemasDiffer} from "./schemas-differ";
-import {PathsDiffRender} from "./paths-diff-render";
-import * as fs from "fs";
+import {Render} from "./render";
 
 const source: OpenAPIObject = adminSource as any;
 const destination: OpenAPIObject = dist as any;
@@ -19,9 +18,10 @@ const schemasDiff: SchemasDiffer = new SchemasDiffer(source.components!.schemas!
 
 const pathsDiff: PathsDiff = new PathsDiff(source.paths, destination.paths);
 
-const render: PathsDiffRender = new PathsDiffRender(pathsDiff);
+const render: Render = new Render(schemasDiff, pathsDiff);
+render.render();
 
-fs.writeFileSync('file.json', JSON.stringify({
-  paths: pathsDiff.pathsDiff,
-  schemas: schemasDiff.schemasDifference,
-}, null, '  '));
+// fs.writeFileSync('file.json', JSON.stringify({
+//   paths: pathsDiff.pathsDiff,
+//   schemas: schemasDiff.schemasDifference,
+// }, null, '  '));

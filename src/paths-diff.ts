@@ -215,29 +215,29 @@ export class PathsDiff {
     const oldReq: Schema|undefined = oldRequest[0];
     const newReq: Schema|undefined = newRequest[0];
 
-    if(!oldReq || !newReq) {
+    if(!oldReq && !newReq) {
       return {
         added: [],
         deleted: [],
       };
     }
 
-    if(oldReq?.$ref && newReq?.$ref) {
-      const equals: boolean = oldReq.$ref === newReq.$ref;
+    if(oldReq?.$ref || newReq?.$ref) {
+      const equals: boolean = oldReq?.$ref === newReq?.$ref;
 
       return {
-        added: equals ? [] : [newReq.$ref],
-        deleted: equals ? [] : [oldReq.$ref],
-        $ref: newReq.$ref,
+        added: equals ? [] : (newReq?.$ref  && newRequest.length > 0 ? [] : []),
+        deleted: equals ? [] :  (oldReq?.$ref  && newRequest.length > 0 ? [oldReq.$ref] : []),
+        $ref: oldReq.$ref ?? newReq?.$ref,
       }
     }
 
-    const schemaPropertyDiff: SchemaPropertyDiff = SchemasDiffer.diffForProperty(oldReq.property ?? [], newReq.property ?? []);
+    const schemaPropertyDiff: SchemaPropertyDiff = SchemasDiffer.diffForProperty(oldReq?.property ?? [], newReq?.property ?? []);
 
     return {
       ...schemaPropertyDiff,
-      ...(oldReq?.$ref && { deleted: [oldReq.$ref, ...schemaPropertyDiff.deleted] }),
-      ...(newReq?.$ref && { added: [newReq.$ref, ...schemaPropertyDiff.added] }),
+      ...(oldReq?.$ref && (oldReq.$ref !== newReq?.$ref) && { deleted: [oldReq.$ref, ...schemaPropertyDiff.deleted] }),
+      ...(newReq?.$ref && (newReq.$ref !== oldReq?.$ref) && { added: [newReq.$ref, ...schemaPropertyDiff.added] }),
     };
   }
 
@@ -263,7 +263,7 @@ export class PathsDiff {
         : (
           deletedKeys.includes(key)
             ? 'DELETE'
-            : (diff.added.length > 0 || diff.deleted.length > 0 ? 'UPDATE' : 'DEFAULT')
+            : (diff.added.length > 0 || diff.deleted.length > 0 && Boolean(newResponses) ? 'UPDATE' : 'DEFAULT')
         )
 
       if(hasChanges && changeType !== 'DEFAULT') {

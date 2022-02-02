@@ -8,7 +8,7 @@ export class SchemasDiffer {
   sourceSchemas: Record<string, SchemaObject | ReferenceObject>;
   destinationSchemas: Record<string, SchemaObject | ReferenceObject>;
 
-  schemasDifference: SchemasDifference;
+  public readonly schemasDifference: SchemasDifference;
 
   constructor(source: Record<string, SchemaObject | ReferenceObject>, destination: Record<string, SchemaObject | ReferenceObject>) {
     this.sourceSchemas = source;
@@ -18,7 +18,7 @@ export class SchemasDiffer {
   }
 
 
-  differs(): Record<string, SchemaDiffType> {
+  private differs(): SchemasDifference {
     const schemas: Set<string> = new Set<string>([...Object.keys(this.sourceSchemas), ...Object.keys(this.destinationSchemas)]);
 
     const schemasChanges: SchemasDifference = {};

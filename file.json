@@ -29,7 +29,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -64,7 +65,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/DashboardDto"
           }
         },
         "deprecated": false
@@ -99,7 +101,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerProfileDto"
           }
         },
         "deprecated": false
@@ -133,7 +136,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerProfileDto"
           }
         },
         "deprecated": false
@@ -152,7 +156,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -171,7 +176,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -200,7 +206,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -218,7 +225,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerEntity"
           }
         },
         "deprecated": false
@@ -336,9 +344,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CartEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -408,7 +427,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CartEntity"
           }
         },
         "deprecated": false
@@ -437,7 +457,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CartDto"
           }
         },
         "deprecated": false
@@ -460,13 +481,15 @@
         ],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [],
+          "$ref": "#/components/schemas/CheckoutInput"
         },
         "responses": {
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CheckoutDto"
           }
         },
         "deprecated": false
@@ -485,7 +508,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerEntity"
           }
         },
         "deprecated": false
@@ -601,9 +625,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CustomerEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -630,7 +665,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -700,7 +736,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerEntity"
           }
         },
         "deprecated": false
@@ -728,7 +765,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerEntity"
           }
         },
         "deprecated": false
@@ -755,7 +793,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -782,7 +821,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerEntity"
           }
         },
         "deprecated": false
@@ -809,7 +849,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -870,7 +911,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerTagDto"
           }
         },
         "deprecated": false
@@ -988,9 +1030,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CustomerBanEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -1007,7 +1060,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerBanEntity"
           }
         },
         "deprecated": false
@@ -1034,7 +1088,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -1104,7 +1159,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerBanEntity"
           }
         },
         "deprecated": false
@@ -1131,7 +1187,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -1160,7 +1217,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerBanEntity"
           }
         },
         "deprecated": false
@@ -1189,7 +1247,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerBannedDto"
           }
         },
         "deprecated": false
@@ -1307,9 +1366,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CustomerSessionHistoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -1379,7 +1449,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerSessionHistoryEntity"
           }
         },
         "deprecated": false
@@ -1398,7 +1469,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerAddressEntity"
           }
         },
         "deprecated": false
@@ -1514,9 +1586,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CustomerAddressEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -1543,7 +1626,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -1613,7 +1697,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerAddressEntity"
           }
         },
         "deprecated": false
@@ -1641,7 +1726,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerAddressEntity"
           }
         },
         "deprecated": false
@@ -1668,7 +1754,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -1695,7 +1782,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerAddressEntity"
           }
         },
         "deprecated": false
@@ -1714,7 +1802,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/LanguageEntity"
           }
         },
         "deprecated": false
@@ -1830,9 +1919,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/LanguageEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -1859,7 +1959,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -1929,7 +2030,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/LanguageEntity"
           }
         },
         "deprecated": false
@@ -1957,7 +2059,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/LanguageEntity"
           }
         },
         "deprecated": false
@@ -1984,7 +2087,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -2011,7 +2115,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/LanguageEntity"
           }
         },
         "deprecated": false
@@ -2038,7 +2143,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -2100,7 +2206,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -2119,7 +2226,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationEntity"
           }
         },
         "deprecated": false
@@ -2235,9 +2343,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/PushNotificationEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -2264,7 +2383,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -2334,7 +2454,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationEntity"
           }
         },
         "deprecated": false
@@ -2362,7 +2483,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationEntity"
           }
         },
         "deprecated": false
@@ -2389,7 +2511,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -2416,7 +2539,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationEntity"
           }
         },
         "deprecated": false
@@ -2443,7 +2567,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -2505,7 +2630,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationTemplateEntity"
           }
         },
         "deprecated": false
@@ -2621,9 +2747,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/PushNotificationTemplateEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -2650,7 +2787,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -2720,7 +2858,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationTemplateEntity"
           }
         },
         "deprecated": false
@@ -2748,7 +2887,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationTemplateEntity"
           }
         },
         "deprecated": false
@@ -2775,7 +2915,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -2802,7 +2943,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationTemplateEntity"
           }
         },
         "deprecated": false
@@ -2829,7 +2971,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -2990,9 +3133,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/PushNotificationHistoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -3062,7 +3216,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationHistoryEntity"
           }
         },
         "deprecated": false
@@ -3081,7 +3236,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CorporateEntity"
           }
         },
         "deprecated": false
@@ -3197,9 +3353,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CorporateEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -3226,7 +3393,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -3296,7 +3464,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CorporateEntity"
           }
         },
         "deprecated": false
@@ -3324,7 +3493,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CorporateEntity"
           }
         },
         "deprecated": false
@@ -3351,7 +3521,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -3378,7 +3549,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CorporateEntity"
           }
         },
         "deprecated": false
@@ -3405,7 +3577,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -3467,7 +3640,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductBrandEntity"
           }
         },
         "deprecated": false
@@ -3583,9 +3757,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductBrandEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -3612,7 +3797,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -3682,7 +3868,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductBrandEntity"
           }
         },
         "deprecated": false
@@ -3710,7 +3897,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductBrandEntity"
           }
         },
         "deprecated": false
@@ -3737,7 +3925,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -3764,7 +3953,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductBrandEntity"
           }
         },
         "deprecated": false
@@ -3791,7 +3981,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -3853,7 +4044,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductCategoryEntity"
           }
         },
         "deprecated": false
@@ -3969,9 +4161,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductCategoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -3998,7 +4201,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -4068,7 +4272,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductCategoryEntity"
           }
         },
         "deprecated": false
@@ -4096,7 +4301,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductCategoryEntity"
           }
         },
         "deprecated": false
@@ -4123,7 +4329,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -4150,7 +4357,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductCategoryEntity"
           }
         },
         "deprecated": false
@@ -4177,7 +4385,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -4239,7 +4448,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -4258,7 +4468,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductEntity"
           }
         },
         "deprecated": false
@@ -4374,9 +4585,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -4404,7 +4626,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -4431,7 +4654,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -4544,9 +4768,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -4616,7 +4851,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductEntity"
           }
         },
         "deprecated": false
@@ -4644,7 +4880,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductEntity"
           }
         },
         "deprecated": false
@@ -4671,7 +4908,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -4698,7 +4936,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductEntity"
           }
         },
         "deprecated": false
@@ -4725,7 +4964,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -4787,7 +5027,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductLinkEntity"
           }
         },
         "deprecated": false
@@ -4903,9 +5144,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductLinkEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -4932,7 +5184,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -5002,7 +5255,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductLinkEntity"
           }
         },
         "deprecated": false
@@ -5030,7 +5284,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductLinkEntity"
           }
         },
         "deprecated": false
@@ -5057,7 +5312,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -5084,7 +5340,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductLinkEntity"
           }
         },
         "deprecated": false
@@ -5103,7 +5360,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductLinkEntity"
           }
         },
         "deprecated": false
@@ -5130,7 +5388,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -5192,7 +5451,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductPriceEntity"
           }
         },
         "deprecated": false
@@ -5308,9 +5568,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductPriceEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -5337,7 +5608,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -5407,7 +5679,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductPriceEntity"
           }
         },
         "deprecated": false
@@ -5435,7 +5708,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductPriceEntity"
           }
         },
         "deprecated": false
@@ -5462,7 +5736,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -5489,7 +5764,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductPriceEntity"
           }
         },
         "deprecated": false
@@ -5516,7 +5792,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -5578,7 +5855,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductSubcategoryEntity"
           }
         },
         "deprecated": false
@@ -5694,9 +5972,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductSubcategoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -5723,7 +6012,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -5793,7 +6083,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductSubcategoryEntity"
           }
         },
         "deprecated": false
@@ -5821,7 +6112,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductSubcategoryEntity"
           }
         },
         "deprecated": false
@@ -5848,7 +6140,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -5875,7 +6168,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductSubcategoryEntity"
           }
         },
         "deprecated": false
@@ -5902,7 +6196,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -5964,7 +6259,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -5983,7 +6279,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductUnitEntity"
           }
         },
         "deprecated": false
@@ -6099,9 +6396,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductUnitEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -6128,7 +6436,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -6198,7 +6507,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductUnitEntity"
           }
         },
         "deprecated": false
@@ -6226,7 +6536,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductUnitEntity"
           }
         },
         "deprecated": false
@@ -6253,7 +6564,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -6280,7 +6592,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductUnitEntity"
           }
         },
         "deprecated": false
@@ -6307,7 +6620,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -6369,7 +6683,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreAddressEntity"
           }
         },
         "deprecated": false
@@ -6485,9 +6800,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreAddressEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -6514,7 +6840,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -6584,7 +6911,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreAddressEntity"
           }
         },
         "deprecated": false
@@ -6612,7 +6940,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreAddressEntity"
           }
         },
         "deprecated": false
@@ -6639,7 +6968,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -6666,7 +6996,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreAddressEntity"
           }
         },
         "deprecated": false
@@ -6693,7 +7024,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -6755,7 +7087,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreBrandEntity"
           }
         },
         "deprecated": false
@@ -6871,9 +7204,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreBrandEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -6900,7 +7244,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -6970,7 +7315,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreBrandEntity"
           }
         },
         "deprecated": false
@@ -6998,7 +7344,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreBrandEntity"
           }
         },
         "deprecated": false
@@ -7025,7 +7372,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -7052,7 +7400,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreBrandEntity"
           }
         },
         "deprecated": false
@@ -7079,7 +7428,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -7141,7 +7491,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreClosingDayEntity"
           }
         },
         "deprecated": false
@@ -7257,9 +7608,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreClosingDayEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -7286,7 +7648,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -7356,7 +7719,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreClosingDayEntity"
           }
         },
         "deprecated": false
@@ -7384,7 +7748,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreClosingDayEntity"
           }
         },
         "deprecated": false
@@ -7411,7 +7776,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -7438,7 +7804,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreClosingDayEntity"
           }
         },
         "deprecated": false
@@ -7465,7 +7832,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -7527,7 +7895,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreContactEntity"
           }
         },
         "deprecated": false
@@ -7643,9 +8012,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreContactEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -7672,7 +8052,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -7742,7 +8123,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreContactEntity"
           }
         },
         "deprecated": false
@@ -7770,7 +8152,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreContactEntity"
           }
         },
         "deprecated": false
@@ -7797,7 +8180,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -7824,7 +8208,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreContactEntity"
           }
         },
         "deprecated": false
@@ -7851,7 +8236,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -7913,7 +8299,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreEntity"
           }
         },
         "deprecated": false
@@ -8029,9 +8416,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -8058,7 +8456,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -8128,7 +8527,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreEntity"
           }
         },
         "deprecated": false
@@ -8156,7 +8556,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreEntity"
           }
         },
         "deprecated": false
@@ -8183,7 +8584,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -8210,7 +8612,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreEntity"
           }
         },
         "deprecated": false
@@ -8240,7 +8643,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreEntity"
           }
         },
         "deprecated": false
@@ -8269,7 +8673,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -8296,7 +8701,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -8409,7 +8815,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -8482,9 +8889,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -8507,13 +8925,15 @@
         ],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [],
+          "$ref": "#/components/schemas/CreateReservationInput"
         },
         "responses": {
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -8532,7 +8952,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreInstantDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -8648,9 +9069,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreInstantDeliveryFeeEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -8677,7 +9109,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -8747,7 +9180,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreInstantDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -8775,7 +9209,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreInstantDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -8802,7 +9237,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -8829,7 +9265,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreInstantDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -8856,7 +9293,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -8918,7 +9356,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliveryZoneEntity"
           }
         },
         "deprecated": false
@@ -9034,9 +9473,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreDeliveryZoneEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -9063,7 +9513,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -9133,7 +9584,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliveryZoneEntity"
           }
         },
         "deprecated": false
@@ -9161,7 +9613,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliveryZoneEntity"
           }
         },
         "deprecated": false
@@ -9188,7 +9641,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -9215,7 +9669,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliveryZoneEntity"
           }
         },
         "deprecated": false
@@ -9242,7 +9697,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -9304,7 +9760,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreOpeningHourEntity"
           }
         },
         "deprecated": false
@@ -9420,9 +9877,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreOpeningHourEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -9449,7 +9917,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -9519,7 +9988,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreOpeningHourEntity"
           }
         },
         "deprecated": false
@@ -9547,7 +10017,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreOpeningHourEntity"
           }
         },
         "deprecated": false
@@ -9574,7 +10045,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -9601,7 +10073,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreOpeningHourEntity"
           }
         },
         "deprecated": false
@@ -9628,7 +10101,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -9690,7 +10164,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreWeightOptionEntity"
           }
         },
         "deprecated": false
@@ -9806,9 +10281,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreWeightOptionEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -9835,7 +10321,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -9905,7 +10392,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreWeightOptionEntity"
           }
         },
         "deprecated": false
@@ -9933,7 +10421,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreWeightOptionEntity"
           }
         },
         "deprecated": false
@@ -9960,7 +10449,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -9987,7 +10477,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreWeightOptionEntity"
           }
         },
         "deprecated": false
@@ -10014,7 +10505,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -10076,7 +10568,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreRegionEntity"
           }
         },
         "deprecated": false
@@ -10192,9 +10685,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreRegionEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -10221,7 +10725,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -10291,7 +10796,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreRegionEntity"
           }
         },
         "deprecated": false
@@ -10319,7 +10825,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreRegionEntity"
           }
         },
         "deprecated": false
@@ -10346,7 +10853,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -10373,7 +10881,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreRegionEntity"
           }
         },
         "deprecated": false
@@ -10400,7 +10909,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -10462,7 +10972,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorTypeEntity"
           }
         },
         "deprecated": false
@@ -10578,9 +11089,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/VendorTypeEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -10607,7 +11129,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -10677,7 +11200,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorTypeEntity"
           }
         },
         "deprecated": false
@@ -10705,7 +11229,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorTypeEntity"
           }
         },
         "deprecated": false
@@ -10732,7 +11257,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -10759,7 +11285,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorTypeEntity"
           }
         },
         "deprecated": false
@@ -10786,7 +11313,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -10878,7 +11406,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreSchedulerDto"
           }
         },
         "deprecated": false
@@ -10927,7 +11456,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/TimeSlotDetailsDto"
           }
         },
         "deprecated": false
@@ -10956,7 +11486,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -11074,9 +11605,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ProductPriceViewEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -11095,7 +11637,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OutOfStockEntity"
           }
         },
         "deprecated": false
@@ -11211,9 +11754,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/OutOfStockEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -11240,7 +11794,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -11310,7 +11865,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OutOfStockEntity"
           }
         },
         "deprecated": false
@@ -11338,7 +11894,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OutOfStockEntity"
           }
         },
         "deprecated": false
@@ -11365,7 +11922,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -11392,7 +11950,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OutOfStockEntity"
           }
         },
         "deprecated": false
@@ -11419,7 +11978,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -11481,7 +12041,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliverySlotEntity"
           }
         },
         "deprecated": false
@@ -11597,9 +12158,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreDeliverySlotEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -11626,7 +12198,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -11709,7 +12282,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliverySlotEntity"
           }
         },
         "deprecated": false
@@ -11737,7 +12311,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliverySlotEntity"
           }
         },
         "deprecated": false
@@ -11764,7 +12339,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -11791,7 +12367,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreDeliverySlotEntity"
           }
         },
         "deprecated": false
@@ -11818,7 +12395,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -11979,9 +12557,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreShoppingListEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -12008,7 +12597,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -12078,7 +12668,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreShoppingListEntity"
           }
         },
         "deprecated": false
@@ -12105,7 +12696,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -12223,9 +12815,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreShoppingListProductEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -12252,7 +12855,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -12322,7 +12926,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreShoppingListProductEntity"
           }
         },
         "deprecated": false
@@ -12341,7 +12946,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreStaffBoundEntity"
           }
         },
         "deprecated": false
@@ -12457,9 +13063,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreStaffBoundEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -12486,7 +13103,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -12556,7 +13174,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreStaffBoundEntity"
           }
         },
         "deprecated": false
@@ -12584,7 +13203,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreStaffBoundEntity"
           }
         },
         "deprecated": false
@@ -12611,7 +13231,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -12638,7 +13259,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreStaffBoundEntity"
           }
         },
         "deprecated": false
@@ -12657,7 +13279,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreStaffBoundEntity"
           }
         },
         "deprecated": false
@@ -12676,7 +13299,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreStaffBoundEntity"
           }
         },
         "deprecated": false
@@ -12703,7 +13327,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -12765,7 +13390,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorCategoryEntity"
           }
         },
         "deprecated": false
@@ -12881,9 +13507,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/VendorCategoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -12910,7 +13547,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -12980,7 +13618,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorCategoryEntity"
           }
         },
         "deprecated": false
@@ -13008,7 +13647,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorCategoryEntity"
           }
         },
         "deprecated": false
@@ -13035,7 +13675,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -13062,7 +13703,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VendorCategoryEntity"
           }
         },
         "deprecated": false
@@ -13089,7 +13731,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -13151,7 +13794,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PaybackCardEntity"
           }
         },
         "deprecated": false
@@ -13267,9 +13911,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/PaybackCardEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -13296,7 +13951,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -13366,7 +14022,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PaybackCardEntity"
           }
         },
         "deprecated": false
@@ -13394,7 +14051,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PaybackCardEntity"
           }
         },
         "deprecated": false
@@ -13421,7 +14079,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -13448,7 +14107,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PaybackCardEntity"
           }
         },
         "deprecated": false
@@ -13475,7 +14135,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -13537,7 +14198,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CategoriesAndGroupsTemplateEntity"
           }
         },
         "deprecated": false
@@ -13653,9 +14315,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CategoriesAndGroupsTemplateEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -13682,7 +14355,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -13752,7 +14426,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CategoriesAndGroupsTemplateEntity"
           }
         },
         "deprecated": false
@@ -13779,7 +14454,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -13806,7 +14482,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CategoriesAndGroupsTemplateEntity"
           }
         },
         "deprecated": false
@@ -13825,7 +14502,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreScheduledDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -13941,9 +14619,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StoreScheduledDeliveryFeeEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -13970,7 +14659,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -14040,7 +14730,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreScheduledDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -14068,7 +14759,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreScheduledDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -14095,7 +14787,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -14122,7 +14815,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreScheduledDeliveryFeeEntity"
           }
         },
         "deprecated": false
@@ -14149,7 +14843,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -14211,7 +14906,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CurrencyEntity"
           }
         },
         "deprecated": false
@@ -14327,9 +15023,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CurrencyEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -14356,7 +15063,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -14426,7 +15134,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CurrencyEntity"
           }
         },
         "deprecated": false
@@ -14454,7 +15163,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CurrencyEntity"
           }
         },
         "deprecated": false
@@ -14481,7 +15191,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -14508,7 +15219,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CurrencyEntity"
           }
         },
         "deprecated": false
@@ -14535,7 +15247,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -14597,7 +15310,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/JobCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -14713,9 +15427,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/JobCancelReasonEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -14742,7 +15467,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -14812,7 +15538,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/JobCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -14840,7 +15567,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/JobCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -14867,7 +15595,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -14894,7 +15623,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/JobCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -14921,7 +15651,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -14983,7 +15714,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -15099,9 +15831,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/OrderCancelReasonEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -15128,7 +15871,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -15198,7 +15942,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -15226,7 +15971,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -15253,7 +15999,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -15280,7 +16027,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderCancelReasonEntity"
           }
         },
         "deprecated": false
@@ -15307,7 +16055,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -15468,9 +16217,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/OrderEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -15487,7 +16247,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderEntity"
           }
         },
         "deprecated": false
@@ -15514,7 +16275,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -15543,7 +16305,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -15572,7 +16335,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -15642,7 +16406,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderEntity"
           }
         },
         "deprecated": false
@@ -15670,7 +16435,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderEntity"
           }
         },
         "deprecated": false
@@ -15697,7 +16463,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -15724,7 +16491,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderEntity"
           }
         },
         "deprecated": false
@@ -15764,7 +16532,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderDetailsDto"
           }
         },
         "deprecated": false
@@ -15805,7 +16574,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderDetailsDto"
           }
         },
         "deprecated": false
@@ -15824,7 +16594,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/SendInvoiceDto"
           }
         },
         "deprecated": false
@@ -15843,7 +16614,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/SendInvoiceDto"
           }
         },
         "deprecated": false
@@ -15861,7 +16633,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/SendAllInvoicesDto"
           }
         },
         "deprecated": false
@@ -15879,7 +16652,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/SendAllInvoicesDto"
           }
         },
         "deprecated": false
@@ -16014,7 +16788,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderEntity"
           }
         },
         "deprecated": false
@@ -16033,7 +16808,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -16052,7 +16828,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ReplaceTypeEntity"
           }
         },
         "deprecated": false
@@ -16168,9 +16945,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ReplaceTypeEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -16197,7 +16985,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -16267,7 +17056,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ReplaceTypeEntity"
           }
         },
         "deprecated": false
@@ -16295,7 +17085,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ReplaceTypeEntity"
           }
         },
         "deprecated": false
@@ -16322,7 +17113,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -16349,7 +17141,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ReplaceTypeEntity"
           }
         },
         "deprecated": false
@@ -16376,7 +17169,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -16438,7 +17232,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VatEntity"
           }
         },
         "deprecated": false
@@ -16554,9 +17349,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/VatEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -16583,7 +17389,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -16653,7 +17460,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VatEntity"
           }
         },
         "deprecated": false
@@ -16681,7 +17489,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VatEntity"
           }
         },
         "deprecated": false
@@ -16708,7 +17517,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -16735,7 +17545,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/VatEntity"
           }
         },
         "deprecated": false
@@ -16762,7 +17573,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -17011,7 +17823,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -17030,7 +17843,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerEntity"
           }
         },
         "deprecated": false
@@ -17146,9 +17960,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ManagerEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -17175,7 +18000,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -17245,7 +18071,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerEntity"
           }
         },
         "deprecated": false
@@ -17273,7 +18100,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerEntity"
           }
         },
         "deprecated": false
@@ -17300,7 +18128,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -17327,7 +18156,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerEntity"
           }
         },
         "deprecated": false
@@ -17354,7 +18184,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -17515,9 +18346,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ManagerSessionHistoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -17587,7 +18429,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerSessionHistoryEntity"
           }
         },
         "deprecated": false
@@ -17606,7 +18449,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StaffEntity"
           }
         },
         "deprecated": false
@@ -17722,9 +18566,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StaffEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -17751,7 +18606,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -17821,7 +18677,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StaffEntity"
           }
         },
         "deprecated": false
@@ -17849,7 +18706,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StaffEntity"
           }
         },
         "deprecated": false
@@ -17876,7 +18734,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -17903,7 +18762,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StaffEntity"
           }
         },
         "deprecated": false
@@ -17930,7 +18790,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -18091,9 +18952,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StaffSessionHistoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -18163,7 +19035,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StaffSessionHistoryEntity"
           }
         },
         "deprecated": false
@@ -18236,9 +19109,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/StaffEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -18256,28 +19140,28 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/AppSettingsCustomerEntity"
           }
         },
         "deprecated": false
       },
       "patch": {
-        "changeType": "UPDATE",
+        "changeType": "DEFAULT",
         "pathParameters": [],
         "request": {
-          "added": [
-            "#/components/schemas/SettingsCustomerUpdateInput"
-          ],
+          "added": [],
           "deleted": [
             "#/components/schemas/AppSettingsCustomerUpdateInput"
           ],
-          "$ref": "#/components/schemas/SettingsCustomerUpdateInput"
+          "$ref": "#/components/schemas/AppSettingsCustomerUpdateInput"
         },
         "responses": {
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/AppSettingsCustomerEntity"
           }
         },
         "deprecated": false
@@ -18295,28 +19179,28 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/AppSettingsStaffEntity"
           }
         },
         "deprecated": false
       },
       "patch": {
-        "changeType": "UPDATE",
+        "changeType": "DEFAULT",
         "pathParameters": [],
         "request": {
-          "added": [
-            "#/components/schemas/SettingsStaffUpdateInput"
-          ],
+          "added": [],
           "deleted": [
             "#/components/schemas/AppSettingsStaffUpdateInput"
           ],
-          "$ref": "#/components/schemas/SettingsStaffUpdateInput"
+          "$ref": "#/components/schemas/AppSettingsStaffUpdateInput"
         },
         "responses": {
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/AppSettingsStaffEntity"
           }
         },
         "deprecated": false
@@ -18335,7 +19219,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CountryEntity"
           }
         },
         "deprecated": false
@@ -18451,9 +19336,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/CountryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -18480,7 +19376,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -18550,7 +19447,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CountryEntity"
           }
         },
         "deprecated": false
@@ -18578,7 +19476,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CountryEntity"
           }
         },
         "deprecated": false
@@ -18605,7 +19504,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -18632,7 +19532,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CountryEntity"
           }
         },
         "deprecated": false
@@ -18659,7 +19560,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -18741,7 +19643,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ZipInfoEntity"
           }
         },
         "deprecated": false
@@ -18770,7 +19673,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ZipInfoEntity"
           }
         },
         "deprecated": false
@@ -18805,7 +19709,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -18841,7 +19746,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/TokensDto"
           }
         },
         "deprecated": false
@@ -18877,7 +19783,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -18912,7 +19819,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -18948,7 +19856,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -18984,7 +19893,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/TokensDto"
           }
         },
         "deprecated": false
@@ -19018,13 +19928,15 @@
         ],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [],
+          "$ref": "#/components/schemas/RefreshPushNotificationTokenInput"
         },
         "responses": {
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19060,7 +19972,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19096,7 +20009,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19132,7 +20046,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19168,7 +20083,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19286,9 +20202,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ManagerSessionEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -19358,7 +20285,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerSessionEntity"
           }
         },
         "deprecated": false
@@ -19387,7 +20315,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/AclDto"
           }
         },
         "deprecated": false
@@ -19415,7 +20344,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19434,7 +20364,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerRoleEntity"
           }
         },
         "deprecated": false
@@ -19550,9 +20481,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/ManagerRoleEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -19622,7 +20564,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerRoleEntity"
           }
         },
         "deprecated": false
@@ -19650,7 +20593,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ManagerRoleEntity"
           }
         },
         "deprecated": false
@@ -19677,7 +20621,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19696,7 +20641,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationCustomEntity"
           }
         },
         "deprecated": false
@@ -19812,9 +20758,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/PushNotificationCustomEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -19841,7 +20798,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19911,7 +20869,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationCustomEntity"
           }
         },
         "deprecated": false
@@ -19939,7 +20898,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationCustomEntity"
           }
         },
         "deprecated": false
@@ -19966,7 +20926,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -19993,7 +20954,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationCustomEntity"
           }
         },
         "deprecated": false
@@ -20020,7 +20982,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -20200,7 +21163,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PageableAnalyticsSalesProducts"
           }
         },
         "deprecated": false
@@ -20296,7 +21260,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/SalesOverTimeDto"
           }
         },
         "deprecated": false
@@ -20433,7 +21398,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PageableProductRefund"
           }
         },
         "deprecated": false
@@ -20528,7 +21494,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PageableProductsOutOfStockDto"
           }
         },
         "deprecated": false
@@ -20615,7 +21582,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/BarChartValueDto"
           }
         },
         "deprecated": false
@@ -20702,7 +21670,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PageableLoyalCustomerDto"
           }
         },
         "deprecated": false
@@ -20839,7 +21808,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PageableOneTimeCustomersDto"
           }
         },
         "deprecated": false
@@ -20895,7 +21865,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/BarChartValueDto"
           }
         },
         "deprecated": false
@@ -20940,7 +21911,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StackedBarChartValueDto"
           }
         },
         "deprecated": false
@@ -21005,7 +21977,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomerOrdersHeatMapDto"
           }
         },
         "deprecated": false
@@ -21081,7 +22054,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CustomersOrderCountDto"
           }
         },
         "deprecated": false
@@ -21187,7 +22161,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductSearchTermsDto"
           }
         },
         "deprecated": false
@@ -21282,7 +22257,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductSearchTermProductsDto"
           }
         },
         "deprecated": false
@@ -21327,7 +22303,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ProductSearchPopularTermsDto"
           }
         },
         "deprecated": false
@@ -21357,7 +22334,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -21397,7 +22375,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/OrderHistoryDto"
           }
         },
         "deprecated": false
@@ -21416,7 +22395,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqTopicEntity"
           }
         },
         "deprecated": false
@@ -21532,9 +22512,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/FaqTopicEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -21561,7 +22552,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -21631,7 +22623,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqTopicEntity"
           }
         },
         "deprecated": false
@@ -21659,7 +22652,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqTopicEntity"
           }
         },
         "deprecated": false
@@ -21686,7 +22680,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -21713,7 +22708,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqTopicEntity"
           }
         },
         "deprecated": false
@@ -21740,7 +22736,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -21802,7 +22799,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -21821,7 +22819,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqItemEntity"
           }
         },
         "deprecated": false
@@ -21937,9 +22936,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/FaqItemEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -21966,7 +22976,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22036,7 +23047,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqItemEntity"
           }
         },
         "deprecated": false
@@ -22064,7 +23076,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqItemEntity"
           }
         },
         "deprecated": false
@@ -22091,7 +23104,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22118,7 +23132,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/FaqItemEntity"
           }
         },
         "deprecated": false
@@ -22145,7 +23160,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false
@@ -22207,7 +23223,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22542,9 +23559,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/MolliePartnerEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -22571,7 +23599,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22641,7 +23670,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/MolliePartnerEntity"
           }
         },
         "deprecated": false
@@ -22669,7 +23699,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/MolliePartnerEntity"
           }
         },
         "deprecated": false
@@ -22696,7 +23727,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22715,7 +23747,8 @@
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PostValidationPipeDto"
           }
         },
         "deprecated": false
@@ -22755,7 +23788,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22778,13 +23812,15 @@
         ],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [],
+          "$ref": "#/components/schemas/CheckoutInput"
         },
         "responses": {
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/CheckoutDto"
           }
         },
         "deprecated": false
@@ -22823,7 +23859,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/StoreSchedulerDayDto"
           }
         },
         "deprecated": false
@@ -22846,13 +23883,15 @@
         ],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [],
+          "$ref": "#/components/schemas/CreateReservationInput"
         },
         "responses": {
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22891,7 +23930,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationSubscriptionEntity"
           }
         },
         "deprecated": false
@@ -22930,7 +23970,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationSubscriptionEntity"
           }
         },
         "deprecated": false
@@ -22959,7 +24000,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -22986,7 +24028,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -23104,9 +24147,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/PushNotificationSubscriptionEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -23133,7 +24187,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -23203,7 +24258,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationSubscriptionEntity"
           }
         },
         "deprecated": false
@@ -23230,7 +24286,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -23257,7 +24314,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/PushNotificationSubscriptionEntity"
           }
         },
         "deprecated": false
@@ -23269,13 +24327,15 @@
         "pathParameters": [],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [],
+          "$ref": "#/components/schemas/RatingAppHistoryCreateInput"
         },
         "responses": {
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/RatingAppHistoryEntity"
           }
         },
         "deprecated": false
@@ -23391,9 +24451,20 @@
         },
         "responses": {
           "200": {
-            "changeType": "DEFAULT",
+            "changeType": "UPDATE",
             "added": [],
-            "deleted": []
+            "deleted": [
+              "items"
+            ],
+            "property": [
+              {
+                "name": "items",
+                "required": false,
+                "deprecated": false,
+                "type": "ref[]",
+                "$ref": "#/components/schemas/RatingAppHistoryEntity"
+              }
+            ]
           }
         },
         "deprecated": false
@@ -23420,7 +24491,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -23490,7 +24562,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/RatingAppHistoryEntity"
           }
         },
         "deprecated": false
@@ -23511,13 +24584,15 @@
         ],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [],
+          "$ref": "#/components/schemas/RatingAppHistoryUpdateInput"
         },
         "responses": {
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/RatingAppHistoryEntity"
           }
         },
         "deprecated": false
@@ -23544,7 +24619,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "property": []
           }
         },
         "deprecated": false
@@ -23571,7 +24647,8 @@
           "200": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/RatingAppHistoryEntity"
           }
         },
         "deprecated": false
@@ -23583,13 +24660,25 @@
         "pathParameters": [],
         "request": {
           "added": [],
-          "deleted": []
+          "deleted": [
+            "file"
+          ],
+          "property": [
+            {
+              "name": "file",
+              "required": true,
+              "deprecated": false,
+              "type": "string",
+              "format": "binary"
+            }
+          ]
         },
         "responses": {
           "201": {
             "changeType": "DEFAULT",
             "added": [],
-            "deleted": []
+            "deleted": [],
+            "$ref": "#/components/schemas/ImportDto"
           }
         },
         "deprecated": false

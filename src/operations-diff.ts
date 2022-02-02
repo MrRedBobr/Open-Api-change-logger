@@ -51,6 +51,7 @@ export class OperationsConverter {
     const responseCode: string[] = Object.keys(responses);
     const response: ResponsesTypeObject = {};
 
+
     for (const code of responseCode) {
       const resp: ResponseObject | ReferenceObject | undefined = responses[code];
       if (!resp || '$ref' in resp || !resp.content) {}

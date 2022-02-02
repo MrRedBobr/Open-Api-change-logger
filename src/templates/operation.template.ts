@@ -1,7 +1,7 @@
-import {ChangeType} from "../types/change.type";
 import {ChangeTypeText} from "./change-type-text.template";
+import {OperationTemplateInput} from "../inputs/operation-template.input";
 
-export function OperationTemplate(parameters: string, path_address: string, operationType: string, changeType: ChangeType) {
+export function OperationTemplate({ operationType, changeType, path_address, parametersHtml, requestHtml, responseHtml }: OperationTemplateInput) {
   return `
 <span class="change-${changeType.toLowerCase()}">
   <div class="opblock opblock-${operationType} is-open">
@@ -23,22 +23,9 @@ export function OperationTemplate(parameters: string, path_address: string, oper
           </button>
         </div>
         <div class="no-margin">
-        <div class="opblock-body">
-            <div class="opblock-section">
-                <div class="opblock-section-header">
-                  <div class="tab-header">
-                    <div class="tab-item active">
-                        <h4 class="opblock-title"><span>Parameters</span></h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="parameters-container">
-                    ${parameters}
-                </div>
-            </div>
-            <div class="execute-wrapper"></div>
-            <div class="responses-wrapper"></div>
-        </div>
+        ${parametersHtml}
+        ${requestHtml}
+        ${responseHtml}
       </div>
     </div>
 </span>

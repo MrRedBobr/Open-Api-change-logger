@@ -14,7 +14,7 @@
     margin: 0
 }
 
-.swagger-ui article,.swagger-ui aside,.swagger-ui footer,.swagger-ui header,.swagger-ui nav,.swagger-ui section {
+.swagger-ui article, .swagger-ui aside, .swagger-ui footer, .swagger-ui header, .swagger-ui nav, .swagger-ui section {
     display: block
 }
 
@@ -23,7 +23,7 @@
     margin: .67em 0
 }
 
-.swagger-ui figcaption,.swagger-ui figure,.swagger-ui main {
+.swagger-ui figcaption, .swagger-ui figure, .swagger-ui main {
     display: block
 }
 
@@ -38,7 +38,7 @@
 }
 
 .swagger-ui pre {
-    font-family: monospace,monospace;
+    font-family: monospace, monospace;
     font-size: 1em
 }
 
@@ -54,13 +54,13 @@
     text-decoration: underline dotted
 }
 
-.swagger-ui b,.swagger-ui strong {
+.swagger-ui b, .swagger-ui strong {
     font-weight: inherit;
     font-weight: bolder
 }
 
-.swagger-ui code,.swagger-ui kbd,.swagger-ui samp {
-    font-family: monospace,monospace;
+.swagger-ui code, .swagger-ui kbd, .swagger-ui samp {
+    font-family: monospace, monospace;
     font-size: 1em
 }
 
@@ -77,7 +77,7 @@
     font-size: 80%
 }
 
-.swagger-ui sub,.swagger-ui sup {
+.swagger-ui sub, .swagger-ui sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -92,7 +92,7 @@
     top: -.5em
 }
 
-.swagger-ui audio,.swagger-ui video {
+.swagger-ui audio, .swagger-ui video {
     display: inline-block
 }
 
@@ -109,31 +109,31 @@
     overflow: hidden
 }
 
-.swagger-ui button,.swagger-ui input,.swagger-ui optgroup,.swagger-ui select,.swagger-ui textarea {
+.swagger-ui button, .swagger-ui input, .swagger-ui optgroup, .swagger-ui select, .swagger-ui textarea {
     font-family: sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
 }
 
-.swagger-ui button,.swagger-ui input {
+.swagger-ui button, .swagger-ui input {
     overflow: visible
 }
 
-.swagger-ui button,.swagger-ui select {
+.swagger-ui button, .swagger-ui select {
     text-transform: none
 }
 
-.swagger-ui [type=reset],.swagger-ui [type=submit],.swagger-ui button,.swagger-ui html [type=button] {
+.swagger-ui [type=reset], .swagger-ui [type=submit], .swagger-ui button, .swagger-ui html [type=button] {
     -webkit-appearance: button
 }
 
-.swagger-ui [type=button]::-moz-focus-inner,.swagger-ui [type=reset]::-moz-focus-inner,.swagger-ui [type=submit]::-moz-focus-inner,.swagger-ui button::-moz-focus-inner {
+.swagger-ui [type=button]::-moz-focus-inner, .swagger-ui [type=reset]::-moz-focus-inner, .swagger-ui [type=submit]::-moz-focus-inner, .swagger-ui button::-moz-focus-inner {
     border-style: none;
     padding: 0
 }
 
-.swagger-ui [type=button]:-moz-focusring,.swagger-ui [type=reset]:-moz-focusring,.swagger-ui [type=submit]:-moz-focusring,.swagger-ui button:-moz-focusring {
+.swagger-ui [type=button]:-moz-focusring, .swagger-ui [type=reset]:-moz-focusring, .swagger-ui [type=submit]:-moz-focusring, .swagger-ui button:-moz-focusring {
     outline: 1px dotted ButtonText
 }
 
@@ -159,12 +159,12 @@
     overflow: auto
 }
 
-.swagger-ui [type=checkbox],.swagger-ui [type=radio] {
+.swagger-ui [type=checkbox], .swagger-ui [type=radio] {
     box-sizing: border-box;
     padding: 0
 }
 
-.swagger-ui [type=number]::-webkit-inner-spin-button,.swagger-ui [type=number]::-webkit-outer-spin-button {
+.swagger-ui [type=number]::-webkit-inner-spin-button, .swagger-ui [type=number]::-webkit-outer-spin-button {
     height: auto
 }
 
@@ -173,7 +173,7 @@
     outline-offset: -2px
 }
 
-.swagger-ui [type=search]::-webkit-search-cancel-button,.swagger-ui [type=search]::-webkit-search-decoration {
+.swagger-ui [type=search]::-webkit-search-cancel-button, .swagger-ui [type=search]::-webkit-search-decoration {
     -webkit-appearance: none
 }
 
@@ -182,7 +182,7 @@
     font: inherit
 }
 
-.swagger-ui details,.swagger-ui menu {
+.swagger-ui details, .swagger-ui menu {
     display: block
 }
 
@@ -194,7 +194,7 @@
     display: inline-block
 }
 
-.swagger-ui [hidden],.swagger-ui template {
+.swagger-ui [hidden], .swagger-ui template {
     display: none
 }
 
@@ -226,7 +226,7 @@
     background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzY3MkJEN0U2N0M1MTFFNkIyQkNFMjQwODEwMDIxNzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzY3MkJEN0Y2N0M1MTFFNkIyQkNFMjQwODEwMDIxNzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NjcyQkQ3QzY3QzUxMUU2QjJCQ0UyNDA4MTAwMjE3MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NjcyQkQ3RDY3QzUxMUU2QjJCQ0UyNDA4MTAwMjE3MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pve6J3kAAAAzSURBVHjaYvz//z8D0UDsMwMjSRoYP5Gq4SPNbRjVMEQ1fCRDg+in/6+J1AJUxsgAEGAA31BAJMS0GYEAAAAASUVORK5CYII=) repeat 0 0
 }
 
-.swagger-ui .border-box,.swagger-ui a,.swagger-ui article,.swagger-ui body,.swagger-ui code,.swagger-ui dd,.swagger-ui div,.swagger-ui dl,.swagger-ui dt,.swagger-ui fieldset,.swagger-ui footer,.swagger-ui form,.swagger-ui h1,.swagger-ui h2,.swagger-ui h3,.swagger-ui h4,.swagger-ui h5,.swagger-ui h6,.swagger-ui header,.swagger-ui html,.swagger-ui input[type=email],.swagger-ui input[type=number],.swagger-ui input[type=password],.swagger-ui input[type=tel],.swagger-ui input[type=text],.swagger-ui input[type=url],.swagger-ui legend,.swagger-ui li,.swagger-ui main,.swagger-ui ol,.swagger-ui p,.swagger-ui pre,.swagger-ui section,.swagger-ui table,.swagger-ui td,.swagger-ui textarea,.swagger-ui th,.swagger-ui tr,.swagger-ui ul {
+.swagger-ui .border-box, .swagger-ui a, .swagger-ui article, .swagger-ui body, .swagger-ui code, .swagger-ui dd, .swagger-ui div, .swagger-ui dl, .swagger-ui dt, .swagger-ui fieldset, .swagger-ui footer, .swagger-ui form, .swagger-ui h1, .swagger-ui h2, .swagger-ui h3, .swagger-ui h4, .swagger-ui h5, .swagger-ui h6, .swagger-ui header, .swagger-ui html, .swagger-ui input[type=email], .swagger-ui input[type=number], .swagger-ui input[type=password], .swagger-ui input[type=tel], .swagger-ui input[type=text], .swagger-ui input[type=url], .swagger-ui legend, .swagger-ui li, .swagger-ui main, .swagger-ui ol, .swagger-ui p, .swagger-ui pre, .swagger-ui section, .swagger-ui table, .swagger-ui td, .swagger-ui textarea, .swagger-ui th, .swagger-ui tr, .swagger-ui ul {
     box-sizing: border-box
 }
 
@@ -292,7 +292,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .aspect-ratio-ns {
-        height:0;
+        height: 0;
         position: relative
     }
 
@@ -352,9 +352,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .aspect-ratio-m {
-        height:0;
+        height: 0;
         position: relative
     }
 
@@ -416,7 +416,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .aspect-ratio-l {
-        height:0;
+        height: 0;
         position: relative
     }
 
@@ -481,40 +481,40 @@
 }
 
 .swagger-ui .cover {
-    background-size: cover!important
+    background-size: cover !important
 }
 
 .swagger-ui .contain {
-    background-size: contain!important
+    background-size: contain !important
 }
 
 @media screen and (min-width: 30em) {
     .swagger-ui .cover-ns {
-        background-size:cover!important
+        background-size: cover !important
     }
 
     .swagger-ui .contain-ns {
-        background-size: contain!important
+        background-size: contain !important
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .cover-m {
-        background-size:cover!important
+        background-size: cover !important
     }
 
     .swagger-ui .contain-m {
-        background-size: contain!important
+        background-size: contain !important
     }
 }
 
 @media screen and (min-width: 60em) {
     .swagger-ui .cover-l {
-        background-size:cover!important
+        background-size: cover !important
     }
 
     .swagger-ui .contain-l {
-        background-size: contain!important
+        background-size: contain !important
     }
 }
 
@@ -545,7 +545,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .bg-center-ns {
-        background-position:50%;
+        background-position: 50%;
         background-repeat: no-repeat
     }
 
@@ -570,9 +570,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .bg-center-m {
-        background-position:50%;
+        background-position: 50%;
         background-repeat: no-repeat
     }
 
@@ -599,7 +599,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .bg-center-l {
-        background-position:50%;
+        background-position: 50%;
         background-repeat: no-repeat
     }
 
@@ -638,7 +638,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .outline-ns {
-        outline:1px solid
+        outline: 1px solid
     }
 
     .swagger-ui .outline-transparent-ns {
@@ -650,9 +650,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .outline-m {
-        outline:1px solid
+        outline: 1px solid
     }
 
     .swagger-ui .outline-transparent-m {
@@ -666,7 +666,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .outline-l {
-        outline:1px solid
+        outline: 1px solid
     }
 
     .swagger-ui .outline-transparent-l {
@@ -710,7 +710,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .ba-ns {
-        border-style:solid;
+        border-style: solid;
         border-width: 1px
     }
 
@@ -740,9 +740,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .ba-m {
-        border-style:solid;
+        border-style: solid;
         border-width: 1px
     }
 
@@ -774,7 +774,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .ba-l {
-        border-style:solid;
+        border-style: solid;
         border-width: 1px
     }
 
@@ -849,99 +849,99 @@
 }
 
 .swagger-ui .b--white-90 {
-    border-color: hsla(0,0%,100%,.9)
+    border-color: hsla(0, 0%, 100%, .9)
 }
 
 .swagger-ui .b--white-80 {
-    border-color: hsla(0,0%,100%,.8)
+    border-color: hsla(0, 0%, 100%, .8)
 }
 
 .swagger-ui .b--white-70 {
-    border-color: hsla(0,0%,100%,.7)
+    border-color: hsla(0, 0%, 100%, .7)
 }
 
 .swagger-ui .b--white-60 {
-    border-color: hsla(0,0%,100%,.6)
+    border-color: hsla(0, 0%, 100%, .6)
 }
 
 .swagger-ui .b--white-50 {
-    border-color: hsla(0,0%,100%,.5)
+    border-color: hsla(0, 0%, 100%, .5)
 }
 
 .swagger-ui .b--white-40 {
-    border-color: hsla(0,0%,100%,.4)
+    border-color: hsla(0, 0%, 100%, .4)
 }
 
 .swagger-ui .b--white-30 {
-    border-color: hsla(0,0%,100%,.3)
+    border-color: hsla(0, 0%, 100%, .3)
 }
 
 .swagger-ui .b--white-20 {
-    border-color: hsla(0,0%,100%,.2)
+    border-color: hsla(0, 0%, 100%, .2)
 }
 
 .swagger-ui .b--white-10 {
-    border-color: hsla(0,0%,100%,.1)
+    border-color: hsla(0, 0%, 100%, .1)
 }
 
 .swagger-ui .b--white-05 {
-    border-color: hsla(0,0%,100%,.05)
+    border-color: hsla(0, 0%, 100%, .05)
 }
 
 .swagger-ui .b--white-025 {
-    border-color: hsla(0,0%,100%,.03)
+    border-color: hsla(0, 0%, 100%, .03)
 }
 
 .swagger-ui .b--white-0125 {
-    border-color: hsla(0,0%,100%,.01)
+    border-color: hsla(0, 0%, 100%, .01)
 }
 
 .swagger-ui .b--black-90 {
-    border-color: rgba(0,0,0,.9)
+    border-color: rgba(0, 0, 0, .9)
 }
 
 .swagger-ui .b--black-80 {
-    border-color: rgba(0,0,0,.8)
+    border-color: rgba(0, 0, 0, .8)
 }
 
 .swagger-ui .b--black-70 {
-    border-color: rgba(0,0,0,.7)
+    border-color: rgba(0, 0, 0, .7)
 }
 
 .swagger-ui .b--black-60 {
-    border-color: rgba(0,0,0,.6)
+    border-color: rgba(0, 0, 0, .6)
 }
 
 .swagger-ui .b--black-50 {
-    border-color: rgba(0,0,0,.5)
+    border-color: rgba(0, 0, 0, .5)
 }
 
 .swagger-ui .b--black-40 {
-    border-color: rgba(0,0,0,.4)
+    border-color: rgba(0, 0, 0, .4)
 }
 
 .swagger-ui .b--black-30 {
-    border-color: rgba(0,0,0,.3)
+    border-color: rgba(0, 0, 0, .3)
 }
 
 .swagger-ui .b--black-20 {
-    border-color: rgba(0,0,0,.2)
+    border-color: rgba(0, 0, 0, .2)
 }
 
 .swagger-ui .b--black-10 {
-    border-color: rgba(0,0,0,.1)
+    border-color: rgba(0, 0, 0, .1)
 }
 
 .swagger-ui .b--black-05 {
-    border-color: rgba(0,0,0,.05)
+    border-color: rgba(0, 0, 0, .05)
 }
 
 .swagger-ui .b--black-025 {
-    border-color: rgba(0,0,0,.03)
+    border-color: rgba(0, 0, 0, .03)
 }
 
 .swagger-ui .b--black-0125 {
-    border-color: rgba(0,0,0,.01)
+    border-color: rgba(0, 0, 0, .01)
 }
 
 .swagger-ui .b--dark-red {
@@ -1102,7 +1102,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .br0-ns {
-        border-radius:0
+        border-radius: 0
     }
 
     .swagger-ui .br1-ns {
@@ -1150,9 +1150,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .br0-m {
-        border-radius:0
+        border-radius: 0
     }
 
     .swagger-ui .br1-m {
@@ -1202,7 +1202,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .br0-l {
-        border-radius:0
+        border-radius: 0
     }
 
     .swagger-ui .br1-l {
@@ -1268,7 +1268,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .b--dotted-ns {
-        border-style:dotted
+        border-style: dotted
     }
 
     .swagger-ui .b--dashed-ns {
@@ -1284,9 +1284,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .b--dotted-m {
-        border-style:dotted
+        border-style: dotted
     }
 
     .swagger-ui .b--dashed-m {
@@ -1304,7 +1304,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .b--dotted-l {
-        border-style:dotted
+        border-style: dotted
     }
 
     .swagger-ui .b--dashed-l {
@@ -1362,7 +1362,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .bw0-ns {
-        border-width:0
+        border-width: 0
     }
 
     .swagger-ui .bw1-ns {
@@ -1402,9 +1402,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .bw0-m {
-        border-width:0
+        border-width: 0
     }
 
     .swagger-ui .bw1-m {
@@ -1446,7 +1446,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .bw0-l {
-        border-width:0
+        border-width: 0
     }
 
     .swagger-ui .bw1-l {
@@ -1487,88 +1487,88 @@
 }
 
 .swagger-ui .shadow-1 {
-    box-shadow: 0 0 4px 2px rgba(0,0,0,.2)
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
 }
 
 .swagger-ui .shadow-2 {
-    box-shadow: 0 0 8px 2px rgba(0,0,0,.2)
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
 }
 
 .swagger-ui .shadow-3 {
-    box-shadow: 2px 2px 4px 2px rgba(0,0,0,.2)
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
 }
 
 .swagger-ui .shadow-4 {
-    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
 }
 
 .swagger-ui .shadow-5 {
-    box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2)
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .2)
 }
 
 @media screen and (min-width: 30em) {
     .swagger-ui .shadow-1-ns {
-        box-shadow:0 0 4px 2px rgba(0,0,0,.2)
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-2-ns {
-        box-shadow: 0 0 8px 2px rgba(0,0,0,.2)
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-3-ns {
-        box-shadow: 2px 2px 4px 2px rgba(0,0,0,.2)
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-4-ns {
-        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+        box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-5-ns {
-        box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2)
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .2)
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .shadow-1-m {
-        box-shadow:0 0 4px 2px rgba(0,0,0,.2)
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-2-m {
-        box-shadow: 0 0 8px 2px rgba(0,0,0,.2)
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-3-m {
-        box-shadow: 2px 2px 4px 2px rgba(0,0,0,.2)
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-4-m {
-        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+        box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-5-m {
-        box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2)
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .2)
     }
 }
 
 @media screen and (min-width: 60em) {
     .swagger-ui .shadow-1-l {
-        box-shadow:0 0 4px 2px rgba(0,0,0,.2)
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-2-l {
-        box-shadow: 0 0 8px 2px rgba(0,0,0,.2)
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-3-l {
-        box-shadow: 2px 2px 4px 2px rgba(0,0,0,.2)
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-4-l {
-        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+        box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
     }
 
     .swagger-ui .shadow-5-l {
-        box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2)
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .2)
     }
 }
 
@@ -1667,7 +1667,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .top-0-ns {
-        top:0
+        top: 0
     }
 
     .swagger-ui .left-0-ns {
@@ -1754,9 +1754,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .top-0-m {
-        top:0
+        top: 0
     }
 
     .swagger-ui .left-0-m {
@@ -1845,7 +1845,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .top-0-l {
-        top:0
+        top: 0
     }
 
     .swagger-ui .left-0-l {
@@ -1932,7 +1932,7 @@
     }
 }
 
-.swagger-ui .cf:after,.swagger-ui .cf:before {
+.swagger-ui .cf:after, .swagger-ui .cf:before {
     content: " ";
     display: table
 }
@@ -1942,7 +1942,8 @@
 }
 
 .swagger-ui .cf {
-    *zoom:1}
+    *zoom: 1
+}
 
 .swagger-ui .cl {
     clear: left
@@ -1962,7 +1963,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .cl-ns {
-        clear:left
+        clear: left
     }
 
     .swagger-ui .cr-ns {
@@ -1978,9 +1979,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .cl-m {
-        clear:left
+        clear: left
     }
 
     .swagger-ui .cr-m {
@@ -1998,7 +1999,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .cl-l {
-        clear:left
+        clear: left
     }
 
     .swagger-ui .cr-l {
@@ -2202,7 +2203,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .flex-ns {
-        display:flex
+        display: flex
     }
 
     .swagger-ui .inline-flex-ns {
@@ -2388,9 +2389,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .flex-m {
-        display:flex
+        display: flex
     }
 
     .swagger-ui .inline-flex-m {
@@ -2578,7 +2579,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .flex-l {
-        display:flex
+        display: flex
     }
 
     .swagger-ui .inline-flex-l {
@@ -2815,7 +2816,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .dn-ns {
-        display:none
+        display: none
     }
 
     .swagger-ui .di-ns {
@@ -2864,9 +2865,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .dn-m {
-        display:none
+        display: none
     }
 
     .swagger-ui .di-m {
@@ -2917,7 +2918,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .dn-l {
-        display:none
+        display: none
     }
 
     .swagger-ui .di-l {
@@ -2982,7 +2983,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .fl-ns {
-        _display:inline;
+        _display: inline;
         float: left
     }
 
@@ -2996,9 +2997,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .fl-m {
-        _display:inline;
+        _display: inline;
         float: left
     }
 
@@ -3014,7 +3015,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .fl-l {
-        _display:inline;
+        _display: inline;
         float: left
     }
 
@@ -3029,11 +3030,11 @@
 }
 
 .swagger-ui .sans-serif {
-    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif
 }
 
 .swagger-ui .serif {
-    font-family: georgia,serif
+    font-family: georgia, serif
 }
 
 .swagger-ui .system-sans-serif {
@@ -3044,48 +3045,48 @@
     font-family: serif
 }
 
-.swagger-ui .code,.swagger-ui code {
-    font-family: Consolas,monaco,monospace
+.swagger-ui .code, .swagger-ui code {
+    font-family: Consolas, monaco, monospace
 }
 
 .swagger-ui .courier {
-    font-family: Courier Next,courier,monospace
+    font-family: Courier Next, courier, monospace
 }
 
 .swagger-ui .helvetica {
-    font-family: helvetica neue,helvetica,sans-serif
+    font-family: helvetica neue, helvetica, sans-serif
 }
 
 .swagger-ui .avenir {
-    font-family: avenir next,avenir,sans-serif
+    font-family: avenir next, avenir, sans-serif
 }
 
 .swagger-ui .athelas {
-    font-family: athelas,georgia,serif
+    font-family: athelas, georgia, serif
 }
 
 .swagger-ui .georgia {
-    font-family: georgia,serif
+    font-family: georgia, serif
 }
 
 .swagger-ui .times {
-    font-family: times,serif
+    font-family: times, serif
 }
 
 .swagger-ui .bodoni {
-    font-family: Bodoni MT,serif
+    font-family: Bodoni MT, serif
 }
 
 .swagger-ui .calisto {
-    font-family: Calisto MT,serif
+    font-family: Calisto MT, serif
 }
 
 .swagger-ui .garamond {
-    font-family: garamond,serif
+    font-family: garamond, serif
 }
 
 .swagger-ui .baskerville {
-    font-family: baskerville,serif
+    font-family: baskerville, serif
 }
 
 .swagger-ui .i {
@@ -3098,7 +3099,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .i-ns {
-        font-style:italic
+        font-style: italic
     }
 
     .swagger-ui .fs-normal-ns {
@@ -3106,9 +3107,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .i-m {
-        font-style:italic
+        font-style: italic
     }
 
     .swagger-ui .fs-normal-m {
@@ -3118,7 +3119,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .i-l {
-        font-style:italic
+        font-style: italic
     }
 
     .swagger-ui .fs-normal-l {
@@ -3172,7 +3173,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .normal-ns {
-        font-weight:400
+        font-weight: 400
     }
 
     .swagger-ui .b-ns {
@@ -3216,9 +3217,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .normal-m {
-        font-weight:400
+        font-weight: 400
     }
 
     .swagger-ui .b-m {
@@ -3264,7 +3265,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .normal-l {
-        font-weight:400
+        font-weight: 400
     }
 
     .swagger-ui .b-l {
@@ -3313,7 +3314,7 @@
     -moz-appearance: none
 }
 
-.swagger-ui .button-reset::-moz-focus-inner,.swagger-ui .input-reset::-moz-focus-inner {
+.swagger-ui .button-reset::-moz-focus-inner, .swagger-ui .input-reset::-moz-focus-inner {
     border: 0;
     padding: 0
 }
@@ -3388,7 +3389,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .h1-ns {
-        height:1rem
+        height: 1rem
     }
 
     .swagger-ui .h2-ns {
@@ -3456,9 +3457,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .h1-m {
-        height:1rem
+        height: 1rem
     }
 
     .swagger-ui .h2-m {
@@ -3528,7 +3529,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .h1-l {
-        height:1rem
+        height: 1rem
     }
 
     .swagger-ui .h2-l {
@@ -3610,7 +3611,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .tracked-ns {
-        letter-spacing:.1em
+        letter-spacing: .1em
     }
 
     .swagger-ui .tracked-tight-ns {
@@ -3622,9 +3623,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .tracked-m {
-        letter-spacing:.1em
+        letter-spacing: .1em
     }
 
     .swagger-ui .tracked-tight-m {
@@ -3638,7 +3639,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .tracked-l {
-        letter-spacing:.1em
+        letter-spacing: .1em
     }
 
     .swagger-ui .tracked-tight-l {
@@ -3664,7 +3665,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .lh-solid-ns {
-        line-height:1
+        line-height: 1
     }
 
     .swagger-ui .lh-title-ns {
@@ -3676,9 +3677,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .lh-solid-m {
-        line-height:1
+        line-height: 1
     }
 
     .swagger-ui .lh-title-m {
@@ -3692,7 +3693,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .lh-solid-l {
-        line-height:1
+        line-height: 1
     }
 
     .swagger-ui .lh-title-l {
@@ -3708,7 +3709,7 @@
     text-decoration: none
 }
 
-.swagger-ui .link,.swagger-ui .link:active,.swagger-ui .link:focus,.swagger-ui .link:hover,.swagger-ui .link:link,.swagger-ui .link:visited {
+.swagger-ui .link, .swagger-ui .link:active, .swagger-ui .link:focus, .swagger-ui .link:hover, .swagger-ui .link:link, .swagger-ui .link:visited {
     transition: color .15s ease-in
 }
 
@@ -3766,7 +3767,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .mw-100-ns {
-        max-width:100%
+        max-width: 100%
     }
 
     .swagger-ui .mw1-ns {
@@ -3810,9 +3811,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .mw-100-m {
-        max-width:100%
+        max-width: 100%
     }
 
     .swagger-ui .mw1-m {
@@ -3858,7 +3859,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .mw-100-l {
-        max-width:100%
+        max-width: 100%
     }
 
     .swagger-ui .mw1-l {
@@ -3992,7 +3993,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .w1-ns {
-        width:1rem
+        width: 1rem
     }
 
     .swagger-ui .w2-ns {
@@ -4080,9 +4081,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .w1-m {
-        width:1rem
+        width: 1rem
     }
 
     .swagger-ui .w2-m {
@@ -4172,7 +4173,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .w1-l {
-        width:1rem
+        width: 1rem
     }
 
     .swagger-ui .w2-l {
@@ -4310,7 +4311,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .overflow-visible-ns {
-        overflow:visible
+        overflow: visible
     }
 
     .swagger-ui .overflow-hidden-ns {
@@ -4358,9 +4359,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .overflow-visible-m {
-        overflow:visible
+        overflow: visible
     }
 
     .swagger-ui .overflow-hidden-m {
@@ -4410,7 +4411,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .overflow-visible-l {
-        overflow:visible
+        overflow: visible
     }
 
     .swagger-ui .overflow-hidden-l {
@@ -4476,7 +4477,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .static-ns {
-        position:static
+        position: static
     }
 
     .swagger-ui .relative-ns {
@@ -4492,9 +4493,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .static-m {
-        position:static
+        position: static
     }
 
     .swagger-ui .relative-m {
@@ -4512,7 +4513,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .static-l {
-        position:static
+        position: static
     }
 
     .swagger-ui .relative-l {
@@ -4610,7 +4611,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .rotate-45-ns {
-        transform:rotate(45deg)
+        transform: rotate(45deg)
     }
 
     .swagger-ui .rotate-90-ns {
@@ -4638,9 +4639,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .rotate-45-m {
-        transform:rotate(45deg)
+        transform: rotate(45deg)
     }
 
     .swagger-ui .rotate-90-m {
@@ -4670,7 +4671,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .rotate-45-l {
-        transform:rotate(45deg)
+        transform: rotate(45deg)
     }
 
     .swagger-ui .rotate-90-l {
@@ -4699,79 +4700,79 @@
 }
 
 .swagger-ui .black-90 {
-    color: rgba(0,0,0,.9)
+    color: rgba(0, 0, 0, .9)
 }
 
 .swagger-ui .black-80 {
-    color: rgba(0,0,0,.8)
+    color: rgba(0, 0, 0, .8)
 }
 
 .swagger-ui .black-70 {
-    color: rgba(0,0,0,.7)
+    color: rgba(0, 0, 0, .7)
 }
 
 .swagger-ui .black-60 {
-    color: rgba(0,0,0,.6)
+    color: rgba(0, 0, 0, .6)
 }
 
 .swagger-ui .black-50 {
-    color: rgba(0,0,0,.5)
+    color: rgba(0, 0, 0, .5)
 }
 
 .swagger-ui .black-40 {
-    color: rgba(0,0,0,.4)
+    color: rgba(0, 0, 0, .4)
 }
 
 .swagger-ui .black-30 {
-    color: rgba(0,0,0,.3)
+    color: rgba(0, 0, 0, .3)
 }
 
 .swagger-ui .black-20 {
-    color: rgba(0,0,0,.2)
+    color: rgba(0, 0, 0, .2)
 }
 
 .swagger-ui .black-10 {
-    color: rgba(0,0,0,.1)
+    color: rgba(0, 0, 0, .1)
 }
 
 .swagger-ui .black-05 {
-    color: rgba(0,0,0,.05)
+    color: rgba(0, 0, 0, .05)
 }
 
 .swagger-ui .white-90 {
-    color: hsla(0,0%,100%,.9)
+    color: hsla(0, 0%, 100%, .9)
 }
 
 .swagger-ui .white-80 {
-    color: hsla(0,0%,100%,.8)
+    color: hsla(0, 0%, 100%, .8)
 }
 
 .swagger-ui .white-70 {
-    color: hsla(0,0%,100%,.7)
+    color: hsla(0, 0%, 100%, .7)
 }
 
 .swagger-ui .white-60 {
-    color: hsla(0,0%,100%,.6)
+    color: hsla(0, 0%, 100%, .6)
 }
 
 .swagger-ui .white-50 {
-    color: hsla(0,0%,100%,.5)
+    color: hsla(0, 0%, 100%, .5)
 }
 
 .swagger-ui .white-40 {
-    color: hsla(0,0%,100%,.4)
+    color: hsla(0, 0%, 100%, .4)
 }
 
 .swagger-ui .white-30 {
-    color: hsla(0,0%,100%,.3)
+    color: hsla(0, 0%, 100%, .3)
 }
 
 .swagger-ui .white-20 {
-    color: hsla(0,0%,100%,.2)
+    color: hsla(0, 0%, 100%, .2)
 }
 
 .swagger-ui .white-10 {
-    color: hsla(0,0%,100%,.1)
+    color: hsla(0, 0%, 100%, .1)
 }
 
 .swagger-ui .black {
@@ -4923,79 +4924,79 @@
 }
 
 .swagger-ui .bg-black-90 {
-    background-color: rgba(0,0,0,.9)
+    background-color: rgba(0, 0, 0, .9)
 }
 
 .swagger-ui .bg-black-80 {
-    background-color: rgba(0,0,0,.8)
+    background-color: rgba(0, 0, 0, .8)
 }
 
 .swagger-ui .bg-black-70 {
-    background-color: rgba(0,0,0,.7)
+    background-color: rgba(0, 0, 0, .7)
 }
 
 .swagger-ui .bg-black-60 {
-    background-color: rgba(0,0,0,.6)
+    background-color: rgba(0, 0, 0, .6)
 }
 
 .swagger-ui .bg-black-50 {
-    background-color: rgba(0,0,0,.5)
+    background-color: rgba(0, 0, 0, .5)
 }
 
 .swagger-ui .bg-black-40 {
-    background-color: rgba(0,0,0,.4)
+    background-color: rgba(0, 0, 0, .4)
 }
 
 .swagger-ui .bg-black-30 {
-    background-color: rgba(0,0,0,.3)
+    background-color: rgba(0, 0, 0, .3)
 }
 
 .swagger-ui .bg-black-20 {
-    background-color: rgba(0,0,0,.2)
+    background-color: rgba(0, 0, 0, .2)
 }
 
 .swagger-ui .bg-black-10 {
-    background-color: rgba(0,0,0,.1)
+    background-color: rgba(0, 0, 0, .1)
 }
 
 .swagger-ui .bg-black-05 {
-    background-color: rgba(0,0,0,.05)
+    background-color: rgba(0, 0, 0, .05)
 }
 
 .swagger-ui .bg-white-90 {
-    background-color: hsla(0,0%,100%,.9)
+    background-color: hsla(0, 0%, 100%, .9)
 }
 
 .swagger-ui .bg-white-80 {
-    background-color: hsla(0,0%,100%,.8)
+    background-color: hsla(0, 0%, 100%, .8)
 }
 
 .swagger-ui .bg-white-70 {
-    background-color: hsla(0,0%,100%,.7)
+    background-color: hsla(0, 0%, 100%, .7)
 }
 
 .swagger-ui .bg-white-60 {
-    background-color: hsla(0,0%,100%,.6)
+    background-color: hsla(0, 0%, 100%, .6)
 }
 
 .swagger-ui .bg-white-50 {
-    background-color: hsla(0,0%,100%,.5)
+    background-color: hsla(0, 0%, 100%, .5)
 }
 
 .swagger-ui .bg-white-40 {
-    background-color: hsla(0,0%,100%,.4)
+    background-color: hsla(0, 0%, 100%, .4)
 }
 
 .swagger-ui .bg-white-30 {
-    background-color: hsla(0,0%,100%,.3)
+    background-color: hsla(0, 0%, 100%, .3)
 }
 
 .swagger-ui .bg-white-20 {
-    background-color: hsla(0,0%,100%,.2)
+    background-color: hsla(0, 0%, 100%, .2)
 }
 
 .swagger-ui .bg-white-10 {
-    background-color: hsla(0,0%,100%,.1)
+    background-color: hsla(0, 0%, 100%, .1)
 }
 
 .swagger-ui .bg-black {
@@ -5150,447 +5151,447 @@
     background-color: inherit
 }
 
-.swagger-ui .hover-black:focus,.swagger-ui .hover-black:hover {
+.swagger-ui .hover-black:focus, .swagger-ui .hover-black:hover {
     color: #000
 }
 
-.swagger-ui .hover-near-black:focus,.swagger-ui .hover-near-black:hover {
+.swagger-ui .hover-near-black:focus, .swagger-ui .hover-near-black:hover {
     color: #111
 }
 
-.swagger-ui .hover-dark-gray:focus,.swagger-ui .hover-dark-gray:hover {
+.swagger-ui .hover-dark-gray:focus, .swagger-ui .hover-dark-gray:hover {
     color: #333
 }
 
-.swagger-ui .hover-mid-gray:focus,.swagger-ui .hover-mid-gray:hover {
+.swagger-ui .hover-mid-gray:focus, .swagger-ui .hover-mid-gray:hover {
     color: #555
 }
 
-.swagger-ui .hover-gray:focus,.swagger-ui .hover-gray:hover {
+.swagger-ui .hover-gray:focus, .swagger-ui .hover-gray:hover {
     color: #777
 }
 
-.swagger-ui .hover-silver:focus,.swagger-ui .hover-silver:hover {
+.swagger-ui .hover-silver:focus, .swagger-ui .hover-silver:hover {
     color: #999
 }
 
-.swagger-ui .hover-light-silver:focus,.swagger-ui .hover-light-silver:hover {
+.swagger-ui .hover-light-silver:focus, .swagger-ui .hover-light-silver:hover {
     color: #aaa
 }
 
-.swagger-ui .hover-moon-gray:focus,.swagger-ui .hover-moon-gray:hover {
+.swagger-ui .hover-moon-gray:focus, .swagger-ui .hover-moon-gray:hover {
     color: #ccc
 }
 
-.swagger-ui .hover-light-gray:focus,.swagger-ui .hover-light-gray:hover {
+.swagger-ui .hover-light-gray:focus, .swagger-ui .hover-light-gray:hover {
     color: #eee
 }
 
-.swagger-ui .hover-near-white:focus,.swagger-ui .hover-near-white:hover {
+.swagger-ui .hover-near-white:focus, .swagger-ui .hover-near-white:hover {
     color: #f4f4f4
 }
 
-.swagger-ui .hover-white:focus,.swagger-ui .hover-white:hover {
+.swagger-ui .hover-white:focus, .swagger-ui .hover-white:hover {
     color: #fff
 }
 
-.swagger-ui .hover-black-90:focus,.swagger-ui .hover-black-90:hover {
-    color: rgba(0,0,0,.9)
+.swagger-ui .hover-black-90:focus, .swagger-ui .hover-black-90:hover {
+    color: rgba(0, 0, 0, .9)
 }
 
-.swagger-ui .hover-black-80:focus,.swagger-ui .hover-black-80:hover {
-    color: rgba(0,0,0,.8)
+.swagger-ui .hover-black-80:focus, .swagger-ui .hover-black-80:hover {
+    color: rgba(0, 0, 0, .8)
 }
 
-.swagger-ui .hover-black-70:focus,.swagger-ui .hover-black-70:hover {
-    color: rgba(0,0,0,.7)
+.swagger-ui .hover-black-70:focus, .swagger-ui .hover-black-70:hover {
+    color: rgba(0, 0, 0, .7)
 }
 
-.swagger-ui .hover-black-60:focus,.swagger-ui .hover-black-60:hover {
-    color: rgba(0,0,0,.6)
+.swagger-ui .hover-black-60:focus, .swagger-ui .hover-black-60:hover {
+    color: rgba(0, 0, 0, .6)
 }
 
-.swagger-ui .hover-black-50:focus,.swagger-ui .hover-black-50:hover {
-    color: rgba(0,0,0,.5)
+.swagger-ui .hover-black-50:focus, .swagger-ui .hover-black-50:hover {
+    color: rgba(0, 0, 0, .5)
 }
 
-.swagger-ui .hover-black-40:focus,.swagger-ui .hover-black-40:hover {
-    color: rgba(0,0,0,.4)
+.swagger-ui .hover-black-40:focus, .swagger-ui .hover-black-40:hover {
+    color: rgba(0, 0, 0, .4)
 }
 
-.swagger-ui .hover-black-30:focus,.swagger-ui .hover-black-30:hover {
-    color: rgba(0,0,0,.3)
+.swagger-ui .hover-black-30:focus, .swagger-ui .hover-black-30:hover {
+    color: rgba(0, 0, 0, .3)
 }
 
-.swagger-ui .hover-black-20:focus,.swagger-ui .hover-black-20:hover {
-    color: rgba(0,0,0,.2)
+.swagger-ui .hover-black-20:focus, .swagger-ui .hover-black-20:hover {
+    color: rgba(0, 0, 0, .2)
 }
 
-.swagger-ui .hover-black-10:focus,.swagger-ui .hover-black-10:hover {
-    color: rgba(0,0,0,.1)
+.swagger-ui .hover-black-10:focus, .swagger-ui .hover-black-10:hover {
+    color: rgba(0, 0, 0, .1)
 }
 
-.swagger-ui .hover-white-90:focus,.swagger-ui .hover-white-90:hover {
-    color: hsla(0,0%,100%,.9)
+.swagger-ui .hover-white-90:focus, .swagger-ui .hover-white-90:hover {
+    color: hsla(0, 0%, 100%, .9)
 }
 
-.swagger-ui .hover-white-80:focus,.swagger-ui .hover-white-80:hover {
-    color: hsla(0,0%,100%,.8)
+.swagger-ui .hover-white-80:focus, .swagger-ui .hover-white-80:hover {
+    color: hsla(0, 0%, 100%, .8)
 }
 
-.swagger-ui .hover-white-70:focus,.swagger-ui .hover-white-70:hover {
-    color: hsla(0,0%,100%,.7)
+.swagger-ui .hover-white-70:focus, .swagger-ui .hover-white-70:hover {
+    color: hsla(0, 0%, 100%, .7)
 }
 
-.swagger-ui .hover-white-60:focus,.swagger-ui .hover-white-60:hover {
-    color: hsla(0,0%,100%,.6)
+.swagger-ui .hover-white-60:focus, .swagger-ui .hover-white-60:hover {
+    color: hsla(0, 0%, 100%, .6)
 }
 
-.swagger-ui .hover-white-50:focus,.swagger-ui .hover-white-50:hover {
-    color: hsla(0,0%,100%,.5)
+.swagger-ui .hover-white-50:focus, .swagger-ui .hover-white-50:hover {
+    color: hsla(0, 0%, 100%, .5)
 }
 
-.swagger-ui .hover-white-40:focus,.swagger-ui .hover-white-40:hover {
-    color: hsla(0,0%,100%,.4)
+.swagger-ui .hover-white-40:focus, .swagger-ui .hover-white-40:hover {
+    color: hsla(0, 0%, 100%, .4)
 }
 
-.swagger-ui .hover-white-30:focus,.swagger-ui .hover-white-30:hover {
-    color: hsla(0,0%,100%,.3)
+.swagger-ui .hover-white-30:focus, .swagger-ui .hover-white-30:hover {
+    color: hsla(0, 0%, 100%, .3)
 }
 
-.swagger-ui .hover-white-20:focus,.swagger-ui .hover-white-20:hover {
-    color: hsla(0,0%,100%,.2)
+.swagger-ui .hover-white-20:focus, .swagger-ui .hover-white-20:hover {
+    color: hsla(0, 0%, 100%, .2)
 }
 
-.swagger-ui .hover-white-10:focus,.swagger-ui .hover-white-10:hover {
-    color: hsla(0,0%,100%,.1)
+.swagger-ui .hover-white-10:focus, .swagger-ui .hover-white-10:hover {
+    color: hsla(0, 0%, 100%, .1)
 }
 
-.swagger-ui .hover-inherit:focus,.swagger-ui .hover-inherit:hover {
+.swagger-ui .hover-inherit:focus, .swagger-ui .hover-inherit:hover {
     color: inherit
 }
 
-.swagger-ui .hover-bg-black:focus,.swagger-ui .hover-bg-black:hover {
+.swagger-ui .hover-bg-black:focus, .swagger-ui .hover-bg-black:hover {
     background-color: #000
 }
 
-.swagger-ui .hover-bg-near-black:focus,.swagger-ui .hover-bg-near-black:hover {
+.swagger-ui .hover-bg-near-black:focus, .swagger-ui .hover-bg-near-black:hover {
     background-color: #111
 }
 
-.swagger-ui .hover-bg-dark-gray:focus,.swagger-ui .hover-bg-dark-gray:hover {
+.swagger-ui .hover-bg-dark-gray:focus, .swagger-ui .hover-bg-dark-gray:hover {
     background-color: #333
 }
 
-.swagger-ui .hover-bg-mid-gray:focus,.swagger-ui .hover-bg-mid-gray:hover {
+.swagger-ui .hover-bg-mid-gray:focus, .swagger-ui .hover-bg-mid-gray:hover {
     background-color: #555
 }
 
-.swagger-ui .hover-bg-gray:focus,.swagger-ui .hover-bg-gray:hover {
+.swagger-ui .hover-bg-gray:focus, .swagger-ui .hover-bg-gray:hover {
     background-color: #777
 }
 
-.swagger-ui .hover-bg-silver:focus,.swagger-ui .hover-bg-silver:hover {
+.swagger-ui .hover-bg-silver:focus, .swagger-ui .hover-bg-silver:hover {
     background-color: #999
 }
 
-.swagger-ui .hover-bg-light-silver:focus,.swagger-ui .hover-bg-light-silver:hover {
+.swagger-ui .hover-bg-light-silver:focus, .swagger-ui .hover-bg-light-silver:hover {
     background-color: #aaa
 }
 
-.swagger-ui .hover-bg-moon-gray:focus,.swagger-ui .hover-bg-moon-gray:hover {
+.swagger-ui .hover-bg-moon-gray:focus, .swagger-ui .hover-bg-moon-gray:hover {
     background-color: #ccc
 }
 
-.swagger-ui .hover-bg-light-gray:focus,.swagger-ui .hover-bg-light-gray:hover {
+.swagger-ui .hover-bg-light-gray:focus, .swagger-ui .hover-bg-light-gray:hover {
     background-color: #eee
 }
 
-.swagger-ui .hover-bg-near-white:focus,.swagger-ui .hover-bg-near-white:hover {
+.swagger-ui .hover-bg-near-white:focus, .swagger-ui .hover-bg-near-white:hover {
     background-color: #f4f4f4
 }
 
-.swagger-ui .hover-bg-white:focus,.swagger-ui .hover-bg-white:hover {
+.swagger-ui .hover-bg-white:focus, .swagger-ui .hover-bg-white:hover {
     background-color: #fff
 }
 
-.swagger-ui .hover-bg-transparent:focus,.swagger-ui .hover-bg-transparent:hover {
+.swagger-ui .hover-bg-transparent:focus, .swagger-ui .hover-bg-transparent:hover {
     background-color: transparent
 }
 
-.swagger-ui .hover-bg-black-90:focus,.swagger-ui .hover-bg-black-90:hover {
-    background-color: rgba(0,0,0,.9)
+.swagger-ui .hover-bg-black-90:focus, .swagger-ui .hover-bg-black-90:hover {
+    background-color: rgba(0, 0, 0, .9)
 }
 
-.swagger-ui .hover-bg-black-80:focus,.swagger-ui .hover-bg-black-80:hover {
-    background-color: rgba(0,0,0,.8)
+.swagger-ui .hover-bg-black-80:focus, .swagger-ui .hover-bg-black-80:hover {
+    background-color: rgba(0, 0, 0, .8)
 }
 
-.swagger-ui .hover-bg-black-70:focus,.swagger-ui .hover-bg-black-70:hover {
-    background-color: rgba(0,0,0,.7)
+.swagger-ui .hover-bg-black-70:focus, .swagger-ui .hover-bg-black-70:hover {
+    background-color: rgba(0, 0, 0, .7)
 }
 
-.swagger-ui .hover-bg-black-60:focus,.swagger-ui .hover-bg-black-60:hover {
-    background-color: rgba(0,0,0,.6)
+.swagger-ui .hover-bg-black-60:focus, .swagger-ui .hover-bg-black-60:hover {
+    background-color: rgba(0, 0, 0, .6)
 }
 
-.swagger-ui .hover-bg-black-50:focus,.swagger-ui .hover-bg-black-50:hover {
-    background-color: rgba(0,0,0,.5)
+.swagger-ui .hover-bg-black-50:focus, .swagger-ui .hover-bg-black-50:hover {
+    background-color: rgba(0, 0, 0, .5)
 }
 
-.swagger-ui .hover-bg-black-40:focus,.swagger-ui .hover-bg-black-40:hover {
-    background-color: rgba(0,0,0,.4)
+.swagger-ui .hover-bg-black-40:focus, .swagger-ui .hover-bg-black-40:hover {
+    background-color: rgba(0, 0, 0, .4)
 }
 
-.swagger-ui .hover-bg-black-30:focus,.swagger-ui .hover-bg-black-30:hover {
-    background-color: rgba(0,0,0,.3)
+.swagger-ui .hover-bg-black-30:focus, .swagger-ui .hover-bg-black-30:hover {
+    background-color: rgba(0, 0, 0, .3)
 }
 
-.swagger-ui .hover-bg-black-20:focus,.swagger-ui .hover-bg-black-20:hover {
-    background-color: rgba(0,0,0,.2)
+.swagger-ui .hover-bg-black-20:focus, .swagger-ui .hover-bg-black-20:hover {
+    background-color: rgba(0, 0, 0, .2)
 }
 
-.swagger-ui .hover-bg-black-10:focus,.swagger-ui .hover-bg-black-10:hover {
-    background-color: rgba(0,0,0,.1)
+.swagger-ui .hover-bg-black-10:focus, .swagger-ui .hover-bg-black-10:hover {
+    background-color: rgba(0, 0, 0, .1)
 }
 
-.swagger-ui .hover-bg-white-90:focus,.swagger-ui .hover-bg-white-90:hover {
-    background-color: hsla(0,0%,100%,.9)
+.swagger-ui .hover-bg-white-90:focus, .swagger-ui .hover-bg-white-90:hover {
+    background-color: hsla(0, 0%, 100%, .9)
 }
 
-.swagger-ui .hover-bg-white-80:focus,.swagger-ui .hover-bg-white-80:hover {
-    background-color: hsla(0,0%,100%,.8)
+.swagger-ui .hover-bg-white-80:focus, .swagger-ui .hover-bg-white-80:hover {
+    background-color: hsla(0, 0%, 100%, .8)
 }
 
-.swagger-ui .hover-bg-white-70:focus,.swagger-ui .hover-bg-white-70:hover {
-    background-color: hsla(0,0%,100%,.7)
+.swagger-ui .hover-bg-white-70:focus, .swagger-ui .hover-bg-white-70:hover {
+    background-color: hsla(0, 0%, 100%, .7)
 }
 
-.swagger-ui .hover-bg-white-60:focus,.swagger-ui .hover-bg-white-60:hover {
-    background-color: hsla(0,0%,100%,.6)
+.swagger-ui .hover-bg-white-60:focus, .swagger-ui .hover-bg-white-60:hover {
+    background-color: hsla(0, 0%, 100%, .6)
 }
 
-.swagger-ui .hover-bg-white-50:focus,.swagger-ui .hover-bg-white-50:hover {
-    background-color: hsla(0,0%,100%,.5)
+.swagger-ui .hover-bg-white-50:focus, .swagger-ui .hover-bg-white-50:hover {
+    background-color: hsla(0, 0%, 100%, .5)
 }
 
-.swagger-ui .hover-bg-white-40:focus,.swagger-ui .hover-bg-white-40:hover {
-    background-color: hsla(0,0%,100%,.4)
+.swagger-ui .hover-bg-white-40:focus, .swagger-ui .hover-bg-white-40:hover {
+    background-color: hsla(0, 0%, 100%, .4)
 }
 
-.swagger-ui .hover-bg-white-30:focus,.swagger-ui .hover-bg-white-30:hover {
-    background-color: hsla(0,0%,100%,.3)
+.swagger-ui .hover-bg-white-30:focus, .swagger-ui .hover-bg-white-30:hover {
+    background-color: hsla(0, 0%, 100%, .3)
 }
 
-.swagger-ui .hover-bg-white-20:focus,.swagger-ui .hover-bg-white-20:hover {
-    background-color: hsla(0,0%,100%,.2)
+.swagger-ui .hover-bg-white-20:focus, .swagger-ui .hover-bg-white-20:hover {
+    background-color: hsla(0, 0%, 100%, .2)
 }
 
-.swagger-ui .hover-bg-white-10:focus,.swagger-ui .hover-bg-white-10:hover {
-    background-color: hsla(0,0%,100%,.1)
+.swagger-ui .hover-bg-white-10:focus, .swagger-ui .hover-bg-white-10:hover {
+    background-color: hsla(0, 0%, 100%, .1)
 }
 
-.swagger-ui .hover-dark-red:focus,.swagger-ui .hover-dark-red:hover {
+.swagger-ui .hover-dark-red:focus, .swagger-ui .hover-dark-red:hover {
     color: #e7040f
 }
 
-.swagger-ui .hover-red:focus,.swagger-ui .hover-red:hover {
+.swagger-ui .hover-red:focus, .swagger-ui .hover-red:hover {
     color: #ff4136
 }
 
-.swagger-ui .hover-light-red:focus,.swagger-ui .hover-light-red:hover {
+.swagger-ui .hover-light-red:focus, .swagger-ui .hover-light-red:hover {
     color: #ff725c
 }
 
-.swagger-ui .hover-orange:focus,.swagger-ui .hover-orange:hover {
+.swagger-ui .hover-orange:focus, .swagger-ui .hover-orange:hover {
     color: #ff6300
 }
 
-.swagger-ui .hover-gold:focus,.swagger-ui .hover-gold:hover {
+.swagger-ui .hover-gold:focus, .swagger-ui .hover-gold:hover {
     color: #ffb700
 }
 
-.swagger-ui .hover-yellow:focus,.swagger-ui .hover-yellow:hover {
+.swagger-ui .hover-yellow:focus, .swagger-ui .hover-yellow:hover {
     color: gold
 }
 
-.swagger-ui .hover-light-yellow:focus,.swagger-ui .hover-light-yellow:hover {
+.swagger-ui .hover-light-yellow:focus, .swagger-ui .hover-light-yellow:hover {
     color: #fbf1a9
 }
 
-.swagger-ui .hover-purple:focus,.swagger-ui .hover-purple:hover {
+.swagger-ui .hover-purple:focus, .swagger-ui .hover-purple:hover {
     color: #5e2ca5
 }
 
-.swagger-ui .hover-light-purple:focus,.swagger-ui .hover-light-purple:hover {
+.swagger-ui .hover-light-purple:focus, .swagger-ui .hover-light-purple:hover {
     color: #a463f2
 }
 
-.swagger-ui .hover-dark-pink:focus,.swagger-ui .hover-dark-pink:hover {
+.swagger-ui .hover-dark-pink:focus, .swagger-ui .hover-dark-pink:hover {
     color: #d5008f
 }
 
-.swagger-ui .hover-hot-pink:focus,.swagger-ui .hover-hot-pink:hover {
+.swagger-ui .hover-hot-pink:focus, .swagger-ui .hover-hot-pink:hover {
     color: #ff41b4
 }
 
-.swagger-ui .hover-pink:focus,.swagger-ui .hover-pink:hover {
+.swagger-ui .hover-pink:focus, .swagger-ui .hover-pink:hover {
     color: #ff80cc
 }
 
-.swagger-ui .hover-light-pink:focus,.swagger-ui .hover-light-pink:hover {
+.swagger-ui .hover-light-pink:focus, .swagger-ui .hover-light-pink:hover {
     color: #ffa3d7
 }
 
-.swagger-ui .hover-dark-green:focus,.swagger-ui .hover-dark-green:hover {
+.swagger-ui .hover-dark-green:focus, .swagger-ui .hover-dark-green:hover {
     color: #137752
 }
 
-.swagger-ui .hover-green:focus,.swagger-ui .hover-green:hover {
+.swagger-ui .hover-green:focus, .swagger-ui .hover-green:hover {
     color: #19a974
 }
 
-.swagger-ui .hover-light-green:focus,.swagger-ui .hover-light-green:hover {
+.swagger-ui .hover-light-green:focus, .swagger-ui .hover-light-green:hover {
     color: #9eebcf
 }
 
-.swagger-ui .hover-navy:focus,.swagger-ui .hover-navy:hover {
+.swagger-ui .hover-navy:focus, .swagger-ui .hover-navy:hover {
     color: #001b44
 }
 
-.swagger-ui .hover-dark-blue:focus,.swagger-ui .hover-dark-blue:hover {
+.swagger-ui .hover-dark-blue:focus, .swagger-ui .hover-dark-blue:hover {
     color: #00449e
 }
 
-.swagger-ui .hover-blue:focus,.swagger-ui .hover-blue:hover {
+.swagger-ui .hover-blue:focus, .swagger-ui .hover-blue:hover {
     color: #357edd
 }
 
-.swagger-ui .hover-light-blue:focus,.swagger-ui .hover-light-blue:hover {
+.swagger-ui .hover-light-blue:focus, .swagger-ui .hover-light-blue:hover {
     color: #96ccff
 }
 
-.swagger-ui .hover-lightest-blue:focus,.swagger-ui .hover-lightest-blue:hover {
+.swagger-ui .hover-lightest-blue:focus, .swagger-ui .hover-lightest-blue:hover {
     color: #cdecff
 }
 
-.swagger-ui .hover-washed-blue:focus,.swagger-ui .hover-washed-blue:hover {
+.swagger-ui .hover-washed-blue:focus, .swagger-ui .hover-washed-blue:hover {
     color: #f6fffe
 }
 
-.swagger-ui .hover-washed-green:focus,.swagger-ui .hover-washed-green:hover {
+.swagger-ui .hover-washed-green:focus, .swagger-ui .hover-washed-green:hover {
     color: #e8fdf5
 }
 
-.swagger-ui .hover-washed-yellow:focus,.swagger-ui .hover-washed-yellow:hover {
+.swagger-ui .hover-washed-yellow:focus, .swagger-ui .hover-washed-yellow:hover {
     color: #fffceb
 }
 
-.swagger-ui .hover-washed-red:focus,.swagger-ui .hover-washed-red:hover {
+.swagger-ui .hover-washed-red:focus, .swagger-ui .hover-washed-red:hover {
     color: #ffdfdf
 }
 
-.swagger-ui .hover-bg-dark-red:focus,.swagger-ui .hover-bg-dark-red:hover {
+.swagger-ui .hover-bg-dark-red:focus, .swagger-ui .hover-bg-dark-red:hover {
     background-color: #e7040f
 }
 
-.swagger-ui .hover-bg-red:focus,.swagger-ui .hover-bg-red:hover {
+.swagger-ui .hover-bg-red:focus, .swagger-ui .hover-bg-red:hover {
     background-color: #ff4136
 }
 
-.swagger-ui .hover-bg-light-red:focus,.swagger-ui .hover-bg-light-red:hover {
+.swagger-ui .hover-bg-light-red:focus, .swagger-ui .hover-bg-light-red:hover {
     background-color: #ff725c
 }
 
-.swagger-ui .hover-bg-orange:focus,.swagger-ui .hover-bg-orange:hover {
+.swagger-ui .hover-bg-orange:focus, .swagger-ui .hover-bg-orange:hover {
     background-color: #ff6300
 }
 
-.swagger-ui .hover-bg-gold:focus,.swagger-ui .hover-bg-gold:hover {
+.swagger-ui .hover-bg-gold:focus, .swagger-ui .hover-bg-gold:hover {
     background-color: #ffb700
 }
 
-.swagger-ui .hover-bg-yellow:focus,.swagger-ui .hover-bg-yellow:hover {
+.swagger-ui .hover-bg-yellow:focus, .swagger-ui .hover-bg-yellow:hover {
     background-color: gold
 }
 
-.swagger-ui .hover-bg-light-yellow:focus,.swagger-ui .hover-bg-light-yellow:hover {
+.swagger-ui .hover-bg-light-yellow:focus, .swagger-ui .hover-bg-light-yellow:hover {
     background-color: #fbf1a9
 }
 
-.swagger-ui .hover-bg-purple:focus,.swagger-ui .hover-bg-purple:hover {
+.swagger-ui .hover-bg-purple:focus, .swagger-ui .hover-bg-purple:hover {
     background-color: #5e2ca5
 }
 
-.swagger-ui .hover-bg-light-purple:focus,.swagger-ui .hover-bg-light-purple:hover {
+.swagger-ui .hover-bg-light-purple:focus, .swagger-ui .hover-bg-light-purple:hover {
     background-color: #a463f2
 }
 
-.swagger-ui .hover-bg-dark-pink:focus,.swagger-ui .hover-bg-dark-pink:hover {
+.swagger-ui .hover-bg-dark-pink:focus, .swagger-ui .hover-bg-dark-pink:hover {
     background-color: #d5008f
 }
 
-.swagger-ui .hover-bg-hot-pink:focus,.swagger-ui .hover-bg-hot-pink:hover {
+.swagger-ui .hover-bg-hot-pink:focus, .swagger-ui .hover-bg-hot-pink:hover {
     background-color: #ff41b4
 }
 
-.swagger-ui .hover-bg-pink:focus,.swagger-ui .hover-bg-pink:hover {
+.swagger-ui .hover-bg-pink:focus, .swagger-ui .hover-bg-pink:hover {
     background-color: #ff80cc
 }
 
-.swagger-ui .hover-bg-light-pink:focus,.swagger-ui .hover-bg-light-pink:hover {
+.swagger-ui .hover-bg-light-pink:focus, .swagger-ui .hover-bg-light-pink:hover {
     background-color: #ffa3d7
 }
 
-.swagger-ui .hover-bg-dark-green:focus,.swagger-ui .hover-bg-dark-green:hover {
+.swagger-ui .hover-bg-dark-green:focus, .swagger-ui .hover-bg-dark-green:hover {
     background-color: #137752
 }
 
-.swagger-ui .hover-bg-green:focus,.swagger-ui .hover-bg-green:hover {
+.swagger-ui .hover-bg-green:focus, .swagger-ui .hover-bg-green:hover {
     background-color: #19a974
 }
 
-.swagger-ui .hover-bg-light-green:focus,.swagger-ui .hover-bg-light-green:hover {
+.swagger-ui .hover-bg-light-green:focus, .swagger-ui .hover-bg-light-green:hover {
     background-color: #9eebcf
 }
 
-.swagger-ui .hover-bg-navy:focus,.swagger-ui .hover-bg-navy:hover {
+.swagger-ui .hover-bg-navy:focus, .swagger-ui .hover-bg-navy:hover {
     background-color: #001b44
 }
 
-.swagger-ui .hover-bg-dark-blue:focus,.swagger-ui .hover-bg-dark-blue:hover {
+.swagger-ui .hover-bg-dark-blue:focus, .swagger-ui .hover-bg-dark-blue:hover {
     background-color: #00449e
 }
 
-.swagger-ui .hover-bg-blue:focus,.swagger-ui .hover-bg-blue:hover {
+.swagger-ui .hover-bg-blue:focus, .swagger-ui .hover-bg-blue:hover {
     background-color: #357edd
 }
 
-.swagger-ui .hover-bg-light-blue:focus,.swagger-ui .hover-bg-light-blue:hover {
+.swagger-ui .hover-bg-light-blue:focus, .swagger-ui .hover-bg-light-blue:hover {
     background-color: #96ccff
 }
 
-.swagger-ui .hover-bg-lightest-blue:focus,.swagger-ui .hover-bg-lightest-blue:hover {
+.swagger-ui .hover-bg-lightest-blue:focus, .swagger-ui .hover-bg-lightest-blue:hover {
     background-color: #cdecff
 }
 
-.swagger-ui .hover-bg-washed-blue:focus,.swagger-ui .hover-bg-washed-blue:hover {
+.swagger-ui .hover-bg-washed-blue:focus, .swagger-ui .hover-bg-washed-blue:hover {
     background-color: #f6fffe
 }
 
-.swagger-ui .hover-bg-washed-green:focus,.swagger-ui .hover-bg-washed-green:hover {
+.swagger-ui .hover-bg-washed-green:focus, .swagger-ui .hover-bg-washed-green:hover {
     background-color: #e8fdf5
 }
 
-.swagger-ui .hover-bg-washed-yellow:focus,.swagger-ui .hover-bg-washed-yellow:hover {
+.swagger-ui .hover-bg-washed-yellow:focus, .swagger-ui .hover-bg-washed-yellow:hover {
     background-color: #fffceb
 }
 
-.swagger-ui .hover-bg-washed-red:focus,.swagger-ui .hover-bg-washed-red:hover {
+.swagger-ui .hover-bg-washed-red:focus, .swagger-ui .hover-bg-washed-red:hover {
     background-color: #ffdfdf
 }
 
-.swagger-ui .hover-bg-inherit:focus,.swagger-ui .hover-bg-inherit:hover {
+.swagger-ui .hover-bg-inherit:focus, .swagger-ui .hover-bg-inherit:hover {
     background-color: inherit
 }
 
@@ -6076,7 +6077,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .pa0-ns {
-        padding:0
+        padding: 0
     }
 
     .swagger-ui .pa1-ns {
@@ -6556,9 +6557,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .pa0-m {
-        padding:0
+        padding: 0
     }
 
     .swagger-ui .pa1-m {
@@ -7040,7 +7041,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .pa0-l {
-        padding:0
+        padding: 0
     }
 
     .swagger-ui .pa1-l {
@@ -7662,7 +7663,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .na1-ns {
-        margin:-.25rem
+        margin: -.25rem
     }
 
     .swagger-ui .na2-ns {
@@ -7802,9 +7803,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .na1-m {
-        margin:-.25rem
+        margin: -.25rem
     }
 
     .swagger-ui .na2-m {
@@ -7946,7 +7947,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .na1-l {
-        margin:-.25rem
+        margin: -.25rem
     }
 
     .swagger-ui .na2-l {
@@ -8108,11 +8109,11 @@
 }
 
 .swagger-ui .stripe-light:nth-child(odd) {
-    background-color: hsla(0,0%,100%,.1)
+    background-color: hsla(0, 0%, 100%, .1)
 }
 
 .swagger-ui .stripe-dark:nth-child(odd) {
-    background-color: rgba(0,0,0,.1)
+    background-color: rgba(0, 0, 0, .1)
 }
 
 .swagger-ui .strike {
@@ -8129,7 +8130,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .strike-ns {
-        text-decoration:line-through
+        text-decoration: line-through
     }
 
     .swagger-ui .underline-ns {
@@ -8141,9 +8142,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .strike-m {
-        text-decoration:line-through
+        text-decoration: line-through
     }
 
     .swagger-ui .underline-m {
@@ -8157,7 +8158,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .strike-l {
-        text-decoration:line-through
+        text-decoration: line-through
     }
 
     .swagger-ui .underline-l {
@@ -8187,7 +8188,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .tl-ns {
-        text-align:left
+        text-align: left
     }
 
     .swagger-ui .tr-ns {
@@ -8203,9 +8204,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .tl-m {
-        text-align:left
+        text-align: left
     }
 
     .swagger-ui .tr-m {
@@ -8223,7 +8224,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .tl-l {
-        text-align:left
+        text-align: left
     }
 
     .swagger-ui .tr-l {
@@ -8257,7 +8258,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .ttc-ns {
-        text-transform:capitalize
+        text-transform: capitalize
     }
 
     .swagger-ui .ttl-ns {
@@ -8273,9 +8274,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .ttc-m {
-        text-transform:capitalize
+        text-transform: capitalize
     }
 
     .swagger-ui .ttl-m {
@@ -8293,7 +8294,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .ttc-l {
-        text-transform:capitalize
+        text-transform: capitalize
     }
 
     .swagger-ui .ttl-l {
@@ -8309,11 +8310,11 @@
     }
 }
 
-.swagger-ui .f-6,.swagger-ui .f-headline {
+.swagger-ui .f-6, .swagger-ui .f-headline {
     font-size: 6rem
 }
 
-.swagger-ui .f-5,.swagger-ui .f-subheadline {
+.swagger-ui .f-5, .swagger-ui .f-subheadline {
     font-size: 5rem
 }
 
@@ -8346,11 +8347,11 @@
 }
 
 @media screen and (min-width: 30em) {
-    .swagger-ui .f-6-ns,.swagger-ui .f-headline-ns {
-        font-size:6rem
+    .swagger-ui .f-6-ns, .swagger-ui .f-headline-ns {
+        font-size: 6rem
     }
 
-    .swagger-ui .f-5-ns,.swagger-ui .f-subheadline-ns {
+    .swagger-ui .f-5-ns, .swagger-ui .f-subheadline-ns {
         font-size: 5rem
     }
 
@@ -8383,12 +8384,12 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
-    .swagger-ui .f-6-m,.swagger-ui .f-headline-m {
-        font-size:6rem
+@media screen and (min-width: 30em) and (max-width: 60em) {
+    .swagger-ui .f-6-m, .swagger-ui .f-headline-m {
+        font-size: 6rem
     }
 
-    .swagger-ui .f-5-m,.swagger-ui .f-subheadline-m {
+    .swagger-ui .f-5-m, .swagger-ui .f-subheadline-m {
         font-size: 5rem
     }
 
@@ -8422,11 +8423,11 @@
 }
 
 @media screen and (min-width: 60em) {
-    .swagger-ui .f-6-l,.swagger-ui .f-headline-l {
-        font-size:6rem
+    .swagger-ui .f-6-l, .swagger-ui .f-headline-l {
+        font-size: 6rem
     }
 
-    .swagger-ui .f-5-l,.swagger-ui .f-subheadline-l {
+    .swagger-ui .f-5-l, .swagger-ui .f-subheadline-l {
         font-size: 5rem
     }
 
@@ -8490,7 +8491,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .measure-ns {
-        max-width:30em
+        max-width: 30em
     }
 
     .swagger-ui .measure-wide-ns {
@@ -8519,9 +8520,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .measure-m {
-        max-width:30em
+        max-width: 30em
     }
 
     .swagger-ui .measure-wide-m {
@@ -8552,7 +8553,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .measure-l {
-        max-width:30em
+        max-width: 30em
     }
 
     .swagger-ui .measure-wide-l {
@@ -8600,7 +8601,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .center-ns {
-        margin-left:auto;
+        margin-left: auto;
         margin-right: auto
     }
 
@@ -8613,9 +8614,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .center-m {
-        margin-left:auto;
+        margin-left: auto;
         margin-right: auto
     }
 
@@ -8630,7 +8631,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .center-l {
-        margin-left:auto;
+        margin-left: auto;
         margin-right: auto
     }
 
@@ -8645,35 +8646,35 @@
 
 .swagger-ui .clip {
     clip: rect(1px 1px 1px 1px);
-    clip: rect(1px,1px,1px,1px);
-    position: fixed!important;
-    _position: absolute!important
+    clip: rect(1px, 1px, 1px, 1px);
+    position: fixed !important;
+    _position: absolute !important
 }
 
 @media screen and (min-width: 30em) {
     .swagger-ui .clip-ns {
-        clip:rect(1px 1px 1px 1px);
-        clip: rect(1px,1px,1px,1px);
-        position: fixed!important;
-        _position: absolute!important
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        position: fixed !important;
+        _position: absolute !important
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .clip-m {
-        clip:rect(1px 1px 1px 1px);
-        clip: rect(1px,1px,1px,1px);
-        position: fixed!important;
-        _position: absolute!important
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        position: fixed !important;
+        _position: absolute !important
     }
 }
 
 @media screen and (min-width: 60em) {
     .swagger-ui .clip-l {
-        clip:rect(1px 1px 1px 1px);
-        clip: rect(1px,1px,1px,1px);
-        position: fixed!important;
-        _position: absolute!important
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        position: fixed !important;
+        _position: absolute !important
     }
 }
 
@@ -8691,7 +8692,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .ws-normal-ns {
-        white-space:normal
+        white-space: normal
     }
 
     .swagger-ui .nowrap-ns {
@@ -8703,9 +8704,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .ws-normal-m {
-        white-space:normal
+        white-space: normal
     }
 
     .swagger-ui .nowrap-m {
@@ -8719,7 +8720,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .ws-normal-l {
-        white-space:normal
+        white-space: normal
     }
 
     .swagger-ui .nowrap-l {
@@ -8749,7 +8750,7 @@
 
 @media screen and (min-width: 30em) {
     .swagger-ui .v-base-ns {
-        vertical-align:baseline
+        vertical-align: baseline
     }
 
     .swagger-ui .v-mid-ns {
@@ -8765,9 +8766,9 @@
     }
 }
 
-@media screen and (min-width: 30em) and (max-width:60em) {
+@media screen and (min-width: 30em) and (max-width: 60em) {
     .swagger-ui .v-base-m {
-        vertical-align:baseline
+        vertical-align: baseline
     }
 
     .swagger-ui .v-mid-m {
@@ -8785,7 +8786,7 @@
 
 @media screen and (min-width: 60em) {
     .swagger-ui .v-base-l {
-        vertical-align:baseline
+        vertical-align: baseline
     }
 
     .swagger-ui .v-mid-l {
@@ -8806,7 +8807,7 @@
     transition: opacity .15s ease-in
 }
 
-.swagger-ui .dim:focus,.swagger-ui .dim:hover {
+.swagger-ui .dim:focus, .swagger-ui .dim:hover {
     opacity: .5;
     transition: opacity .15s ease-in
 }
@@ -8820,7 +8821,7 @@
     transition: opacity .15s ease-in
 }
 
-.swagger-ui .glow:focus,.swagger-ui .glow:hover {
+.swagger-ui .glow:focus, .swagger-ui .glow:hover {
     opacity: 1;
     transition: opacity .15s ease-in
 }
@@ -8830,12 +8831,12 @@
     transition: opacity .15s ease-in
 }
 
-.swagger-ui .hide-child:active .child,.swagger-ui .hide-child:focus .child,.swagger-ui .hide-child:hover .child {
+.swagger-ui .hide-child:active .child, .swagger-ui .hide-child:focus .child, .swagger-ui .hide-child:hover .child {
     opacity: 1;
     transition: opacity .15s ease-in
 }
 
-.swagger-ui .underline-hover:focus,.swagger-ui .underline-hover:hover {
+.swagger-ui .underline-hover:focus, .swagger-ui .underline-hover:hover {
     text-decoration: underline
 }
 
@@ -8847,7 +8848,7 @@
     transition: transform .25s ease-out
 }
 
-.swagger-ui .grow:focus,.swagger-ui .grow:hover {
+.swagger-ui .grow:focus, .swagger-ui .grow:hover {
     transform: scale(1.05)
 }
 
@@ -8863,7 +8864,7 @@
     transition: transform .25s ease-in-out
 }
 
-.swagger-ui .grow-large:focus,.swagger-ui .grow-large:hover {
+.swagger-ui .grow-large:focus, .swagger-ui .grow-large:hover {
     transform: scale(1.2)
 }
 
@@ -8878,28 +8879,28 @@
 .swagger-ui .shadow-hover {
     cursor: pointer;
     position: relative;
-    transition: all .5s cubic-bezier(.165,.84,.44,1)
+    transition: all .5s cubic-bezier(.165, .84, .44, 1)
 }
 
 .swagger-ui .shadow-hover:after {
     border-radius: inherit;
-    box-shadow: 0 0 16px 2px rgba(0,0,0,.2);
+    box-shadow: 0 0 16px 2px rgba(0, 0, 0, .2);
     content: "";
     height: 100%;
     left: 0;
     opacity: 0;
     position: absolute;
     top: 0;
-    transition: opacity .5s cubic-bezier(.165,.84,.44,1);
+    transition: opacity .5s cubic-bezier(.165, .84, .44, 1);
     width: 100%;
     z-index: -1
 }
 
-.swagger-ui .shadow-hover:focus:after,.swagger-ui .shadow-hover:hover:after {
+.swagger-ui .shadow-hover:focus:after, .swagger-ui .shadow-hover:hover:after {
     opacity: 1
 }
 
-.swagger-ui .bg-animate,.swagger-ui .bg-animate:focus,.swagger-ui .bg-animate:hover {
+.swagger-ui .bg-animate, .swagger-ui .bg-animate:focus, .swagger-ui .bg-animate:hover {
     transition: background-color .15s ease-in-out
 }
 
@@ -8951,27 +8952,27 @@
     z-index: unset
 }
 
-.swagger-ui .nested-copy-line-height ol,.swagger-ui .nested-copy-line-height p,.swagger-ui .nested-copy-line-height ul {
+.swagger-ui .nested-copy-line-height ol, .swagger-ui .nested-copy-line-height p, .swagger-ui .nested-copy-line-height ul {
     line-height: 1.5
 }
 
-.swagger-ui .nested-headline-line-height h1,.swagger-ui .nested-headline-line-height h2,.swagger-ui .nested-headline-line-height h3,.swagger-ui .nested-headline-line-height h4,.swagger-ui .nested-headline-line-height h5,.swagger-ui .nested-headline-line-height h6 {
+.swagger-ui .nested-headline-line-height h1, .swagger-ui .nested-headline-line-height h2, .swagger-ui .nested-headline-line-height h3, .swagger-ui .nested-headline-line-height h4, .swagger-ui .nested-headline-line-height h5, .swagger-ui .nested-headline-line-height h6 {
     line-height: 1.25
 }
 
-.swagger-ui .nested-list-reset ol,.swagger-ui .nested-list-reset ul {
+.swagger-ui .nested-list-reset ol, .swagger-ui .nested-list-reset ul {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0
 }
 
-.swagger-ui .nested-copy-indent p+p {
+.swagger-ui .nested-copy-indent p + p {
     margin-bottom: 0;
     margin-top: 0;
     text-indent: .1em
 }
 
-.swagger-ui .nested-copy-seperator p+p {
+.swagger-ui .nested-copy-seperator p + p {
     margin-top: 1.5em
 }
 
@@ -8986,7 +8987,7 @@
     transition: color .15s ease-in
 }
 
-.swagger-ui .nested-links a:focus,.swagger-ui .nested-links a:hover {
+.swagger-ui .nested-links a:focus, .swagger-ui .nested-links a:hover {
     color: #96ccff;
     transition: color .15s ease-in
 }
@@ -9016,7 +9017,7 @@
 
 .swagger-ui .opblock-tag {
     align-items: center;
-    border-bottom: 1px solid rgba(59,65,81,.3);
+    border-bottom: 1px solid rgba(59, 65, 81, .3);
     cursor: pointer;
     display: flex;
     padding: 10px 20px 10px 10px;
@@ -9024,7 +9025,7 @@
 }
 
 .swagger-ui .opblock-tag:hover {
-    background: rgba(0,0,0,.02)
+    background: rgba(0, 0, 0, .02)
 }
 
 .swagger-ui .opblock-tag {
@@ -9117,7 +9118,7 @@
 .swagger-ui .opblock {
     border: 1px solid #000;
     border-radius: 4px;
-    box-shadow: 0 0 3px rgba(0,0,0,.19);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .19);
     margin: 0 0 15px
 }
 
@@ -9156,14 +9157,14 @@
 
 .swagger-ui .opblock .opblock-section-header {
     align-items: center;
-    background: hsla(0,0%,100%,.8);
-    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    background: hsla(0, 0%, 100%, .8);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     display: flex;
     min-height: 50px;
     padding: 8px 20px
 }
 
-.swagger-ui .opblock .opblock-section-header>label {
+.swagger-ui .opblock .opblock-section-header > label {
     align-items: center;
     color: #3b4151;
     display: flex;
@@ -9173,7 +9174,7 @@
     margin: 0 0 0 auto
 }
 
-.swagger-ui .opblock .opblock-section-header>label>span {
+.swagger-ui .opblock .opblock-section-header > label > span {
     padding: 0 10px 0 0
 }
 
@@ -9195,10 +9196,10 @@
     min-width: 80px;
     padding: 6px 15px;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(0,0,0,.1)
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1)
 }
 
-.swagger-ui .opblock .opblock-summary-operation-id,.swagger-ui .opblock .opblock-summary-path,.swagger-ui .opblock .opblock-summary-path__deprecated {
+.swagger-ui .opblock .opblock-summary-operation-id, .swagger-ui .opblock .opblock-summary-path, .swagger-ui .opblock .opblock-summary-path__deprecated {
     align-items: center;
     color: #3b4151;
     display: flex;
@@ -9210,8 +9211,8 @@
 }
 
 @media (max-width: 768px) {
-    .swagger-ui .opblock .opblock-summary-operation-id,.swagger-ui .opblock .opblock-summary-path,.swagger-ui .opblock .opblock-summary-path__deprecated {
-        font-size:12px
+    .swagger-ui .opblock .opblock-summary-operation-id, .swagger-ui .opblock .opblock-summary-path, .swagger-ui .opblock .opblock-summary-path__deprecated {
+        font-size: 12px
     }
 }
 
@@ -9258,7 +9259,7 @@
 }
 
 .swagger-ui .opblock.opblock-post {
-    background: rgba(73,204,144,.1);
+    background: rgba(73, 204, 144, .1);
     border-color: #49cc90
 }
 
@@ -9275,7 +9276,7 @@
 }
 
 .swagger-ui .opblock.opblock-put {
-    background: rgba(252,161,48,.1);
+    background: rgba(252, 161, 48, .1);
     border-color: #fca130
 }
 
@@ -9292,7 +9293,7 @@
 }
 
 .swagger-ui .opblock.opblock-delete {
-    background: rgba(249,62,62,.1);
+    background: rgba(249, 62, 62, .1);
     border-color: #f93e3e
 }
 
@@ -9309,7 +9310,7 @@
 }
 
 .swagger-ui .opblock.opblock-get {
-    background: rgba(97,175,254,.1);
+    background: rgba(97, 175, 254, .1);
     border-color: #61affe
 }
 
@@ -9326,7 +9327,7 @@
 }
 
 .swagger-ui .opblock.opblock-patch {
-    background: rgba(80,227,194,.1);
+    background: rgba(80, 227, 194, .1);
     border-color: #50e3c2
 }
 
@@ -9343,7 +9344,7 @@
 }
 
 .swagger-ui .opblock.opblock-head {
-    background: rgba(144,18,254,.1);
+    background: rgba(144, 18, 254, .1);
     border-color: #9012fe
 }
 
@@ -9360,7 +9361,7 @@
 }
 
 .swagger-ui .opblock.opblock-options {
-    background: rgba(13,90,167,.1);
+    background: rgba(13, 90, 167, .1);
     border-color: #0d5aa7
 }
 
@@ -9377,7 +9378,7 @@
 }
 
 .swagger-ui .opblock.opblock-deprecated {
-    background: hsla(0,0%,92%,.1);
+    background: hsla(0, 0%, 92%, .1);
     border-color: #ebebeb;
     opacity: .6
 }
@@ -9409,11 +9410,11 @@
     width: 100%
 }
 
-.swagger-ui .download-url-wrapper .failed,.swagger-ui .filter .failed {
+.swagger-ui .download-url-wrapper .failed, .swagger-ui .filter .failed {
     color: red
 }
 
-.swagger-ui .download-url-wrapper .loading,.swagger-ui .filter .loading {
+.swagger-ui .download-url-wrapper .loading, .swagger-ui .filter .loading {
     color: #aaa
 }
 
@@ -9443,7 +9444,7 @@
 }
 
 .swagger-ui .tab li:first-of-type:after {
-    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
     content: "";
     height: 100%;
     position: absolute;
@@ -9456,7 +9457,7 @@
     font-weight: 700
 }
 
-.swagger-ui .opblock-description-wrapper,.swagger-ui .opblock-external-docs-wrapper,.swagger-ui .opblock-title_normal {
+.swagger-ui .opblock-description-wrapper, .swagger-ui .opblock-external-docs-wrapper, .swagger-ui .opblock-title_normal {
     color: #3b4151;
     font-family: sans-serif;
     font-size: 12px;
@@ -9464,14 +9465,14 @@
     padding: 15px 20px
 }
 
-.swagger-ui .opblock-description-wrapper h4,.swagger-ui .opblock-external-docs-wrapper h4,.swagger-ui .opblock-title_normal h4 {
+.swagger-ui .opblock-description-wrapper h4, .swagger-ui .opblock-external-docs-wrapper h4, .swagger-ui .opblock-title_normal h4 {
     color: #3b4151;
     font-family: sans-serif;
     font-size: 12px;
     margin: 0 0 5px
 }
 
-.swagger-ui .opblock-description-wrapper p,.swagger-ui .opblock-external-docs-wrapper p,.swagger-ui .opblock-title_normal p {
+.swagger-ui .opblock-description-wrapper p, .swagger-ui .opblock-external-docs-wrapper p, .swagger-ui .opblock-title_normal p {
     color: #3b4151;
     font-family: sans-serif;
     font-size: 14px;
@@ -9513,7 +9514,7 @@
     padding: 20px
 }
 
-.swagger-ui .responses-inner h4,.swagger-ui .responses-inner h5 {
+.swagger-ui .responses-inner h4, .swagger-ui .responses-inner h5 {
     color: #3b4151;
     font-family: sans-serif;
     font-size: 12px;
@@ -9591,14 +9592,14 @@
     position: relative
 }
 
-.swagger-ui .highlight-code>.microlight {
+.swagger-ui .highlight-code > .microlight {
     max-height: 400px;
     min-height: 6em;
     overflow-y: auto
 }
 
-.swagger-ui .highlight-code>.microlight code {
-    white-space: pre-wrap!important;
+.swagger-ui .highlight-code > .microlight code {
+    white-space: pre-wrap !important;
     word-break: break-all
 }
 
@@ -9624,7 +9625,7 @@
 
 .swagger-ui .scheme-container {
     background: #fff;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15);
     margin: 0 0 20px;
     padding: 30px 0
 }
@@ -9634,7 +9635,7 @@
     display: flex
 }
 
-.swagger-ui .scheme-container .schemes>label {
+.swagger-ui .scheme-container .schemes > label {
     color: #3b4151;
     display: flex;
     flex-direction: column;
@@ -9644,7 +9645,7 @@
     margin: -20px 15px 0 0
 }
 
-.swagger-ui .scheme-container .schemes>label select {
+.swagger-ui .scheme-container .schemes > label select {
     min-width: 130px;
     text-transform: uppercase
 }
@@ -9673,17 +9674,17 @@
     position: absolute;
     text-transform: uppercase;
     top: 50%;
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%)
 }
 
 .swagger-ui .loading-container .loading:before {
-    -webkit-animation: rotation 1s linear infinite,opacity .5s;
-    animation: rotation 1s linear infinite,opacity .5s;
+    -webkit-animation: rotation 1s linear infinite, opacity .5s;
+    animation: rotation 1s linear infinite, opacity .5s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 2px solid rgba(85,85,85,.1);
+    border: 2px solid rgba(85, 85, 85, .1);
     border-radius: 100%;
-    border-top-color: rgba(0,0,0,.6);
+    border-top-color: rgba(0, 0, 0, .6);
     content: "";
     display: block;
     height: 60px;
@@ -9725,7 +9726,7 @@
     font-size: .7em
 }
 
-.swagger-ui .response-control-examples__title,.swagger-ui .response-control-media-type__title {
+.swagger-ui .response-control-examples__title, .swagger-ui .response-control-media-type__title {
     display: block;
     font-size: .7em;
     margin-bottom: .2em
@@ -9773,7 +9774,7 @@
     display: inline
 }
 
-.swagger-ui a.nostyle,.swagger-ui a.nostyle:visited {
+.swagger-ui a.nostyle, .swagger-ui a.nostyle:visited {
     color: inherit;
     cursor: pointer;
     text-decoration: inherit
@@ -9799,7 +9800,7 @@
     text-align: center
 }
 
-.swagger-ui .version-pragma__message>div {
+.swagger-ui .version-pragma__message > div {
     flex: 1;
     max-width: 55ch
 }
@@ -9831,7 +9832,7 @@
     background: transparent;
     border: 2px solid grey;
     border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     color: #3b4151;
     font-family: sans-serif;
     font-size: 14px;
@@ -9851,7 +9852,7 @@
 }
 
 .swagger-ui .btn:hover {
-    box-shadow: 0 0 5px rgba(0,0,0,.3)
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3)
 }
 
 .swagger-ui .btn.cancel {
@@ -9915,7 +9916,7 @@
     opacity: .4
 }
 
-.swagger-ui .model-box-control,.swagger-ui .models-control,.swagger-ui .opblock-summary-control {
+.swagger-ui .model-box-control, .swagger-ui .models-control, .swagger-ui .opblock-summary-control {
     all: inherit;
     border-bottom: 0;
     cursor: pointer;
@@ -9923,16 +9924,16 @@
     padding: 0
 }
 
-.swagger-ui .model-box-control:focus,.swagger-ui .models-control:focus,.swagger-ui .opblock-summary-control:focus {
+.swagger-ui .model-box-control:focus, .swagger-ui .models-control:focus, .swagger-ui .opblock-summary-control:focus {
     outline: auto
 }
 
-.swagger-ui .expand-methods,.swagger-ui .expand-operation {
+.swagger-ui .expand-methods, .swagger-ui .expand-operation {
     background: none;
     border: none
 }
 
-.swagger-ui .expand-methods svg,.swagger-ui .expand-operation svg {
+.swagger-ui .expand-methods svg, .swagger-ui .expand-operation svg {
     height: 20px;
     width: 20px
 }
@@ -9999,7 +10000,7 @@
     background-size: 20px;
     border: 2px solid #41444e;
     border-radius: 4px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.25);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .25);
     color: #3b4151;
     font-family: sans-serif;
     font-size: 14px;
@@ -10026,7 +10027,7 @@
 
 @media (max-width: 768px) {
     .swagger-ui .opblock-body select {
-        min-width:180px
+        min-width: 180px
     }
 }
 
@@ -10039,12 +10040,12 @@
 }
 
 @media (max-width: 768px) {
-    .swagger-ui input[type=email],.swagger-ui input[type=file],.swagger-ui input[type=password],.swagger-ui input[type=search],.swagger-ui input[type=text] {
-        max-width:175px
+    .swagger-ui input[type=email], .swagger-ui input[type=file], .swagger-ui input[type=password], .swagger-ui input[type=search], .swagger-ui input[type=text] {
+        max-width: 175px
     }
 }
 
-.swagger-ui input[type=email],.swagger-ui input[type=file],.swagger-ui input[type=password],.swagger-ui input[type=search],.swagger-ui input[type=text],.swagger-ui textarea {
+.swagger-ui input[type=email], .swagger-ui input[type=file], .swagger-ui input[type=password], .swagger-ui input[type=search], .swagger-ui input[type=text], .swagger-ui textarea {
     background: #fff;
     border: 1px solid #d9d9d9;
     border-radius: 4px;
@@ -10053,14 +10054,14 @@
     padding: 8px 10px
 }
 
-.swagger-ui input[type=email].invalid,.swagger-ui input[type=file].invalid,.swagger-ui input[type=password].invalid,.swagger-ui input[type=search].invalid,.swagger-ui input[type=text].invalid,.swagger-ui textarea.invalid {
+.swagger-ui input[type=email].invalid, .swagger-ui input[type=file].invalid, .swagger-ui input[type=password].invalid, .swagger-ui input[type=search].invalid, .swagger-ui input[type=text].invalid, .swagger-ui textarea.invalid {
     -webkit-animation: shake .4s 1;
     animation: shake .4s 1;
     background: #feebeb;
     border-color: #f93e3e
 }
 
-.swagger-ui input[disabled],.swagger-ui select[disabled],.swagger-ui textarea[disabled] {
+.swagger-ui input[disabled], .swagger-ui select[disabled], .swagger-ui textarea[disabled] {
     background-color: #fafafa;
     color: #888;
     cursor: not-allowed
@@ -10076,43 +10077,43 @@
 }
 
 @-webkit-keyframes shake {
-    10%,90% {
-        transform: translate3d(-1px,0,0)
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0)
     }
 
-    20%,80% {
-        transform: translate3d(2px,0,0)
+    20%, 80% {
+        transform: translate3d(2px, 0, 0)
     }
 
-    30%,50%,70% {
-        transform: translate3d(-4px,0,0)
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0)
     }
 
-    40%,60% {
-        transform: translate3d(4px,0,0)
+    40%, 60% {
+        transform: translate3d(4px, 0, 0)
     }
 }
 
 @keyframes shake {
-    10%,90% {
-        transform: translate3d(-1px,0,0)
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0)
     }
 
-    20%,80% {
-        transform: translate3d(2px,0,0)
+    20%, 80% {
+        transform: translate3d(2px, 0, 0)
     }
 
-    30%,50%,70% {
-        transform: translate3d(-4px,0,0)
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0)
     }
 
-    40%,60% {
-        transform: translate3d(4px,0,0)
+    40%, 60% {
+        transform: translate3d(4px, 0, 0)
     }
 }
 
 .swagger-ui textarea {
-    background: hsla(0,0%,100%,.8);
+    background: hsla(0, 0%, 100%, .8);
     border: none;
     border-radius: 4px;
     color: #3b4151;
@@ -10156,16 +10157,16 @@
     color: #3b4151;
     font-family: monospace;
     font-style: italic;
-    font-weight: 400!important;
+    font-weight: 400 !important;
     font-weight: 600;
-    margin: 0!important
+    margin: 0 !important
 }
 
 .swagger-ui .checkbox input[type=checkbox] {
     display: none
 }
 
-.swagger-ui .checkbox input[type=checkbox]+label>.item {
+.swagger-ui .checkbox input[type=checkbox] + label > .item {
     background: #e8e8e8;
     border-radius: 1px;
     box-shadow: 0 0 0 2px #e8e8e8;
@@ -10180,11 +10181,11 @@
     width: 16px
 }
 
-.swagger-ui .checkbox input[type=checkbox]+label>.item:active {
+.swagger-ui .checkbox input[type=checkbox] + label > .item:active {
     transform: scale(.9)
 }
 
-.swagger-ui .checkbox input[type=checkbox]:checked+label>.item {
+.swagger-ui .checkbox input[type=checkbox]:checked + label > .item {
     background: #e8e8e8 url('data:image/svg+xml;charset=utf-8,<svg width="10" height="8" viewBox="3 7 10 8" xmlns="http://www.w3.org/2000/svg"><path fill="%2341474E" fill-rule="evenodd" d="M6.333 15 3 11.667l1.333-1.334 2 2L11.667 7 13 8.333z"/></svg>') 50% no-repeat
 }
 
@@ -10198,7 +10199,7 @@
 }
 
 .swagger-ui .dialog-ux .backdrop-ux {
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
     bottom: 0;
     left: 0;
     position: fixed;
@@ -10210,13 +10211,13 @@
     background: #fff;
     border: 1px solid #ebebeb;
     border-radius: 4px;
-    box-shadow: 0 10px 30px 0 rgba(0,0,0,.2);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .2);
     left: 50%;
     max-width: 650px;
     min-width: 300px;
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 100%;
     z-index: 9999
 }
@@ -10277,11 +10278,11 @@
     font-weight: 600
 }
 
-.swagger-ui .model .deprecated span,.swagger-ui .model .deprecated td {
-    color: #a0a0a0!important
+.swagger-ui .model .deprecated span, .swagger-ui .model .deprecated td {
+    color: #a0a0a0 !important
 }
 
-.swagger-ui .model .deprecated>td:first-of-type {
+.swagger-ui .model .deprecated > td:first-of-type {
     text-decoration: line-through
 }
 
@@ -10330,7 +10331,7 @@
 }
 
 .swagger-ui .model-hint {
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
     border-radius: 4px;
     color: #ebebeb;
     padding: .1em .5em;
@@ -10358,7 +10359,7 @@
     font-weight: 400
 }
 
-.swagger-ui table.model tr.description td:first-child,.swagger-ui table.model tr.property-row.required td:first-child {
+.swagger-ui table.model tr.description td:first-child, .swagger-ui table.model tr.property-row.required td:first-child {
     font-weight: 700
 }
 
@@ -10383,7 +10384,7 @@
 }
 
 .swagger-ui section.models {
-    border: 1px solid rgba(59,65,81,.3);
+    border: 1px solid rgba(59, 65, 81, .3);
     border-radius: 4px;
     margin: 30px 0
 }
@@ -10397,7 +10398,7 @@
 }
 
 .swagger-ui section.models.is-open h4 {
-    border-bottom: 1px solid rgba(59,65,81,.3);
+    border-bottom: 1px solid rgba(59, 65, 81, .3);
     margin: 0 0 5px
 }
 
@@ -10422,7 +10423,7 @@
 }
 
 .swagger-ui section.models h4:hover {
-    background: rgba(0,0,0,.02)
+    background: rgba(0, 0, 0, .02)
 }
 
 .swagger-ui section.models h5 {
@@ -10438,7 +10439,7 @@
 }
 
 .swagger-ui section.models .model-container {
-    background: rgba(0,0,0,.05);
+    background: rgba(0, 0, 0, .05);
     border-radius: 4px;
     margin: 0 20px 15px;
     position: relative;
@@ -10446,7 +10447,7 @@
 }
 
 .swagger-ui section.models .model-container:hover {
-    background: rgba(0,0,0,.07)
+    background: rgba(0, 0, 0, .07)
 }
 
 .swagger-ui section.models .model-container:first-of-type {
@@ -10469,7 +10470,7 @@
 }
 
 .swagger-ui .model-box {
-    background: rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, .1);
     border-radius: 4px;
     display: inline-block;
     padding: 10px
@@ -10504,7 +10505,7 @@
     margin-right: 1em
 }
 
-.swagger-ui span>span.model .brace-close {
+.swagger-ui span > span.model .brace-close {
     padding: 0 0 0 10px
 }
 
@@ -10525,14 +10526,14 @@
     color: #606060
 }
 
-.swagger-ui .servers>label {
+.swagger-ui .servers > label {
     color: #3b4151;
     font-family: sans-serif;
     font-size: 12px;
     margin: -20px 15px 0 0
 }
 
-.swagger-ui .servers>label select {
+.swagger-ui .servers > label select {
     max-width: 100%;
     min-width: 130px
 }
@@ -10622,8 +10623,8 @@
     padding: 10px 0
 }
 
-.swagger-ui table thead tr td,.swagger-ui table thead tr th {
-    border-bottom: 1px solid rgba(59,65,81,.2);
+.swagger-ui table thead tr td, .swagger-ui table thead tr th {
+    border-bottom: 1px solid rgba(59, 65, 81, .2);
     color: #3b4151;
     font-family: sans-serif;
     font-size: 12px;
@@ -10663,7 +10664,7 @@
 }
 
 .swagger-ui .parameter__name.required:after {
-    color: rgba(255,0,0,.6);
+    color: rgba(255, 0, 0, .6);
     content: "required";
     font-size: 10px;
     padding: 5px;
@@ -10671,7 +10672,7 @@
     top: -6px
 }
 
-.swagger-ui .parameter__extension,.swagger-ui .parameter__in {
+.swagger-ui .parameter__extension, .swagger-ui .parameter__in {
     color: grey;
     font-family: monospace;
     font-size: 12px;
@@ -10727,7 +10728,7 @@
     padding: 10px 0
 }
 
-.swagger-ui .topbar .topbar-wrapper,.swagger-ui .topbar a {
+.swagger-ui .topbar .topbar-wrapper, .swagger-ui .topbar a {
     align-items: center;
     display: flex
 }
@@ -10819,13 +10820,13 @@
     font-size: 14px
 }
 
-.swagger-ui .info li,.swagger-ui .info p,.swagger-ui .info table {
+.swagger-ui .info li, .swagger-ui .info p, .swagger-ui .info table {
     color: #3b4151;
     font-family: sans-serif;
     font-size: 14px
 }
 
-.swagger-ui .info h1,.swagger-ui .info h2,.swagger-ui .info h3,.swagger-ui .info h4,.swagger-ui .info h5 {
+.swagger-ui .info h1, .swagger-ui .info h2, .swagger-ui .info h3, .swagger-ui .info h4, .swagger-ui .info h5 {
     color: #3b4151;
     font-family: sans-serif
 }
@@ -10841,7 +10842,7 @@
     color: #1f69c0
 }
 
-.swagger-ui .info>div {
+.swagger-ui .info > div {
     margin: 0 0 5px
 }
 
@@ -10849,7 +10850,7 @@
     color: #3b4151;
     font-family: monospace;
     font-size: 12px;
-    font-weight: 300!important;
+    font-weight: 300 !important;
     font-weight: 600;
     margin: 0
 }
@@ -10918,7 +10919,7 @@
 }
 
 .swagger-ui .auth-container h4 {
-    margin: 5px 0 15px!important
+    margin: 5px 0 15px !important
 }
 
 .swagger-ui .auth-container .wrapper {
@@ -10926,7 +10927,7 @@
     padding: 0
 }
 
-.swagger-ui .auth-container input[type=password],.swagger-ui .auth-container input[type=text] {
+.swagger-ui .auth-container input[type=password], .swagger-ui .auth-container input[type=text] {
     min-width: 230px
 }
 
@@ -10968,7 +10969,7 @@
 .swagger-ui .errors-wrapper {
     -webkit-animation: scaleUp .5s;
     animation: scaleUp .5s;
-    background: rgba(249,62,62,.1);
+    background: rgba(249, 62, 62, .1);
     border: 2px solid #f93e3e;
     border-radius: 4px;
     margin: 20px;
@@ -11045,13 +11046,13 @@
     display: none
 }
 
-.swagger-ui .markdown p,.swagger-ui .markdown pre,.swagger-ui .renderedMarkdown p,.swagger-ui .renderedMarkdown pre {
+.swagger-ui .markdown p, .swagger-ui .markdown pre, .swagger-ui .renderedMarkdown p, .swagger-ui .renderedMarkdown pre {
     margin: 1em auto;
     word-break: break-all;
     word-break: break-word
 }
 
-.swagger-ui .markdown pre,.swagger-ui .renderedMarkdown pre {
+.swagger-ui .markdown pre, .swagger-ui .renderedMarkdown pre {
     background: none;
     color: #000;
     font-weight: 400;
@@ -11059,8 +11060,8 @@
     white-space: pre-wrap
 }
 
-.swagger-ui .markdown code,.swagger-ui .renderedMarkdown code {
-    background: rgba(0,0,0,.05);
+.swagger-ui .markdown code, .swagger-ui .renderedMarkdown code {
+    background: rgba(0, 0, 0, .05);
     border-radius: 4px;
     color: #9012fe;
     font-family: monospace;
@@ -11069,11 +11070,29 @@
     padding: 5px 7px
 }
 
-.swagger-ui .markdown pre>code,.swagger-ui .renderedMarkdown pre>code {
+.swagger-ui .markdown pre > code, .swagger-ui .renderedMarkdown pre > code {
     display: block
 }
 
 /*# sourceMappingURL=swagger-ui.css.map*/
+
+
+html {
+    box-sizing: border-box;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: #fafafa;
+}
 
 .change-type {
     margin-left: auto;
