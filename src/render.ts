@@ -2,8 +2,9 @@ import {SchemasDiffer} from "./schemas-differ";
 import {PathsDiffer} from "./paths-differ";
 import {SchemasDiffRender} from "./schemas-diff.render";
 import {PathsDiffRender} from "./paths-diff.render";
-import fs from "fs";
 import {InformationTemplate} from "./templates/information.template";
+import {Normalize} from "./css/normalize";
+import {Ui} from "./css/ui";
 
 export class Render {
   private readonly pathsRender: PathsDiffRender;
@@ -23,8 +24,8 @@ export class Render {
   }
 
   private loadStyles(): void {
-    this.normalizeStyle = fs.readFileSync('./src/css/normalize.css', {encoding: 'utf-8'});
-    this.uiStyle = fs.readFileSync('./src/css/ui.css', {encoding: 'utf-8'});
+    this.normalizeStyle = Normalize;
+    this.uiStyle = Ui;
   }
 
   render(): string {
