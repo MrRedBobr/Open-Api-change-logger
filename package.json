@@ -1,7 +1,8 @@
 {
   "name": "open-api-change-logger",
-  "version": "1.2.3",
+  "version": "2.0.0",
   "description": "Generates an HTML page with api changes.",
+  "types": "lib/index.d.ts",
   "main": "lib/index.js",
   "typings": "lib",
   "scripts": {
@@ -19,17 +20,13 @@
   "author": "mrredbobr",
   "license": "ISC",
   "devDependencies": {
-    "@nestjs/swagger": "^5.1.1",
-    "@types/json-diff": "0.5.2",
+    "@nestjs/swagger": "5.1.0",
     "@types/node": "^16.11.1",
-    "typescript": "^4.4.4"
+    "typescript": "4.5.5"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/MrRedBobr/change-logger"
   },
-  "dependencies": {
-    "handlebars": "4.7.7",
-    "json-diff": "0.5.4"
-  }
+  "dependencies": {}
 }

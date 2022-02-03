@@ -1,5 +1,6 @@
 node_modules
 dist
+lib/
 .awcache
 .cache
 /config/project.json
@@ -93,3 +94,7 @@ tsdoc-metadata.json
 # generated html docs
 docs-*/
 docs/
+
+# test api
+example-apis/
+yarn.lock

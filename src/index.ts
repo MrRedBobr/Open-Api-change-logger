@@ -1,3 +1,2 @@
-export * from './open-api-diff';
-export * from './converter';
-export * from './change-log';
+export * from './types';
+export * from './change-logger';

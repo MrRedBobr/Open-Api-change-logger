@@ -1,20 +1,18 @@
 ### OpenApi change-logger
 ```typescript
-const changeLoger: ChangeLog = new ChangeLog(source: OpenAPIObject, destination: OpenAPIObject, {
-	apiName: string;
-	hbsTemplate?: string;
-	[key:string]: any
-})
+const source: OpenAPIObject = adminSource;
+const destination: OpenAPIObject = dist;
 
-fs.writeFileSync('pathFile/name.html', changeLoger.render());
-```
+const changeLog: ChangeLogger = new ChangeLogger(source, destination);
 
-------------
+const currentVersion: string = changeLog.currentVersion; //7.5.1
 
-*If, In Addition To Generating Html, You Also Want To Get A Version That Depends On Changes:*
+changeLog.getJson() //return object with difference
 
-```typescript
-changeLog._openApiDiff.version
-// return new version.
-//Current version gets from source.json
+changeLog.renderAndSave({
+  path: './',
+  fileName: `apiName`,
+  format: 'html', //isOptional
+  pasteVersionInName: true, // isOptional
+});
 ```

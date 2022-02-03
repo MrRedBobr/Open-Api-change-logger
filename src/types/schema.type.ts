@@ -1,11 +1,11 @@
-import { Properties } from './properties.type';
-import { Property } from './property.type';
-import {EnumProperty} from "./enum-property.type";
+import {SchemaPropertyType} from "./schema-property.type";
 
 export type Schema = {
-  changeType: string;
-  name: string;
-  type: string;
-  properties?: Properties;
-  enum?: EnumProperty[];
-};
+  deprecated: boolean,
+  type: string,
+  required?: boolean,
+  $ref?: string,
+  format?: string,
+  enum?: string[],
+  property?: SchemaPropertyType[]
+}
