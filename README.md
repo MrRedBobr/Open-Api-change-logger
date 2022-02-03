@@ -11,7 +11,8 @@ changeLog.getJson() //return object with difference
 
 changeLog.renderAndSave({
   path: './',
-  fileName: `apiName.${currentVersion}`,
+  fileName: `apiName`,
   format: 'html', //isOptional
+  pasteVersionInName: true, // isOptional
 });
 ```

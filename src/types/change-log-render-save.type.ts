@@ -1,5 +1,6 @@
 export type ChangeLogRenderSaveType = {
   path: string,
   fileName: string,
-  format?: 'html'
+  format?: 'html',
+  pasteVersionInName?: boolean,
 }

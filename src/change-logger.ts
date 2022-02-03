@@ -47,14 +47,14 @@ export class ChangeLogger {
     }
   }
 
-  renderAndSave({ path, fileName, format = 'html' }: ChangeLogRenderSaveType): void {
-    const render: Render = new Render(this.modelsDiffer, this.pathDiffer);
+  renderAndSave({ path, fileName, format = 'html', pasteVersionInName = false }: ChangeLogRenderSaveType): void {
+    const render: Render = new Render(this.modelsDiffer, this.pathDiffer, fileName, this.currentVersion);
 
     const html: string = render.render();
 
     const fixPath: string = path[path.length - 1] === '/' ? path : path+'/';
 
-    fs.writeFileSync(`${fixPath}${fileName}.${format}`, html);
+    fs.writeFileSync(`${fixPath}${fileName}${ pasteVersionInName ? `.${this.currentVersion}` : ''}.${format}`, html);
     fs.writeFileSync(`${fixPath}normalize.css`, render.normalizeStyle);
     fs.writeFileSync(`${fixPath}ui.css`, render.uiStyle);
   }

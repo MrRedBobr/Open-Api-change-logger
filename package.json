@@ -7,7 +7,7 @@
   "typings": "lib",
   "scripts": {
     "build": "tsc -p .",
-    "start": "ts-node ./src/ebat.ts"
+    "start": "ts-node ./src/index.ts"
   },
   "keywords": [
     "OpenApi",
