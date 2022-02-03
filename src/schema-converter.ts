@@ -60,7 +60,7 @@ export class SchemaConverter {
         }),
 
         ...(property.allOf && property.allOf.length > 1 && {
-          type: property.title,
+          type: property.title ?? property.type,
           property: [
             //  todo find schema and put all properties here
 

@@ -16,7 +16,7 @@ export function SchemaEnumTemplate(ENUM: SchemaDiffType, modelName: string): str
                         Enum:
                         <span>
                             [${enums.map((key: string) => `<span style="background-color: ${
-                                ENUM.added.includes(key) 
+                                ENUM.added.includes(key) || ENUM.changeType === 'CREATE'
                                   ? ChangeColor('CREATE') :
                                   (ENUM.deleted.includes(key) ? ChangeColor('DELETE') : ChangeColor('DEFAULT'))
                             }">${key}</span>`).join(', ')}]

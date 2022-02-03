@@ -17,7 +17,6 @@ export function SchemaTemplate(model: SchemaDiffType, modelName: string): string
                         <span class="model-title__text">${modelName}</span>
                     </span>
                 </span>
-                <span class="model-toggle"></span>
             </button>
             <span class="brace-open object">{</span>
             <span class="inner-object">

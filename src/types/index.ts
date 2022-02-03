@@ -3,7 +3,6 @@ export * from './Operation.type';
 export * from './operations-changes.type';
 export * from './parameter.type';
 export * from './path-parameter-diff.type';
-export * from './path.type';
 export * from './paths-diff.type';
 export * from './properties.type';
 export * from './property.type';

@@ -10,6 +10,9 @@ export class SchemasDiffer {
 
   public readonly schemasDifference: SchemasDifference;
 
+  hasDeleteOrCreate: boolean = false;
+  hasUpdate: boolean = false;
+
   constructor(source: Record<string, SchemaObject | ReferenceObject>, destination: Record<string, SchemaObject | ReferenceObject>) {
     this.sourceSchemas = source;
     this.destinationSchemas = destination;
@@ -27,18 +30,32 @@ export class SchemasDiffer {
       const source: SchemaObject | undefined = this.sourceSchemas[schemaName] as SchemaObject;
       const destination: SchemaObject | undefined = this.destinationSchemas[schemaName] as SchemaObject;
 
-      if(source && destination){ //if schema updated or don't have change
+      if(source && destination){ //schema updated or don't have change
         const sourceConverted: Schema = SchemaConverter.property(source);
         const destinationConverted: Schema = SchemaConverter.property(destination);
         schemasChanges[schemaName] = SchemasDiffer.schemaUpdate(sourceConverted, destinationConverted);
+
+        if(!this.hasUpdate && schemasChanges[schemaName].changeType === 'UPDATE') {
+          this.hasUpdate = true;
+        }
       }
-      if(source && !destination) {//if schema deleted
+
+      if(source && !destination) {//schema deleted
         const sourceConverted: Schema = SchemaConverter.property(source);
         schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(sourceConverted, 'DELETE');
+
+        if(!this.hasDeleteOrCreate) {
+          this.hasUpdate = true;
+        }
       }
-      if(!source && destination) {//if schema created
+
+      if(!source && destination) {//schema created
         const destinationConverted: Schema = SchemaConverter.property(destination);
         schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(destinationConverted, 'CREATE');
+
+        if(!this.hasDeleteOrCreate) {
+          this.hasUpdate = true;
+        }
       }
     }
     return schemasChanges;

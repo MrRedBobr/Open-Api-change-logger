@@ -14,7 +14,7 @@ import {SchemasDiffer} from "./schemas-differ";
 import {ResponsesTypeObject} from "./types/responsesTypeObject";
 import {ResponsesDiffObjectType} from "./types/responses-diff-object.type";
 
-export class PathsDiff {
+export class PathsDiffer {
   operationsKeys: string[] = [
     'get',
     'put',
@@ -26,6 +26,9 @@ export class PathsDiff {
   destination: PathsObject;
 
   pathsDiff: PathsDiffType;
+
+  public hasDeletedOrCreated: boolean = false;
+  public hasUpdate: boolean = false;
 
   constructor(source: PathsObject, destination: PathsObject) {
     this.source = source;
@@ -75,6 +78,10 @@ export class PathsDiff {
           , false
         );
 
+      if (!this.hasUpdate && isUpdated) {
+        this.hasUpdate = true;
+      }
+
       operations[operation] = {
         changeType: isUpdated ? 'UPDATE' : 'DEFAULT',
         pathParameters,
@@ -89,6 +96,10 @@ export class PathsDiff {
   pathItemDeleteOrCreate(oldPath: PathItemObject, changeType: ChangeType): OperationsChanges {
     const operationsNames: string[] = [...new Set<string>([...(oldPath ? Object.keys(oldPath) : [])])].filter((v: string) => this.operationsKeys.includes(v));
     const operations: OperationsChanges = {};
+
+    if(!this.hasDeletedOrCreated) {
+      this.hasDeletedOrCreated = true;
+    }
 
     for (const operation of operationsNames) {
       const oldOperation: Operation = OperationsConverter.convertingToNormal(oldPath[operation as keyof PathItemObject] as OperationObject);
@@ -272,6 +283,8 @@ export class PathsDiff {
 
       responses[key] = {
         changeType: changeType,
+        ...(newResponse && newResponse.length > 0 && newResponse[0].type !== 'object' && { type: newResponse[0].type }),
+        ...(oldResponse && !newResponses && { type: oldResponse[0].type }),
         ...diff,
       }
     }

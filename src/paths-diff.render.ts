@@ -1,4 +1,4 @@
-import {PathsDiff} from "./paths-diff";
+import {PathsDiffer} from "./paths-differ";
 import {
   OperationDiff,
   OperationsChanges,
@@ -25,7 +25,7 @@ export class PathsDiffRender {
   diffs: PathsDiffType;
   operationsKeys: string[];
 
-  constructor(differ: PathsDiff) {
+  constructor(differ: PathsDiffer) {
     this.diffs = differ.pathsDiff;
     this.operationsKeys = differ.operationsKeys;
   }
@@ -58,15 +58,17 @@ export class PathsDiffRender {
     for (const operationType of operationsTypes) {
       const { parametersHtml, requestHtml, responseHtml } = this.renderOperation(operationsChanges[operationType]);
 
-      const operationHtml: string = OperationTemplate({
-        path_address: address,
-        operationType,
-        changeType: operationsChanges[operationType].changeType,
-        parametersHtml,
-        requestHtml,
-        responseHtml,
-      });
-      operationsHtml.push(operationHtml);
+      if(operationsChanges[operationType].changeType !== 'DEFAULT') {
+        const operationHtml: string = OperationTemplate({
+          path_address: address,
+          operationType,
+          changeType: operationsChanges[operationType].changeType,
+          parametersHtml,
+          requestHtml,
+          responseHtml,
+        });
+        operationsHtml.push(operationHtml);
+      }
     }
     return operationsHtml;
   }
@@ -74,7 +76,7 @@ export class PathsDiffRender {
   renderOperation({ changeType, request, responses, pathParameters }: OperationDiff): { parametersHtml: string, requestHtml: string, responseHtml: string } {
     const parametersHtml: string = this.renderParameters(pathParameters, changeType);
 
-    const requestHtml: string = this.renderRequest(request, changeType);
+    const requestHtml: string =this.requestRender(request, changeType);
 
     const responseHtml: string = this.renderResponses(responses);
 
@@ -93,15 +95,13 @@ export class PathsDiffRender {
     return '';
   }
 
-  renderRequest(request: SchemaPropertyDiff, endpointChangeType: ChangeType): string {
-    if(request.$ref || (request.property?.length && request.property?.length)) {
+  renderSchema(request: SchemaPropertyDiff, endpointChangeType: ChangeType): string {
+    if(request.$ref || request?.type || (request.property?.length && request.property?.length)) {
       let html: string = '';
 
-      if(request.$ref) {
-        html = `<span class="model">${request.$ref}</span>`;
-      }
-
-      if (request.property?.length) {
+      if(request.$ref || request?.type) {
+        html = `<span class="model">${request?.$ref ?? request?.type}</span>`;
+      } else if (request.property?.length && request.property?.length > 0) {
         html = RequestTableTemplate(
           request.property.map((prop: SchemaPropertyType): string => SchemaPropertyTemplate(
             prop,
@@ -112,9 +112,15 @@ export class PathsDiffRender {
         );
       }
 
-      return RequestTemplate(html);
+      return html;
     }
     return '';
+  }
+
+  requestRender(request: SchemaPropertyDiff, endpointChangeType: ChangeType): string {
+    const renderedSchema: string = this.renderSchema(request, endpointChangeType);
+
+    return renderedSchema ? RequestTemplate(renderedSchema) : '';
   }
 
   renderResponses(response: ResponsesDiffObjectType): string {
@@ -125,14 +131,14 @@ export class PathsDiffRender {
     for(const responseCode of responseCodes) {
       const {changeType, ...res}: ResponseDiffType = response[responseCode];
 
-      const paramsTable: string = this.renderRequest(res, changeType);
+      const paramsTable: string = this.renderSchema(res, changeType);
 
       const tableHtml: string = ResponseTableTemplate(responseCode, changeType, paramsTable);
 
       tablesHtml.push(tableHtml)
     }
 
-    return ResponsesTemplate(tablesHtml.join('\n'));
+    return tablesHtml.length > 0 ? ResponsesTemplate(tablesHtml.join('\n')) : '';
   }
 
 }

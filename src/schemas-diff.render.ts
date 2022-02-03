@@ -17,12 +17,15 @@ export class SchemasDiffRender {
 
     for(const modelName of schemasNames) {
       const model: SchemaDiffType = this.diffs[modelName];
-      if(model.type === 'enum') {
-        const enumHtml: string = SchemaEnumTemplate(model, modelName);
-        modelsHtml.push(enumHtml);
-      } else {
-        const objHtml: string = SchemaTemplate(model, modelName);
-        modelsHtml.push(objHtml);
+
+      if (model.changeType !== 'DEFAULT') {
+        if(model.type === 'enum') {
+          const enumHtml: string = SchemaEnumTemplate(model, modelName);
+          modelsHtml.push(enumHtml);
+        } else {
+          const objHtml: string = SchemaTemplate(model, modelName);
+          modelsHtml.push(objHtml);
+        }
       }
     }
 
