@@ -6,8 +6,7 @@
   "main": "lib/index.js",
   "typings": "lib",
   "scripts": {
-    "build": "tsc -p .",
-    "start": "ts-node ./src/index.ts"
+    "build": "tsc -p ."
   },
   "keywords": [
     "OpenApi",
@@ -23,7 +22,6 @@
   "devDependencies": {
     "@nestjs/swagger": "5.1.0",
     "@types/node": "^16.11.1",
-    "ts-node": "10.4.0",
     "typescript": "4.5.5"
   },
   "repository": {
