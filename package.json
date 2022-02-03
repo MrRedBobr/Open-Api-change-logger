@@ -1,10 +1,9 @@
 {
   "name": "open-api-change-logger",
-  "version": "2.5.0",
+  "version": "2.5.5",
   "description": "Generates an HTML page with api changes.",
   "types": "lib/index.d.ts",
-  "main": "lib/index.js",
-  "typings": "lib",
+  "main": "lib",
   "scripts": {
     "build": "tsc -p ."
   },
@@ -28,5 +27,8 @@
     "type": "git",
     "url": "https://github.com/MrRedBobr/change-logger"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "lib"
+  ]
 }
