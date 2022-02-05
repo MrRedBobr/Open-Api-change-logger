@@ -1,4 +1,4 @@
-import {SchemaDiffType} from "./types";
+import {ChangeTypeEnum, SchemaDiffType} from "./types";
 import {ChangeColor} from "./helpers/change-color";
 
 export function SchemaEnumTemplate(ENUM: SchemaDiffType, modelName: string): string {
@@ -16,9 +16,9 @@ export function SchemaEnumTemplate(ENUM: SchemaDiffType, modelName: string): str
                         Enum:
                         <span>
                             [${enums.map((key: string) => `<span style="background-color: ${
-                                ENUM.added.includes(key) || ENUM.changeType === 'CREATE'
-                                  ? ChangeColor('CREATE') :
-                                  (ENUM.deleted.includes(key) ? ChangeColor('DELETE') : ChangeColor('DEFAULT'))
+                                ENUM.added.includes(key) || ENUM.changeType === ChangeTypeEnum.created
+                                  ? ChangeColor(ChangeTypeEnum.created) :
+                                  (ENUM.deleted.includes(key) ? ChangeColor(ChangeTypeEnum.deleted) : ChangeColor(ChangeTypeEnum.default))
                             }">${key}</span>`).join(', ')}]
                         </span>
                     </span>

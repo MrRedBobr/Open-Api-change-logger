@@ -1,1 +1,0 @@
-export type ChangeType = 'CREATE' | 'UPDATE' | 'DELETE' | 'DEFAULT';

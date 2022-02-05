@@ -1,9 +1,9 @@
-import {ChangeType} from "../types/change.type";
+import {ChangeTypeEnum} from "../types/change-type.enum";
 
 export interface OperationTemplateInput {
   path_address: string,
   operationType: string,
-  changeType: ChangeType,
+  changeType: ChangeTypeEnum,
   parametersHtml: string,
   requestHtml: string,
   responseHtml: string,

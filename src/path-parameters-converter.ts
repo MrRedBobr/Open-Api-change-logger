@@ -2,7 +2,7 @@ import {ParameterObject, ReferenceObject} from "@nestjs/swagger/dist/interfaces/
 import {SchemaConverter} from "./schema-converter";
 import {PathParameter} from "./types";
 
-export class PathParametersDiff {
+export class PathParametersConverter {
   private static param({ schema, name, in: placed, required, deprecated }: ParameterObject): PathParameter | undefined {
     if(!schema) {
       return undefined;

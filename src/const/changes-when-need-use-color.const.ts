@@ -1,3 +1,3 @@
-import {ChangeType} from "../types/change.type";
+import {ChangeTypeEnum} from "../types";
 
-export const ChangesWhenNeedUseColor: ChangeType[] = ['UPDATE', 'DEFAULT'];
+export const ChangesWhenNeedUseColor: ChangeTypeEnum[] = [ChangeTypeEnum.updated, ChangeTypeEnum.default];

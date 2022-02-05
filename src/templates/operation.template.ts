@@ -1,5 +1,6 @@
 import {ChangeTypeText} from "./change-type-text.template";
 import {OperationTemplateInput} from "../inputs/operation-template.input";
+import {ChangeTypeEnum} from "../types";
 
 export function OperationTemplate({ operationType, changeType, path_address, parametersHtml, requestHtml, responseHtml }: OperationTemplateInput) {
   return `
@@ -19,7 +20,7 @@ export function OperationTemplate({ operationType, changeType, path_address, par
       <!--    <svg class="arrow" width="20" height="20" aria-hidden="true" focusable="false">-->
       <!--      <use href="#large-arrow-up" xlink:href="#large-arrow-up"></use>-->
       <!--    </svg>-->
-          ${changeType !== 'DEFAULT' ? ChangeTypeText(changeType) : ''}
+          ${changeType !== ChangeTypeEnum.default ? ChangeTypeText(changeType) : ''}
           </button>
         </div>
         <div class="no-margin">

@@ -1,15 +1,16 @@
 import {OperationObject, PathItemObject, PathsObject} from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
-import {OperationsConverter} from "./operations-diff";
+import {OperationsConverter} from "./operations-converter";
 import {
   Operation,
   OperationsChanges,
   PathParameter,
   PathParameterDiff,
-  PathsDiffType, Schema,
+  PathsDiffType,
+  Schema,
   SchemaPropertyDiff
 } from "./types";
-import {ChangeType} from "./types/change.type";
-import {EnumDiffType} from "./types/enum-diff.type";
+import {ChangeTypeEnum} from "./types";
+import {EnumDiffType} from "./types";
 import {SchemasDiffer} from "./schemas-differ";
 import {ResponsesTypeObject} from "./types/responsesTypeObject";
 import {ResponsesDiffObjectType} from "./types/responses-diff-object.type";
@@ -46,18 +47,21 @@ export class PathsDiffer {
       const destination: PathItemObject = newPaths[path_address];
 
       if (source && destination) {//update or no changes
-        paths[path_address] = this.pathItemUpdate(source, destination, path_address);
+        paths[path_address] = this.pathItemUpdate(source, destination);
       } else if (source && !destination) {//delete
-        paths[path_address] = this.pathItemDeleteOrCreate(source, 'DELETE');
+        paths[path_address] = this.pathItemDeleteOrCreate(source, ChangeTypeEnum.deleted);
       } else if (!source && destination) {//create
-        paths[path_address] = this.pathItemDeleteOrCreate(destination, 'CREATE');
+        paths[path_address] = this.pathItemDeleteOrCreate(destination, ChangeTypeEnum.created);
       }
     }
     return paths;
   }
 
-  pathItemUpdate(oldPath: PathItemObject, newPath: PathItemObject, s: string): OperationsChanges {
-    const operationsNames: string[] = [...new Set<string>([...(oldPath ? Object.keys(oldPath) : []), ...Object.keys(newPath)])].filter((v: string) => this.operationsKeys.includes(v));
+  pathItemUpdate(oldPath: PathItemObject, newPath: PathItemObject): OperationsChanges {
+    const operationsNames: string[] = [...new Set<string>([
+      ...(oldPath ? Object.keys(oldPath) : []),
+      ...Object.keys(newPath)
+    ])].filter((v: string) => this.operationsKeys.includes(v));
     const operations: OperationsChanges = {};
 
     for (const operation of operationsNames) {
@@ -83,7 +87,7 @@ export class PathsDiffer {
       }
 
       operations[operation] = {
-        changeType: isUpdated ? 'UPDATE' : 'DEFAULT',
+        changeType: isUpdated ? ChangeTypeEnum.updated : ChangeTypeEnum.default,
         pathParameters,
         request,
         responses,
@@ -93,7 +97,7 @@ export class PathsDiffer {
     return operations;
   }
 
-  pathItemDeleteOrCreate(oldPath: PathItemObject, changeType: ChangeType): OperationsChanges {
+  pathItemDeleteOrCreate(oldPath: PathItemObject, changeType: ChangeTypeEnum): OperationsChanges {
     const operationsNames: string[] = [...new Set<string>([...(oldPath ? Object.keys(oldPath) : [])])].filter((v: string) => this.operationsKeys.includes(v));
     const operations: OperationsChanges = {};
 
@@ -111,7 +115,7 @@ export class PathsDiffer {
       const { responses, hasChanges } = this.responseDiff(oldOperation.response);
 
       operations[operation] = {
-        changeType: hasChanges ? 'UPDATE' : changeType,
+        changeType: hasChanges ? ChangeTypeEnum.updated : changeType,
         pathParameters,
         request,
         responses,
@@ -140,9 +144,9 @@ export class PathsDiffer {
       if (old && new_) {//updated or not changed
         params.push(this.parameterUpdate(old, new_));
       } else if (old && !new_) {//deleted
-        params.push(this.parameterCreateOrDelete(old, 'DELETE'));
+        params.push(this.parameterCreateOrDelete(old, ChangeTypeEnum.deleted));
       } else if (!old && new_) {//created
-        params.push(this.parameterCreateOrDelete(new_, 'CREATE'));
+        params.push(this.parameterCreateOrDelete(new_, ChangeTypeEnum.created));
       }
     }
     return params;
@@ -160,7 +164,7 @@ export class PathsDiffer {
 
       deleted: [],
       added: [],
-      changeType: "DEFAULT",
+      changeType: ChangeTypeEnum.default,
     };
 
     const type: string = oldParameter.enum ? 'enum' : oldParameter.type!;
@@ -169,7 +173,7 @@ export class PathsDiffer {
       const diffEnum: EnumDiffType = SchemasDiffer.diffForEnum(oldParameter.enum, newParameter.enum);
       return {
         ...schemaDiff,
-        changeType: diffEnum.added.length > 0 || diffEnum.deleted.length > 0 ? 'UPDATE' : 'DEFAULT',
+        changeType: diffEnum.added.length > 0 || diffEnum.deleted.length > 0 ? ChangeTypeEnum.updated : ChangeTypeEnum.default,
         ...diffEnum,
       }
     }
@@ -179,7 +183,7 @@ export class PathsDiffer {
 
       return {
         ...schemaDiff,
-        changeType: schemaPropertyDiff.added.length > 0 || schemaPropertyDiff.deleted.length > 0 ? 'UPDATE' : 'DEFAULT',
+        changeType: schemaPropertyDiff.added.length > 0 || schemaPropertyDiff.deleted.length > 0 ? ChangeTypeEnum.updated : ChangeTypeEnum.default,
         ...schemaPropertyDiff,
       }
     }
@@ -187,7 +191,7 @@ export class PathsDiffer {
     return schemaDiff;
   }
 
-  parameterCreateOrDelete(parameter: PathParameter, changeType: ChangeType): PathParameterDiff {
+  parameterCreateOrDelete(parameter: PathParameter, changeType: ChangeTypeEnum): PathParameterDiff {
     let schemaDiff: PathParameterDiff = {
       name: parameter.name,
       placed: parameter.placed,
@@ -269,15 +273,15 @@ export class PathsDiffer {
       const newResponse: Schema[] = newResponses ? newResponses[key] : [];
       const diff: SchemaPropertyDiff = this.requestDiff(oldResponse, newResponse);
 
-      const changeType: ChangeType = createdKeys.includes(key)
-        ? 'CREATE'
+      const changeType: ChangeTypeEnum = createdKeys.includes(key)
+        ? ChangeTypeEnum.created
         : (
           deletedKeys.includes(key)
-            ? 'DELETE'
-            : (diff.added.length > 0 || diff.deleted.length > 0 && Boolean(newResponses) ? 'UPDATE' : 'DEFAULT')
+            ? ChangeTypeEnum.deleted
+            : (diff.added.length > 0 || diff.deleted.length > 0 && Boolean(newResponses) ? ChangeTypeEnum.updated : ChangeTypeEnum.default)
         )
 
-      if(hasChanges && changeType !== 'DEFAULT') {
+      if(hasChanges && changeType !== ChangeTypeEnum.default) {
         hasChanges = true;
       }
 

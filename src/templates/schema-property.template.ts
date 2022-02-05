@@ -1,17 +1,19 @@
 import {SchemaPropertyType} from "../types";
 import {ChangesWhenNeedUseColor} from "../const/changes-when-need-use-color.const";
-import {ChangeType} from "../types/change.type";
+import {ChangeTypeEnum} from "../types";
 import {ChangeColor} from "../helpers/change-color";
 
-const useDefRef: ChangeType[] = ['CREATE', 'DEFAULT']
+const useDefRef: ChangeTypeEnum[] = [ChangeTypeEnum.created, ChangeTypeEnum.default]
 
-export function SchemaPropertyTemplate(prop: SchemaPropertyType, endpointChangeType: ChangeType, added: string[], deleted: string[]): string {
-    const useColor: boolean = endpointChangeType === 'CREATE' || endpointChangeType === 'DELETE' || ChangesWhenNeedUseColor.includes(endpointChangeType);
+export function SchemaPropertyTemplate(prop: SchemaPropertyType, endpointChangeType: ChangeTypeEnum, added: string[], deleted: string[]): string {
+    const useColor: boolean = endpointChangeType === ChangeTypeEnum.created
+      || endpointChangeType === ChangeTypeEnum.deleted
+      || ChangesWhenNeedUseColor.includes(endpointChangeType);
 
-    const isCreate: boolean = added.includes(prop.name) || endpointChangeType === 'CREATE';
-    const isDelete: boolean = deleted.includes(prop.name) || endpointChangeType === 'DELETE';
+    const isCreate: boolean = added.includes(prop.name) || endpointChangeType === ChangeTypeEnum.created;
+    const isDelete: boolean = deleted.includes(prop.name) || endpointChangeType === ChangeTypeEnum.deleted;
 
-    const changeColor: string = ChangeColor( isCreate ? 'CREATE' : isDelete ? 'DELETE' : 'DEFAULT');
+    const changeColor: string = ChangeColor( isCreate ? ChangeTypeEnum.created : isDelete ? ChangeTypeEnum.deleted : ChangeTypeEnum.default);
 
     const deleteRefHtml: string = deleted.length === 1 ? `<span class="prop-type" style="background-color: rgba(255,0,0,0.55)">${deleted[0]}</span>` : '';
     const createRefHtml: string = deleted.length === 1 ? `<span class="prop-type" style="background-color: rgba(0,255,0,0.55)">${deleted[0]}</span>` : '';

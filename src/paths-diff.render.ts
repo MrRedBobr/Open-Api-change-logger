@@ -7,8 +7,7 @@ import {
   SchemaPropertyDiff,
   SchemaPropertyType
 } from "./types";
-import {ChangeType} from "./types/change.type";
-import * as fs from "fs";
+import {ChangeTypeEnum} from "./types";
 import {ParameterTemplate} from "./templates/parameter.template";
 import {ParametersTableTemplate} from "./templates/parameters-table.template";
 import {OperationTemplate} from "./templates/operation.template";
@@ -87,7 +86,7 @@ export class PathsDiffRender {
     }
   }
 
-  renderParameters(parameters: PathParameterDiff[], endpointChangeType: ChangeType): string {
+  renderParameters(parameters: PathParameterDiff[], endpointChangeType: ChangeTypeEnum): string {
     if (parameters.length > 0) {
       const elementsHtml: string[] = parameters.map((pathParameterDiff:PathParameterDiff) => ParameterTemplate(pathParameterDiff, endpointChangeType));
       return ParametersTemplate(ParametersTableTemplate(elementsHtml));
@@ -95,7 +94,7 @@ export class PathsDiffRender {
     return '';
   }
 
-  renderSchema(request: SchemaPropertyDiff, endpointChangeType: ChangeType): string {
+  renderSchema(request: SchemaPropertyDiff, endpointChangeType: ChangeTypeEnum): string {
     if(request.$ref || request?.type || (request.property?.length && request.property?.length)) {
       let html: string = '';
 
@@ -117,7 +116,7 @@ export class PathsDiffRender {
     return '';
   }
 
-  requestRender(request: SchemaPropertyDiff, endpointChangeType: ChangeType): string {
+  requestRender(request: SchemaPropertyDiff, endpointChangeType: ChangeTypeEnum): string {
     const renderedSchema: string = this.renderSchema(request, endpointChangeType);
 
     return renderedSchema ? RequestTemplate(renderedSchema) : '';

@@ -1,9 +1,9 @@
 import {PathParameterDiff} from "../types";
-import {ChangeType} from "../types/change.type";
+import {ChangeTypeEnum} from "../types";
 import {ChangesWhenNeedUseColor} from "../const/changes-when-need-use-color.const";
 import {ChangeColor} from "../helpers/change-color";
 
-export function ParameterTemplate(v:PathParameterDiff, endpointChangeType: ChangeType) {
+export function ParameterTemplate(v:PathParameterDiff, endpointChangeType: ChangeTypeEnum) {
   const useColor: boolean = ChangesWhenNeedUseColor.includes(endpointChangeType);
 
   return `

@@ -1,7 +1,7 @@
-import {ChangeType} from "../types/change.type";
+import {ChangeTypeEnum} from "../types";
 import {ChangeColor} from "../helpers/change-color";
 
-export function ResponseTableTemplate(code: string, changeType: ChangeType, html: string): string {
+export function ResponseTableTemplate(code: string, changeType: ChangeTypeEnum, html: string): string {
   const green: string = ChangeColor(changeType);
 
   return `

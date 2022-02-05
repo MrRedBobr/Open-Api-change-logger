@@ -1,8 +1,8 @@
-import {ChangeType} from "./change.type";
+import {ChangeTypeEnum} from "./change-type.enum";
 import {PathParameter} from "./parameter.type";
 
 export type PathParameterDiff = {
-  changeType: ChangeType,
+  changeType: ChangeTypeEnum,
   added: string[],
   deleted: string[],
 } & PathParameter;

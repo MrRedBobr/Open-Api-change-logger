@@ -1,17 +1,17 @@
-import {ChangeType} from "../types/change.type";
+import {ChangeTypeEnum} from "../types";
 
-export function ChangeColor(changeType: ChangeType): string {
+export function ChangeColor(changeType: ChangeTypeEnum): string {
   switch (changeType) {
-    case "CREATE": {
+    case ChangeTypeEnum.created: {
       return 'rgb(166,255,147)';
     }
-    case "DEFAULT": {
+    case ChangeTypeEnum.default: {
       return 'transparent';
     }
-    case "DELETE": {
+    case ChangeTypeEnum.deleted: {
       return 'rgba(255,127,127,0.55)';
     }
-    case "UPDATE": {
+    case ChangeTypeEnum.updated: {
       return 'rgb(166,255,147)'
     }
   }

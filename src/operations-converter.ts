@@ -4,7 +4,7 @@ import {
   ReferenceObject,
   RequestBodyObject, ResponseObject, ResponsesObject, SchemaObject
 } from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
-import {PathParametersDiff} from "./pathParametersDiff";
+import {PathParametersConverter} from "./path-parameters-converter";
 import {Operation, PathParameter, Schema} from "./types";
 import {SchemaConverter} from "./schema-converter";
 import {ResponsesTypeObject} from "./types/responsesTypeObject";
@@ -12,7 +12,7 @@ import {ResponsesTypeObject} from "./types/responsesTypeObject";
 export class OperationsConverter {
   public static convertingToNormal(operation?: OperationObject): Operation {
 
-    const pathParameters: PathParameter[] = PathParametersDiff.parameters(operation?.parameters);
+    const pathParameters: PathParameter[] = PathParametersConverter.parameters(operation?.parameters);
     const request: Schema[] = OperationsConverter.request(operation?.requestBody);
     const response: ResponsesTypeObject = OperationsConverter.response(operation?.responses);
 
@@ -73,9 +73,5 @@ export class OperationsConverter {
       }
     }
     return response;
-  }
-
-  public static diffOperations(oldOperation: Operation, newOperation: Operation): void {
-
   }
 }

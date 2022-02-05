@@ -1,6 +1,6 @@
-import {ChangeType} from "./change.type";
+import {ChangeTypeEnum} from "./change-type.enum";
 import {SchemaPropertyDiff} from "./schema-property-diff.type";
 
 export type ResponseDiffType = {
-  changeType: ChangeType;
+  changeType: ChangeTypeEnum;
 } & SchemaPropertyDiff;

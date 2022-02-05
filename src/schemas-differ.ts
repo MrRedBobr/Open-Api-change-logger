@@ -1,8 +1,8 @@
 import {ReferenceObject, SchemaObject} from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
 import {SchemaConverter} from "./schema-converter";
 import {Schema, SchemaDiffType, SchemaPropertyDiff, SchemaPropertyType, SchemasDifference} from "./types";
-import {EnumDiffType} from "./types/enum-diff.type";
-import {ChangeType} from "./types/change.type";
+import {EnumDiffType} from "./types";
+import {ChangeTypeEnum} from "./types";
 
 export class SchemasDiffer {
   sourceSchemas: Record<string, SchemaObject | ReferenceObject>;
@@ -35,14 +35,14 @@ export class SchemasDiffer {
         const destinationConverted: Schema = SchemaConverter.property(destination);
         schemasChanges[schemaName] = SchemasDiffer.schemaUpdate(sourceConverted, destinationConverted);
 
-        if(!this.hasUpdate && schemasChanges[schemaName].changeType === 'UPDATE') {
+        if(!this.hasUpdate && schemasChanges[schemaName].changeType === ChangeTypeEnum.updated) {
           this.hasUpdate = true;
         }
       }
 
       if(source && !destination) {//schema deleted
         const sourceConverted: Schema = SchemaConverter.property(source);
-        schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(sourceConverted, 'DELETE');
+        schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(sourceConverted,  ChangeTypeEnum.deleted);
 
         if(!this.hasDeleteOrCreate) {
           this.hasUpdate = true;
@@ -51,7 +51,7 @@ export class SchemasDiffer {
 
       if(!source && destination) {//schema created
         const destinationConverted: Schema = SchemaConverter.property(destination);
-        schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(destinationConverted, 'CREATE');
+        schemasChanges[schemaName] = SchemasDiffer.schemaDeleteOrUpdate(destinationConverted, ChangeTypeEnum.created);
 
         if(!this.hasDeleteOrCreate) {
           this.hasUpdate = true;
@@ -69,7 +69,7 @@ export class SchemasDiffer {
       ...(destinationConverted.$ref && {'$ref': destinationConverted.$ref}),
       deleted: [],
       added: [],
-      changeType: "DEFAULT",
+      changeType: ChangeTypeEnum.default,
     };
 
     const type: string = sourceConverted.enum ? 'enum' : sourceConverted.type!;
@@ -78,7 +78,7 @@ export class SchemasDiffer {
       const diffEnum: EnumDiffType = SchemasDiffer.diffForEnum(sourceConverted.enum, destinationConverted.enum);
       return {
         ...schemaDiff,
-        changeType: diffEnum.added.length > 0 || diffEnum.deleted.length > 0 ? 'UPDATE' : 'DEFAULT',
+        changeType: diffEnum.added.length > 0 || diffEnum.deleted.length > 0 ? ChangeTypeEnum.updated : ChangeTypeEnum.default,
         ...diffEnum,
       }
     }
@@ -87,7 +87,7 @@ export class SchemasDiffer {
 
       return {
         ...schemaDiff,
-        changeType: schemaPropertyDiff.added.length > 0 || schemaPropertyDiff.deleted.length > 0 ? 'UPDATE' : 'DEFAULT',
+        changeType: schemaPropertyDiff.added.length > 0 || schemaPropertyDiff.deleted.length > 0 ? ChangeTypeEnum.updated : ChangeTypeEnum.default,
         ...schemaPropertyDiff,
       }
     }
@@ -95,7 +95,7 @@ export class SchemasDiffer {
     return schemaDiff;
   }
 
-  public static schemaDeleteOrUpdate(sourceConverted: Schema, changeType: ChangeType): SchemaDiffType {
+  public static schemaDeleteOrUpdate(sourceConverted: Schema, changeType: ChangeTypeEnum): SchemaDiffType {
     let schemaDiff: SchemaDiffType = {
       type: sourceConverted.type!,
       deprecated: sourceConverted.deprecated,
