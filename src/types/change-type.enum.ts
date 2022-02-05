@@ -1,6 +1,6 @@
 export enum ChangeTypeEnum {
-  created ='CREATE',
-  updated = 'UPDATE',
-  deleted = 'DELETE',
+  created ='CREATED',
+  updated = 'UPDATED',
+  deleted = 'DELETED',
   default = 'DEFAULT',
 }

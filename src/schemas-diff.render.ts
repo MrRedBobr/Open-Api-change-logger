@@ -1,6 +1,6 @@
 import {SchemasDiffer} from "./schemas-differ";
 import {SchemaDiffType, SchemasDifference} from "./types";
-import {SchemaEnumTemplate} from "./schema-enum.template";
+import {SchemaEnumTemplate} from "./templates/schema-enum.template";
 import {SchemaTemplate} from "./templates/schema.template";
 
 export class SchemasDiffRender {

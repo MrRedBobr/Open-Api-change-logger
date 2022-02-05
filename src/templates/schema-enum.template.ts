@@ -1,8 +1,9 @@
-import {ChangeTypeEnum, SchemaDiffType} from "./types";
-import {ChangeColor} from "./helpers/change-color";
+import {ChangeTypeEnum, SchemaDiffType} from "../types";
+import {ChangeColor} from "../helpers/change-color";
 
 export function SchemaEnumTemplate(ENUM: SchemaDiffType, modelName: string): string {
     const enums: string[] = [...new Set([...ENUM.enum ?? [], ...ENUM.added, ...ENUM.deleted])];
+    const modeNameBG: string = ENUM.changeType === ChangeTypeEnum.updated ? 'transparent' : ChangeColor(ENUM.changeType);
 
     return `
     <div id="model-${modelName}" class="model-container" data-name="${modelName}">
@@ -10,8 +11,8 @@ export function SchemaEnumTemplate(ENUM: SchemaDiffType, modelName: string): str
         <div class="model-box">
             <span class="model">
                 <span class="prop">
-                    <span class="model-title prop-name">${modelName}</span>
-                    <span class="prop-type">string</span>
+                    <span class="model-title prop-name" style="background-color: ${modeNameBG}">${modelName}</span>
+                    <span class="prop-type">${ENUM.type ?? 'string'}</span>
                     <span class="prop-enum"><br>
                         Enum:
                         <span>
