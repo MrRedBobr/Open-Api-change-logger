@@ -17,11 +17,11 @@ import {ResponsesDiffObjectType} from "./types/responses-diff-object.type";
 
 export class PathsDiffer {
   operationsKeys: string[] = [
-    'get',
-    'put',
     'post',
-    'delete',
+    'get',
     'patch',
+    'delete',
+    'put',
   ]
   source: PathsObject;
   destination: PathsObject;
@@ -31,6 +31,8 @@ export class PathsDiffer {
   public hasDeletedOrCreated: boolean = false;
   public hasUpdate: boolean = false;
 
+  private readonly created: Set<string> = new Set<string>([]);
+
   constructor(source: PathsObject, destination: PathsObject) {
     this.source = source;
     this.destination = destination;
@@ -39,19 +41,56 @@ export class PathsDiffer {
   }
 
   diff(oldPaths: PathsObject, newPaths: PathsObject): PathsDiffType {
-    const paths_addresses: string[] = [...new Set<string>([...Object.keys(oldPaths), ...Object.keys(newPaths)])];
+    const paths_addresses: string[] = [...new Set<string>([
+      ...Object.keys(oldPaths),
+      ...Object.keys(newPaths)
+    ])];
     const paths: PathsDiffType = {};
 
     for (const path_address of paths_addresses) {
-      const source: PathItemObject = oldPaths[path_address];
-      const destination: PathItemObject = newPaths[path_address];
+      if(!this.created.has(path_address)) {
+        let source: PathItemObject = oldPaths[path_address];
+        let destination: PathItemObject = newPaths[path_address];
+        let currentAddress: string = path_address;
 
-      if (source && destination) {//update or no changes
-        paths[path_address] = this.pathItemUpdate(source, destination);
-      } else if (source && !destination) {//delete
-        paths[path_address] = this.pathItemDeleteOrCreate(source, ChangeTypeEnum.deleted);
-      } else if (!source && destination) {//create
-        paths[path_address] = this.pathItemDeleteOrCreate(destination, ChangeTypeEnum.created);
+        if(!destination) {
+          const removeParams: string = path_address.replace(/{([A-z]*)}/gm, '');
+          if(removeParams !== path_address) {
+            const correctName: string|undefined = paths_addresses.find((address: string) =>
+              address.replace(/{([A-z]*)}/gm, '') === removeParams &&
+              address !== path_address
+            );
+            if(correctName) {
+              destination = newPaths[correctName];
+              currentAddress = correctName;
+              this.created.add(correctName);
+            }
+          }
+        }
+
+        if(source) {
+          const replaceParam: string = path_address.replace(/{([A-z]*)}/gm, '');
+          if(replaceParam !== path_address) {
+            const correctName: string|undefined = paths_addresses.find((address: string) =>
+              address.replace(/{([A-z]*)}/gm, '') === replaceParam &&
+              address !== path_address
+            );
+            if(correctName) {
+              source = newPaths[correctName];
+              this.created.add(correctName);
+            }
+          }
+        }
+
+        if (source && destination) {//update or no changes
+          paths[currentAddress] = this.pathItemUpdate(source, destination);
+        } else if (source && !destination) {//delete
+          paths[currentAddress] = this.pathItemDeleteOrCreate(source, ChangeTypeEnum.deleted);
+        } else if (!source && destination) {//create
+          paths[currentAddress] = this.pathItemDeleteOrCreate(destination, ChangeTypeEnum.created);
+        }
+
+        this.created.add(path_address);
       }
     }
     return paths;
