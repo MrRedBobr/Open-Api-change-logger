@@ -68,7 +68,12 @@ export class Render {
     
     <script>
         function modelOpen(event) {
-            const button = event.target.parentElement.parentElement.parentElement;
+            let button = event.target;
+            
+            while(button.tagName !== 'BUTTON') {
+                button = button.parentElement;
+            }
+            
             const container = button.parentElement;
             const modelName = event.target.innerText?.replaceAll('[', '').replaceAll(']', '');
             const modelId = ${'`#model-${modelName}`'}
