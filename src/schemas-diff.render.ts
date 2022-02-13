@@ -48,7 +48,7 @@ export class SchemasDiffRender {
     }
   }
 
-  schemaTemplate(model: SchemaDiffType, modelName: string): string {
+  schemaTemplate(model: SchemaDiffType, modelName: string, useHide: boolean = true): string {
     const propsRowsHtml: string[] = model?.property?.map(
       (prop: SchemaPropertyType) => {
         const propChangeType: ChangeTypeEnum = model.changeType !== ChangeTypeEnum.default ? model.changeType :
@@ -63,7 +63,7 @@ export class SchemasDiffRender {
     const modeNameBG: string = model.changeType === ChangeTypeEnum.updated ? 'transparent' : ChangeColor(model.changeType);
 
     return `
-      <div id="model-${modelName}" class="model-container ${model.changeType === ChangeTypeEnum.default ? 'hide' : ''}" data-name="${modelName}">
+      <div id="model-${modelName}" class="model-container ${model.changeType === ChangeTypeEnum.default && useHide ? 'hide' : ''}" data-name="${modelName}">
         <span class="models-jump-to-path"></span>
         <span class="model-box">
           <div class="model-box">

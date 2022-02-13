@@ -143,7 +143,7 @@ export class PathsDiffRender extends SchemasDiffRender {
       }
 
       const typeName: string = type.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-      return this.schemaTemplate(model, typeName);
+      return this.schemaTemplate(model, typeName, false);
     }
 
     let html: string = `<span class="model">${type}</span>`;
