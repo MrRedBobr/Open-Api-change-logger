@@ -56,8 +56,6 @@ export class SchemasDiffRender {
           model.deleted.includes(prop.name) ? ChangeTypeEnum.deleted :
           ChangeTypeEnum.default;
 
-        if(modelName === 'OrderEntity') console.log(modelName, prop.name, propChangeType);
-
         return this.schemaPropertyTemplate(prop, propChangeType);
       }
     ) ?? [];
