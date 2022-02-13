@@ -11100,5 +11100,16 @@ body {
     margin-left: auto;
     margin-block: 0;
 }
+.hide {
+    display: none;
+}
+
+.model-box > .model-box {
+    background: transparent;
+}
+
+td > .model-box {
+    padding: 0;
+}
 
 `

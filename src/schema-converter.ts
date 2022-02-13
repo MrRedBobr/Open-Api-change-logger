@@ -19,7 +19,7 @@ export class SchemaConverter {
   public static property(property: ReferenceObject | SchemaObject): Schema {
     if ('$ref' in property) {
       return {
-        $ref: property.$ref,
+        $ref: this.getRefModelName(property.$ref),
         deprecated: false,
         type: 'ref',
       }
@@ -38,7 +38,7 @@ export class SchemaConverter {
         ...(!(property.enum || (property as any).new) && property.items && {
           ...(
             '$ref' in property.items ?
-              {$ref: property.items.$ref, type: 'ref[]'} :
+              {$ref: this.getRefModelName(property.items.$ref), type: 'ref[]'} :
               {type: `${property.items.type}[]`}
           )
         }),
@@ -54,7 +54,7 @@ export class SchemaConverter {
           type: 'ref',
           ...('$ref' in property.allOf[0] ?
               {
-                $ref: property.allOf[0].$ref,
+                $ref: this.getRefModelName(property.allOf[0].$ref),
               } : {}
           )
         }),
@@ -72,5 +72,9 @@ export class SchemaConverter {
         })
       }
     }
+  }
+
+  public static getRefModelName(ref: string): string {
+    return ref.split('/').pop() ?? ref;
   }
 }
