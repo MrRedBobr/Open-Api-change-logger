@@ -12,7 +12,7 @@ export function ChangeColor(changeType: ChangeTypeEnum): string {
       return 'rgba(255,127,127,0.55)';
     }
     case ChangeTypeEnum.updated: {
-      return 'rgb(166,255,147)'
+      return 'rgba(127,175,165,0.42)'
     }
   }
 }

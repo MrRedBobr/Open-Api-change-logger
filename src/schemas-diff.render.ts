@@ -51,16 +51,18 @@ export class SchemasDiffRender {
   schemaTemplate(model: SchemaDiffType, modelName: string, useHide: boolean = true): string {
     const propsRowsHtml: string[] = model?.property?.map(
       (prop: SchemaPropertyType) => {
-        const propChangeType: ChangeTypeEnum = model.changeType !== ChangeTypeEnum.default ? model.changeType :
+        const propChangeType: ChangeTypeEnum = model.changeType !== ChangeTypeEnum.default && model.changeType !== ChangeTypeEnum.updated ? model.changeType :
           model.added.includes(prop.name) ? ChangeTypeEnum.created :
           model.deleted.includes(prop.name) ? ChangeTypeEnum.deleted :
           ChangeTypeEnum.default;
+
+        if(modelName === 'OrderEntity') console.log(modelName, prop.name, propChangeType);
 
         return this.schemaPropertyTemplate(prop, propChangeType);
       }
     ) ?? [];
 
-    const modeNameBG: string = model.changeType === ChangeTypeEnum.updated ? 'transparent' : ChangeColor(model.changeType);
+    const modeNameBG: string = ChangeColor(model.changeType);
 
     return `
       <div id="model-${modelName}" class="model-container ${model.changeType === ChangeTypeEnum.default && useHide ? 'hide' : ''}" data-name="${modelName}">
@@ -77,7 +79,7 @@ export class SchemasDiffRender {
               <span class="brace-open object">{</span>
               <span class="inner-object">
                 <table class="model">
-                  <tbody>
+                  <tbody style="background-color: ${modeNameBG}">
                     ${propsRowsHtml.join('\n')}
                   </tbody>
                 </table>
