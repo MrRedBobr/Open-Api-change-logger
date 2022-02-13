@@ -1,6 +1,6 @@
 {
   "name": "open-api-change-logger",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "Generates an HTML page with api changes.",
   "types": "lib/index.d.ts",
   "main": "lib",
