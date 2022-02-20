@@ -23,13 +23,13 @@ export class ChangeLogger {
   }
 
   private generateChangeVersion(): string {
-    const [major, minor, maintenance]: [string, string, string] = this.oldVersion.split('.') as [string, string, string];
+    const [major = '0', minor = '0', maintenance = '0']: [string, string, string] = this.oldVersion.split('.') as [string, string, string];
 
-    if(this.pathDiffer.hasDeletedOrCreated) {
+    if(this.pathDiffer.hasDeleted) {
       return `${Number(major) + 1}.0.0`;
     }
 
-    if (this.pathDiffer.hasUpdate || this.modelsDiffer.hasDeleteOrCreate) {
+    if (this.pathDiffer.hasUpdate || this.modelsDiffer.hasDeleteOrCreate || this.pathDiffer.hasCreated) {
       return `${major}.${Number(minor) + 1}.0`;
     }
 

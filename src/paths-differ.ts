@@ -28,7 +28,8 @@ export class PathsDiffer {
 
   pathsDiff: PathsDiffType;
 
-  public hasDeletedOrCreated: boolean = false;
+  public hasDeleted: boolean = false;
+  public hasCreated: boolean = false;
   public hasUpdate: boolean = false;
 
   private readonly created: Set<string> = new Set<string>([]);
@@ -140,8 +141,15 @@ export class PathsDiffer {
     const operationsNames: string[] = [...new Set<string>([...(oldPath ? Object.keys(oldPath) : [])])].filter((v: string) => this.operationsKeys.includes(v));
     const operations: OperationsChanges = {};
 
-    if(!this.hasDeletedOrCreated) {
-      this.hasDeletedOrCreated = true;
+    switch (changeType) {
+      case ChangeTypeEnum.deleted: {
+        this.hasDeleted = true;
+        break;
+      }
+      case ChangeTypeEnum.created: {
+        this.hasCreated = true;
+        break;
+      }
     }
 
     for (const operation of operationsNames) {
