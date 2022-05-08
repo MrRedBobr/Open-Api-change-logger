@@ -12,8 +12,8 @@ export class Render {
   private readonly apiName: string;
   private readonly currentVersion: string;
 
-  normalizeStyle!: string;
-  uiStyle!: string;
+  static normalizeStyle: string = Normalize;
+  static uiStyle: string = Ui;
 
   constructor(modelsDiff: SchemasDiffer, pathsDiff: PathsDiffer, apiName: string, currentVersion: string) {
 
@@ -22,12 +22,6 @@ export class Render {
 
     this.apiName = apiName;
     this.currentVersion = currentVersion;
-    this.loadStyles();
-  }
-
-  private loadStyles(): void {
-    this.normalizeStyle = Normalize;
-    this.uiStyle = Ui;
   }
 
   render(): string {

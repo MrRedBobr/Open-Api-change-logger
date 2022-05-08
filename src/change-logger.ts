@@ -1,24 +1,42 @@
-import {OpenAPIObject} from "@nestjs/swagger/dist/interfaces";
 import {PathsDiffer} from "./paths-differ";
 import {SchemasDiffer} from "./schemas-differ";
 import {ChangeLogJsonType} from "./types/change-log-json.type";
 import {Render} from "./render";
 import fs from "fs";
 import {ChangeLogRenderSaveType} from "./types/change-log-render-save.type";
+import {ChangeLoggerSchemasInput} from "./types/change-logger-schemas.input";
 
+/**
+ * The main class of this package. It is used to analyze two schemas and generate html file.
+ */
 export class ChangeLogger {
-  private readonly pathDiffer: PathsDiffer;
-  private readonly modelsDiffer: SchemasDiffer;
-  public readonly oldVersion: string;
-  public readonly currentVersion: string;
+  private pathDiffer!: PathsDiffer;
+  private modelsDiffer!: SchemasDiffer;
+  public oldVersion!: string;
+  /**
+   * Generated api version (compere schemas, update oldSchema version.)
+   */
+  public currentVersion!: string;
 
+  constructor(input: ChangeLoggerSchemasInput) {
+    this.setApiSchemas(input);
+  }
 
-  constructor(source: OpenAPIObject, destination: OpenAPIObject) {
-    this.oldVersion = source.info.version;
+  private setApiSchemas(input: ChangeLoggerSchemasInput): void {
+    this.oldVersion = input.oldSchema.info.version;
 
-    this.pathDiffer = new PathsDiffer(source.paths, destination.paths);
-    this.modelsDiffer = new SchemasDiffer(source.components?.schemas ?? {}, destination.components?.schemas ?? {});
+    this.createPathDiffer(input);
+    this.createModelsDiffer(input);
+    this.generateCurrentVersion();
+  }
 
+  private createPathDiffer({ oldSchema, newSchema }: ChangeLoggerSchemasInput): void {
+    this.pathDiffer = new PathsDiffer(oldSchema.paths, newSchema.paths);
+  }
+  private createModelsDiffer({ oldSchema, newSchema }: ChangeLoggerSchemasInput): void {
+    this.modelsDiffer = new SchemasDiffer(oldSchema.components?.schemas ?? {}, newSchema.components?.schemas ?? {});
+  }
+  private generateCurrentVersion(): void {
     this.currentVersion = this.generateChangeVersion();
   }
 
@@ -40,13 +58,19 @@ export class ChangeLogger {
     return this.oldVersion;
   }
 
-  public getJson(): ChangeLogJsonType {
+  /**
+   * Returns you a json comparing the two schemes.
+   */
+  getJson(): ChangeLogJsonType {
     return {
       paths: this.pathDiffer.pathsDiff,
       schemas: this.modelsDiffer.schemasDifference,
     }
   }
 
+  /**
+   * save change log files (1 html, 2 css).
+   */
   renderAndSave({ path, fileName, format = 'html', pasteVersionInName = false }: ChangeLogRenderSaveType): void {
     const render: Render = new Render(this.modelsDiffer, this.pathDiffer, fileName, this.currentVersion);
 
@@ -55,8 +79,36 @@ export class ChangeLogger {
     const fixPath: string = path[path.length - 1] === '/' ? path : path+'/';
 
     fs.writeFileSync(`${fixPath}${fileName}${ pasteVersionInName ? `.${this.currentVersion}` : ''}.${format}`, html);
-    fs.writeFileSync(`${fixPath}normalize.css`, render.normalizeStyle);
-    fs.writeFileSync(`${fixPath}ui.css`, render.uiStyle);
+    fs.writeFileSync(`${fixPath}normalize.css`, Render.normalizeStyle);
+    fs.writeFileSync(`${fixPath}ui.css`, Render.uiStyle);
   }
 
+  /**
+   * You wanna to change api schemas? Use it
+   * @param input new schemas
+   */
+  changeSchemas(input: ChangeLoggerSchemasInput): void {
+    this.setApiSchemas(input);
+  }
+
+  /**
+   * Don't wanna to save files? Use it to get html string. It not includes styles, but include <script></script> tag.
+   * @param apiName api name. It will be in the title.
+   * @return {string} html file in string.
+   */
+  getHtmlString(apiName: string): string {
+    const render: Render = new Render(this.modelsDiffer, this.pathDiffer, apiName, this.currentVersion);
+    return render.render();
+  }
+
+  /**
+   * don't wanna to save files? Use it to get styles string. But it not includes html.
+   * @return {string} css file in string.
+   */
+  getStyleString(): string {
+    return `
+      ${Render.normalizeStyle}
+      ${Render.uiStyle}
+    `
+  }
 }
