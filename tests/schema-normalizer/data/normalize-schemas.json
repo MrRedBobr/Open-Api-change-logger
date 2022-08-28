@@ -1,0 +1,160 @@
+{
+  "input": {
+    "LocationInput": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number",
+          "example": 53.54971200706458
+        },
+        "lng": {
+          "type": "number",
+          "example": 9.968216616141591
+        }
+      },
+      "required": [
+        "lat",
+        "lng"
+      ]
+    },
+    "CheckoutAddressInput": {
+      "type": "object",
+      "properties": {
+        "streets": {
+          "example": [
+            "Baker street, o442b"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "countryCode": {
+          "type": "string",
+          "example": "DE"
+        },
+        "city": {
+          "type": "string",
+          "example": "Hamburg"
+        },
+        "floorNumber": {
+          "type": "string",
+          "example": "1b"
+        },
+        "apartmentNumber": {
+          "type": "string",
+          "example": "16a"
+        },
+        "zipCode": {
+          "type": "string",
+          "example": "NW1 6XE"
+        },
+        "state": {
+          "type": "string",
+          "example": "Marylebone"
+        },
+        "location": {
+          "$ref": "#/components/schemas/LocationInput"
+        }
+      },
+      "required": [
+        "streets",
+        "countryCode",
+        "city",
+        "zipCode",
+        "location"
+      ]
+    },
+    "DeliveryDestinationEnum": {
+      "type": "string",
+      "enum": [
+        "HOME",
+        "NEIGHBOUR"
+      ]
+    }
+  },
+  "output": {
+    "LocationInput": {
+      "type": "object",
+      "object": {
+        "lat": {
+          "type": "number",
+          "example": 53.54971200706458,
+          "isArray": false,
+          "required": true
+        },
+        "lng": {
+          "type": "number",
+          "example": 9.968216616141591,
+          "isArray": false,
+          "required": true
+        }
+      },
+      "isArray": false,
+      "required": false
+    },
+    "CheckoutAddressInput": {
+      "type": "object",
+      "object": {
+        "streets": {
+          "type": "string",
+          "isArray": true,
+          "required": true
+        },
+        "countryCode": {
+          "type": "string",
+          "isArray": false,
+          "example": "DE",
+          "required": true
+        },
+        "city": {
+          "type": "string",
+          "isArray": false,
+          "example": "Hamburg",
+          "required": true
+        },
+        "floorNumber": {
+          "type": "string",
+          "isArray": false,
+          "example": "1b",
+          "required": false
+        },
+        "apartmentNumber": {
+          "type": "string",
+          "isArray": false,
+          "example": "16a",
+          "required": false
+        },
+        "zipCode": {
+          "type": "string",
+          "isArray": false,
+          "example": "NW1 6XE",
+          "required": true
+        },
+        "state": {
+          "type": "string",
+          "isArray": false,
+          "example": "Marylebone",
+          "required": false
+        },
+        "location": {
+          "type": "ref",
+          "name": "LocationInput",
+          "isArray": false,
+          "required": true
+        }
+      },
+      "isArray": false,
+      "required": false
+    },
+    "DeliveryDestinationEnum": {
+      "type": "enum",
+      "values": [
+        "HOME",
+        "NEIGHBOUR"
+      ],
+      "isArray": false,
+      "required": false
+    }
+  }
+}

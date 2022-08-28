@@ -1,0 +1,152 @@
+{
+  "input": {
+    "CartAddressEntity": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "readOnly": true
+        },
+        "isActive": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "create_date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "update_date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "deleted_date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "streets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "floorNumber": {
+          "type": "string"
+        },
+        "apartmentNumber": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "$ref": "#/components/schemas/CountryEntity"
+        },
+        "countryCode": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/components/schemas/LocationDto"
+        },
+        "cartId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "isActive",
+        "streets"
+      ]
+    }
+  },
+  "output": {
+    "CartAddressEntity": {
+      "type": "object",
+      "object": {
+        "id": {
+          "type": "string",
+          "isArray": false,
+          "required": true
+        },
+        "isActive": {
+          "type": "boolean",
+          "isArray": false,
+          "required": true
+        },
+        "create_date": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "update_date": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "deleted_date": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "streets": {
+          "type": "string",
+          "isArray": true,
+          "required": true
+        },
+        "floorNumber": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "apartmentNumber": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "zipCode": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "city": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "state": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "country": {
+          "type": "ref",
+          "name": "CountryEntity",
+          "isArray": false,
+          "required": false
+        },
+        "countryCode": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        },
+        "location": {
+          "type": "ref",
+          "name": "LocationDto",
+          "isArray": false,
+          "required": false
+        },
+        "cartId": {
+          "type": "string",
+          "isArray": false,
+          "required": false
+        }
+      },
+      "isArray": false
+    }
+  }
+}
