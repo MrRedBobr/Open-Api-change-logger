@@ -1,0 +1,83 @@
+{
+  "input": {
+    "/crud-product-brand/import": {
+      "post": {
+        "operationId": "CrudProductBrandController_import",
+        "summary": "Import multiple items by file upload",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "file"
+                ],
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImportDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "crud-product-brand"
+        ],
+        "security": [
+          {
+            "access-token": []
+          }
+        ]
+      }
+    }
+  },
+  "output": {
+    "/crud-product-brand/import": {
+      "post": {
+        "summary": "Import multiple items by file upload",
+        "description": "",
+        "security": "access-token",
+        "header": {},
+        "path": {},
+        "query": {},
+        "cookie": {},
+        "responses": {
+          "201": {
+            "type": "ref",
+            "name": "ImportDto",
+            "isArray": false
+          }
+        },
+        "requestBody": {
+          "type": "object",
+          "object": {
+            "file": {
+              "type": "string",
+              "isArray": false,
+              "required": true
+            }
+          },
+          "isArray": false,
+          "title": "multipart/form-data",
+          "required": true
+        }
+      }
+    }
+  }
+}

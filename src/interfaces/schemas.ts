@@ -39,11 +39,12 @@ export interface AnyOf {
 }
 
 export interface notOf {
-  not: RefSchema;
+  not?: RefSchema;
 }
 
 export interface GeneralOptions {
   isArray: boolean;
   required?: boolean;
   example?: string;
+  title?: string;
 }

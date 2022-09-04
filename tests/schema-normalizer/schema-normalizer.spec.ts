@@ -1,11 +1,11 @@
-import { normalizeObject, SchemaNormalizer } from '../../src/helpers/schema-normalizer';
+import { normalizeByType, SchemaNormalizer } from '../../src/helpers/schema-normalizer';
 import { NormalizedSchema, SchemaType } from '../../src/types/normalized-schema';
 import normalize_object from './data/normalize-object.json';
 import normalize_schemas from './data/normalize-schemas.json';
 
 describe('Normalizer test', () => {
   it('should normalize object', () => {
-    const schema: SchemaType = normalizeObject(normalize_object.input.CartAddressEntity);
+    const schema: SchemaType = normalizeByType(normalize_object.input.CartAddressEntity);
     expect(schema).toEqual(normalize_object.output.CartAddressEntity);
   });
   it('should normalize schemas', () => {
