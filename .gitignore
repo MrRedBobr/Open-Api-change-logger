@@ -5,6 +5,7 @@ lib/
 .cache
 /config/project.json
 scripts/docgen-compat/html
+test/
 
 # OS Specific Files
 .DS_Store

@@ -290,7 +290,7 @@ export class PathsDiffer {
       return {
         added: equals ? [] : (newReq?.$ref  && newRequest.length > 0 ? [] : []),
         deleted: equals ? [] :  (oldReq?.$ref  && newRequest.length > 0 ? [oldReq.$ref] : []),
-        $ref: oldReq.$ref ?? newReq?.$ref,
+        $ref: oldReq?.$ref ?? newReq?.$ref,
       }
     }
 
