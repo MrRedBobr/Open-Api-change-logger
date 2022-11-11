@@ -9,8 +9,8 @@ import {
 } from '@nestjs/swagger/dist/interfaces/open-api-spec.interface';
 
 import { NormalizedOperationObject, PathOperations } from '../interfaces/paths';
-import { Path } from '../types/normalized-path';
-import { NormalizedSchema, SchemaType } from '../types/normalized-schema';
+import { Path } from '../normalizer-types/normalized-path';
+import { NormalizedSchema, SchemaType } from '../normalizer-types/normalized-schema';
 import { normalizeByType, normalizeRef } from './schema-normalizer';
 
 const operationsTypes: (keyof PathOperations)[] = ['get', 'patch', 'post', 'put', 'delete'];

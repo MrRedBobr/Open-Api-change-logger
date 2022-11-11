@@ -1,0 +1,151 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/app-manager-cart/checkout/{id}": {
+      "post": {
+        "operationId": "AppManagerCartController_checkout",
+        "summary": "Checkout cart by manager, on behalf of the customer. Create order.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckoutDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "app-manager-cart"
+        ],
+        "security": [
+          {
+            "access-token": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Admin Endpoints API",
+    "description": "",
+    "version": "1.0.1",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [
+    {
+      "url": "https://localhost:3000"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "CheckoutAddressInput": {
+        "type": "object",
+        "properties": {
+          "streets": {
+            "example": [
+              "Baker street, o442b"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "countryCode": {
+            "type": "string",
+            "example": "DE"
+          },
+          "city": {
+            "type": "string",
+            "example": "Hamburg"
+          },
+          "floorNumber": {
+            "type": "string",
+            "example": "1b"
+          },
+          "apartmentNumber": {
+            "type": "string",
+            "example": "16a"
+          },
+          "zipCode": {
+            "type": "string",
+            "example": "NW1 6XE"
+          },
+          "state": {
+            "type": "string",
+            "example": "Marylebone"
+          },
+          "location": {
+            "$ref": "#/components/schemas/LocationInput"
+          }
+        },
+        "required": [
+          "streets",
+          "countryCode",
+          "city",
+          "zipCode",
+          "location"
+        ]
+      },
+      "DeliveryDestinationEnum": {
+        "type": "string",
+        "enum": [
+          "HOME",
+          "NEIGHBOUR"
+        ]
+      },
+      "CheckoutDto": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "string"
+          },
+          "checkoutUrl": {
+            "type": "string"
+          },
+          "orderTransactionId": {
+            "type": "string"
+          },
+          "transactionsCount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "orderId",
+          "checkoutUrl",
+          "orderTransactionId"
+        ]
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { SchemaObject } from '@nestjs/swagger/dist/interfaces/open-api-spec.interface';
 
 import { EnumSchema, StringSchema } from '../interfaces/schemas';
-import { SchemaType } from '../types/normalized-schema';
+import { SchemaType } from '../normalizer-types/normalized-schema';
 
 export function getDefaultNormalizeType(obj: SchemaObject): SchemaType {
   return {

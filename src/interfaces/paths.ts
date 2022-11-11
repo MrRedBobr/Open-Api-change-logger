@@ -1,4 +1,4 @@
-import { NormalizedSchema, SchemaType } from '../types/normalized-schema';
+import { NormalizedSchema, SchemaType } from '../normalizer-types/normalized-schema';
 
 export interface PathOperations {
   get?: NormalizedOperationObject;

@@ -1,7 +1,7 @@
 import { ReferenceObject, SchemaObject } from '@nestjs/swagger/dist/interfaces/open-api-spec.interface';
 
 import { AllOf, AnyOf, notOf, ObjectSchema, OneOf, RefSchema } from '../interfaces/schemas';
-import { NormalizedSchema, SchemaType } from '../types/normalized-schema';
+import { NormalizedSchema, SchemaType } from '../normalizer-types/normalized-schema';
 import { RefSchemaName } from './ref-schema-name';
 import { getDefaultNormalizeType, getNormalizeString } from './types-normalizer';
 

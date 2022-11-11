@@ -1,0 +1,148 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/app-manager-cart/checkout/{id}": {
+      "post": {
+        "operationId": "AppManagerCartController_checkout",
+        "summary": "Checkout cart by manager, on behalf of the customer. Create order.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "test",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckoutDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "app-manager-cart"
+        ],
+        "security": [
+          {
+            "access-token": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Admin Endpoints API",
+    "description": "",
+    "version": "1.0.1",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [
+    {
+      "url": "https://auth.prod.de.bringooapi.com"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "CheckoutInput": {
+        "type": "object",
+        "properties": {
+          "deliveryAddress": {
+            "$ref": "#/components/schemas/CheckoutAddressInput"
+          },
+          "billingAddress": {
+            "$ref": "#/components/schemas/CheckoutAddressInput"
+          },
+          "phoneCountryCode": {
+            "type": "string",
+            "example": "+49"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "example": "905456654"
+          },
+          "deliveryComment": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "deliveryDestination": {
+            "default": "HOME",
+            "$ref": "#/components/schemas/DeliveryDestinationEnum"
+          },
+          "messageForShopper": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "deliveryCallMe": {
+            "type": "number"
+          },
+          "deliveryLeaveAtTheDoor": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "deliveryAddress",
+          "billingAddress",
+          "phoneCountryCode",
+          "phoneNumber",
+          "deliveryDestination"
+        ]
+      },
+      "CheckoutDto": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "string"
+          },
+          "checkoutUrl": {
+            "type": "string"
+          },
+          "orderTransactionId": {
+            "type": "string"
+          },
+          "transactionsCount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "orderId",
+          "checkoutUrl",
+          "orderTransactionId"
+        ]
+      }
+    }
+  }
+}

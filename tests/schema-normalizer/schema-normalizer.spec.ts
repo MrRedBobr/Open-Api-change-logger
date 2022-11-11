@@ -1,5 +1,5 @@
 import { normalizeByType, SchemaNormalizer } from '../../src/helpers/schema-normalizer';
-import { NormalizedSchema, SchemaType } from '../../src/types/normalized-schema';
+import { NormalizedSchema, SchemaType } from '../../src/normalizer-types/normalized-schema';
 import normalize_object from './data/normalize-object.json';
 import normalize_schemas from './data/normalize-schemas.json';
 

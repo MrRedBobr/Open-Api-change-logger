@@ -1,4 +1,4 @@
-import { NormalizedSchema } from '../types/normalized-schema';
+import { NormalizedSchema } from '../normalizer-types/normalized-schema';
 
 export interface RefSchema extends GeneralOptions {
   type: 'ref';
