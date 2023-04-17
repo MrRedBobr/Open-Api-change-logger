@@ -52,7 +52,7 @@ export class ChangeLogger {
     }
 
     if (this.modelsDiffer.hasUpdate) {
-      return `${major}.${minor}.${Number(maintenance + 1)}`;
+      return `${major}.${minor}.${Number(maintenance) + 1}`;
     }
 
     return this.oldVersion;

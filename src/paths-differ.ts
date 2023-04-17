@@ -1,6 +1,8 @@
 import {OperationObject, PathItemObject, PathsObject} from "@nestjs/swagger/dist/interfaces/open-api-spec.interface";
 import {OperationsConverter} from "./operations-converter";
 import {
+  ChangeTypeEnum,
+  EnumDiffType,
   Operation,
   OperationsChanges,
   PathParameter,
@@ -9,8 +11,6 @@ import {
   Schema,
   SchemaPropertyDiff
 } from "./types";
-import {ChangeTypeEnum} from "./types";
-import {EnumDiffType} from "./types";
 import {SchemasDiffer} from "./schemas-differ";
 import {ResponsesTypeObject} from "./types/responsesTypeObject";
 import {ResponsesDiffObjectType} from "./types/responses-diff-object.type";
@@ -113,14 +113,18 @@ export class PathsDiffer {
 
       const { responses, hasChanges } = this.responseDiff(oldOperation.response);
 
+      let queryHasChanges: boolean = false;
+
+      for (const pathParameter of pathParameters) {
+        if (pathParameter.changeType !== ChangeTypeEnum.default) {
+          queryHasChanges = true;
+        }
+      }
+
       const isUpdated: boolean =
         (request.added.length > 0 && request.deleted.length > 0)
         || hasChanges
-        || pathParameters.reduce(
-          (previousValue: boolean, currentValue: PathParameterDiff): boolean =>
-            (currentValue.added.length > 0 && currentValue.deleted.length > 0)
-          , false
-        );
+        || queryHasChanges;
 
       if (!this.hasUpdate && isUpdated) {
         this.hasUpdate = true;
