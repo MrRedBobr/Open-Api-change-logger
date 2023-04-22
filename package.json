@@ -1,11 +1,12 @@
 {
   "name": "open-api-change-logger",
-  "version": "2.9.3",
+  "version": "3.0.0",
   "description": "Generates an HTML page with api changes.",
   "types": "lib/index.d.ts",
   "main": "lib",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "test": "ts-node example/index.ts"
   },
   "keywords": [
     "OpenApi",
@@ -21,8 +22,19 @@
   "devDependencies": {
     "@nestjs/swagger": "5.1.0",
     "@types/node": "^16.11.1",
+    "ts-node": "^10.9.1",
     "typescript": "4.5.5",
-    "ts-node": "^10.9.1"
+    "eslint": "8.20.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-import-resolver-node": "0.3.6",
+    "eslint-import-resolver-typescript": "3.3.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-unicorn": "46.0.0",
+    "@typescript-eslint/eslint-plugin": "5.31.0",
+    "@typescript-eslint/parser": "5.31.0",
+    "prettier": "2.8.7"
   },
   "repository": {
     "type": "git",
@@ -30,5 +42,6 @@
   },
   "files": [
     "lib"
-  ]
+  ],
+  "dependencies": {}
 }

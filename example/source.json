@@ -1,0 +1,291 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/app-cart/cart/{storeId}": {
+      "get": {
+        "operationId": "AppCartController_cartDetails",
+        "summary": "Find one cart by storeId.",
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "EN",
+                "DE",
+                "FR",
+                "ALL"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "storeId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ahahaha",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CartDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "app-cart"
+        ],
+        "security": [
+          {
+            "access-token": []
+          }
+        ]
+      }
+    },
+    "/app-cart/cart/{id}": {
+      "delete": {
+        "operationId": "AppCartController_delete",
+        "summary": "Delete cart.",
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "EN",
+                "DE",
+                "FR",
+                "ALL"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "app-cart"
+        ],
+        "security": [
+          {
+            "access-token": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Customer App api",
+    "description": "",
+    "version": "1.2.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [
+    {
+      "url": "https://localhost:3000"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "CartDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "itemsCount": {
+            "type": "number"
+          },
+          "weight": {
+            "type": "string"
+          },
+          "maxWeight": {
+            "type": "string"
+          },
+          "isOverload": {
+            "type": "boolean"
+          },
+          "productsCount": {
+            "type": "number"
+          },
+          "store": {
+            "$ref": "#/components/schemas/StoreDto"
+          },
+          "storeId": {
+            "type": "string"
+          },
+          "cartCode": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CartItemDto"
+            }
+          },
+          "changedItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CartItemDto"
+            }
+          },
+          "replaceTypeCode": {
+            "$ref": "#/components/schemas/ReplaceTypeEnum"
+          },
+          "isAlcohol": {
+            "type": "boolean"
+          },
+          "isCustomAgeRestriction": {
+            "type": "boolean",
+            "description": "Product need age verification"
+          },
+          "ageRestriction": {
+            "type": "number",
+            "description": "Product need age verification"
+          },
+          "isTobacco": {
+            "type": "boolean"
+          },
+          "isNotForUnderage": {
+            "type": "boolean"
+          },
+          "vatTotal": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TotalVatDto"
+            }
+          },
+          "totalDeposit": {
+            "type": "string"
+          },
+          "priceDiscounted": {
+            "type": "string"
+          },
+          "subtotal": {
+            "type": "string"
+          },
+          "subtotalDiscounted": {
+            "type": "string"
+          },
+          "deliveryPrice": {
+            "type": "string"
+          },
+          "deliveryPriceDiscounted": {
+            "type": "string"
+          },
+          "totalPrice": {
+            "type": "string"
+          },
+          "totalPriceDiscounted": {
+            "type": "string"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressDto"
+          },
+          "itemsDiscount": {
+            "type": "string"
+          },
+          "itemsDiscountValue": {
+            "type": "number"
+          },
+          "deliveryFeeDiscount": {
+            "type": "string"
+          },
+          "deliveryFeeDiscountValue": {
+            "type": "number"
+          },
+          "allDiscount": {
+            "type": "string"
+          },
+          "allDiscountValue": {
+            "type": "number"
+          },
+          "minimumCartPrice": {
+            "$ref": "#/components/schemas/MinimumCartPriceDto"
+          }
+        },
+        "required": [
+          "id",
+          "price",
+          "itemsCount",
+          "weight",
+          "maxWeight",
+          "isOverload",
+          "productsCount",
+          "store",
+          "storeId",
+          "cartCode",
+          "items",
+          "changedItems",
+          "replaceTypeCode",
+          "isAlcohol",
+          "isCustomAgeRestriction",
+          "isTobacco",
+          "isNotForUnderage",
+          "vatTotal",
+          "totalDeposit",
+          "priceDiscounted",
+          "subtotal",
+          "subtotalDiscounted",
+          "deliveryPrice",
+          "deliveryPriceDiscounted",
+          "totalPrice",
+          "totalPriceDiscounted",
+          "itemsDiscount",
+          "itemsDiscountValue",
+          "deliveryFeeDiscount",
+          "deliveryFeeDiscountValue",
+          "allDiscount",
+          "allDiscountValue"
+        ]
+      }
+    }
+  }
+}

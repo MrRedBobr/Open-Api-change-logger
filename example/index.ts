@@ -1,6 +1,4 @@
-### OpenApi change-logger
-```typescript
-import { ChangeLogger } from "open-api-change-logger";
+import { ChangeLogger } from "../src";
 import source from "./source.json";
 import destination from "./destination.json";
 import { OpenAPIObject } from "@nestjs/swagger/dist/interfaces";
@@ -16,4 +14,3 @@ changeLogger.saveFiles({
   stylesFolder: path.join(__dirname, 'files', 'style'),
   apiName: 'test-api'
 });
-```

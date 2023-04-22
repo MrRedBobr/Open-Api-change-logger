@@ -1,0 +1,484 @@
+
+    <link rel="stylesheet" type="text/css" href="../style/style.css">    
+    <style>
+      html {
+          box-sizing: border-box;
+          overflow: -moz-scrollbars-vertical;
+          overflow-y: scroll;
+      }
+      
+      *,
+      *:before,
+      *:after {
+          box-sizing: inherit;
+      }
+      
+      body {
+          margin: 0;
+          background: #fafafa;
+      }
+    </style>
+
+    <body>
+        <div class="swagger-ui">
+            
+<div class="information-container wrapper">
+    <section class="block col-12">
+        <div>
+            <div class="info">
+                <hgroup class="main">
+                    <h2 class="title">
+                        test-api              
+                        <span>
+                            <small><pre class="version">1.2.0</pre></small>
+                            <small class="version-stamp"><pre class="version">OAS3</pre></small>
+                        </span>
+                    </h2>
+                </hgroup>
+            </div>
+        </div>
+    </section>
+</div>  
+ 
+            
+      <div class="wrapper">
+        <section class="block col-12 block-desktop col-12-desktop">
+            <div></div>
+        </section>
+      </div>
+    
+            
+      <div class="wrapper">
+        <section class="block col-12 block-desktop col-12-desktop">
+          <section class="models is-open">
+            <h4>
+              <button aria-expanded="true" class="models-control">
+                <span>Schemas</span>
+              </button>
+            </h4>
+            <div class="no-margin">
+              
+      <div id="model-CartDto" class="model-container hide" data-name="CartDto">
+        <span class="models-jump-to-path"></span>
+        <span class="model-box">
+          <div class="model-box">
+            <button aria-expanded="true" class="model-box-control">
+              <span class="pointer">
+                <span class="model-title">
+                  <span class="model-title__text" style="background-color: transparent">CartDto</span>
+                </span>
+              </span>
+            </button>
+              <span class="brace-open object">{</span>
+              <span class="inner-object">
+                <table class="model">
+                  <tbody style="background-color: transparent">
+                    
+<tr class="property-row required  " style="background-color: transparent">
+  <td>id<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>price<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>itemsCount<span class="star">*</span></td>
+  <td>
+    number
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>weight<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>maxWeight<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>isOverload<span class="star">*</span></td>
+  <td>
+    boolean
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>productsCount<span class="star">*</span></td>
+  <td>
+    number
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>store<span class="star">*</span></td>
+  <td>
+    
+        <div class="model-box">
+          <button aria-expanded="false" class="model-box-control" onclick="modelOpen(event)">
+            <span class="pointer">
+              <span class="model-title">
+                <span class="model-title__text" style="background-color: transparent">StoreDto</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>storeId<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>cartCode<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>items<span class="star">*</span></td>
+  <td>
+    
+        <div class="model-box">
+          <button aria-expanded="false" class="model-box-control" onclick="modelOpen(event)">
+            <span class="pointer">
+              <span class="model-title">
+                <span class="model-title__text" style="background-color: transparent">[CartItemDto]</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>changedItems<span class="star">*</span></td>
+  <td>
+    
+        <div class="model-box">
+          <button aria-expanded="false" class="model-box-control" onclick="modelOpen(event)">
+            <span class="pointer">
+              <span class="model-title">
+                <span class="model-title__text" style="background-color: transparent">[CartItemDto]</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>replaceTypeCode<span class="star">*</span></td>
+  <td>
+    
+        <div class="model-box">
+          <button aria-expanded="false" class="model-box-control" onclick="modelOpen(event)">
+            <span class="pointer">
+              <span class="model-title">
+                <span class="model-title__text" style="background-color: transparent">ReplaceTypeEnum</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>isAlcohol<span class="star">*</span></td>
+  <td>
+    boolean
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>isCustomAgeRestriction<span class="star">*</span></td>
+  <td>
+    boolean
+  </td>
+</tr>
+
+
+<tr class="property-row   " style="background-color: transparent">
+  <td>ageRestriction</td>
+  <td>
+    number
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>isTobacco<span class="star">*</span></td>
+  <td>
+    boolean
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>isNotForUnderage<span class="star">*</span></td>
+  <td>
+    boolean
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>vatTotal<span class="star">*</span></td>
+  <td>
+    
+        <div class="model-box">
+          <button aria-expanded="false" class="model-box-control" onclick="modelOpen(event)">
+            <span class="pointer">
+              <span class="model-title">
+                <span class="model-title__text" style="background-color: transparent">[TotalVatDto]</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>totalDeposit<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>priceDiscounted<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>subtotal<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>subtotalDiscounted<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>deliveryPrice<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>deliveryPriceDiscounted<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>totalPrice<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>totalPriceDiscounted<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row   " style="background-color: transparent">
+  <td>address</td>
+  <td>
+    
+        <div class="model-box">
+          <button aria-expanded="false" class="model-box-control" onclick="modelOpen(event)">
+            <span class="pointer">
+              <span class="model-title">
+                <span class="model-title__text" style="background-color: transparent">AddressDto</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>itemsDiscount<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>itemsDiscountValue<span class="star">*</span></td>
+  <td>
+    number
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>deliveryFeeDiscount<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>deliveryFeeDiscountValue<span class="star">*</span></td>
+  <td>
+    number
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>allDiscount<span class="star">*</span></td>
+  <td>
+    string
+  </td>
+</tr>
+
+
+<tr class="property-row required  " style="background-color: transparent">
+  <td>allDiscountValue<span class="star">*</span></td>
+  <td>
+    number
+  </td>
+</tr>
+
+
+<tr class="property-row   " style="background-color: transparent">
+  <td>minimumCartPrice</td>
+  <td>
+    
+        <div class="model-box">
+          <button aria-expanded="false" class="model-box-control" onclick="modelOpen(event)">
+            <span class="pointer">
+              <span class="model-title">
+                <span class="model-title__text" style="background-color: transparent">MinimumCartPriceDto</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      
+  </td>
+</tr>
+
+                  </tbody>
+                </table>
+              </span>
+              <span class="brace-close">}</span>
+          </div>
+        </span>
+      </div>
+
+            </div>
+          </section>
+        </section>
+      </div>
+    
+        </div>
+    </body>
+    
+    <script>
+        function modelOpen(event) {
+            let button = event.target;
+            
+            while(button.tagName !== 'BUTTON') {
+                button = button.parentElement;
+            }
+            
+            const container = button.parentElement;
+            const modelName = event.target.innerText?.replaceAll('[', '').replaceAll(']', '');
+            const modelId = `#model-${modelName}`
+            const modelExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            if(!modelExpanded) {
+                button.setAttribute('aria-expanded', 'true');
+                
+                const braceOpen = document.createElement('span'); //<span class="brace-open object">{</span>
+                braceOpen.className = 'brace-open object'
+                braceOpen.innerText = '{';
+                
+                const model = document
+                .querySelector(modelId)
+                .querySelector(modelName.toLowerCase().includes('enum') ? 'span.prop-enum' : 'span.inner-object')
+                .cloneNode(2);
+                
+                const braceClose = document.createElement('span');//<span class="brace-close">}</span>
+                braceClose.className = 'brace-close'
+                braceClose.innerText = '}';
+                
+                container.appendChild(braceOpen);
+                container.appendChild(model);
+                container.appendChild(braceClose);
+            } else {
+                button.setAttribute('aria-expanded', 'false');
+                
+                const childs = container.children;
+                for(let index = childs.length - 1; index !== 0; index--) {
+                    childs.item(index).remove();
+                }
+            }
+        }
+    </script>
+    
