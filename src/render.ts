@@ -92,7 +92,10 @@ export class Render {
                 braceOpen.className = 'brace-open object'
                 braceOpen.innerText = '{';
                 
-                const model = document.querySelector(modelId).querySelector(modelName.toLowerCase().includes('enum') ? 'span.prop-enum' : 'span.inner-object').cloneNode(2);
+                const model = document
+                .querySelector(modelId)
+                .querySelector(modelName.toLowerCase().includes('enum') ? 'span.prop-enum' : 'span.inner-object')
+                .cloneNode(2);
                 
                 const braceClose = document.createElement('span');//<span class="brace-close">}</span>
                 braceClose.className = 'brace-close'
