@@ -267,7 +267,6 @@ export class PathsDiffer {
           oldParameter.property,
           newParameter.property ?? []
         );
-      console.log(schemaPropertyDiff);
 
       return {
         ...schemaDiff,
