@@ -1,10 +1,10 @@
-import {SchemasDiffer} from "./schemas-differ";
-import {PathsDiffer} from "./paths-differ";
-import {SchemasDiffRender} from "./schemas-diff.render";
-import {PathsDiffRender} from "./paths-diff.render";
-import {InformationTemplate} from "./templates/information.template";
-import {Normalize} from "./css/normalize";
-import {Ui} from "./css/ui";
+import { Normalize } from "./css/normalize";
+import { Ui } from "./css/ui";
+import { PathsDiffRender } from "./paths-diff.render";
+import { PathsDiffer } from "./paths-differ";
+import { SchemasDiffRender } from "./schemas-diff.render";
+import { SchemasDiffer } from "./schemas-differ";
+import { InformationTemplate } from "./templates/information.template";
 
 export class Render {
   private readonly pathsRender: PathsDiffRender;
@@ -15,8 +15,12 @@ export class Render {
   static normalizeStyle: string = Normalize;
   static uiStyle: string = Ui;
 
-  constructor(modelsDiff: SchemasDiffer, pathsDiff: PathsDiffer, apiName: string, currentVersion: string) {
-
+  constructor(
+    modelsDiff: SchemasDiffer,
+    pathsDiff: PathsDiffer,
+    apiName: string,
+    currentVersion: string
+  ) {
     this.pathsRender = new PathsDiffRender(pathsDiff, modelsDiff);
     this.schemasRender = new SchemasDiffRender(modelsDiff);
 
@@ -24,15 +28,23 @@ export class Render {
     this.currentVersion = currentVersion;
   }
 
-  render(): string {
+  render(stylePath?: string): string {
     const endpointsHtml: string = this.pathsRender.render();
     const modelsHtml: string = this.schemasRender.render();
-    const informationHtml: string = InformationTemplate(this.apiName, this.currentVersion);
+    const informationHtml: string = InformationTemplate(
+      this.apiName,
+      this.currentVersion
+    );
+
+    const styles: string = stylePath
+      ? `<link rel="stylesheet" type="text/css" href="${stylePath}">`
+      : `
+      <link rel="stylesheet" type="text/css" href="normalize.css">
+      <link rel="stylesheet" type="text/css" href="ui.css">
+    `;
 
     return `
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="ui.css">
-    
+    ${styles}    
     <style>
       html {
           box-sizing: border-box;
@@ -70,7 +82,7 @@ export class Render {
             
             const container = button.parentElement;
             const modelName = event.target.innerText?.replaceAll('[', '').replaceAll(']', '');
-            const modelId = ${'`#model-${modelName}`'}
+            const modelId = ${"`#model-${modelName}`"}
             const modelExpanded = button.getAttribute('aria-expanded') === 'true';
             
             if(!modelExpanded) {
@@ -99,6 +111,6 @@ export class Render {
             }
         }
     </script>
-    `
+    `;
   }
 }

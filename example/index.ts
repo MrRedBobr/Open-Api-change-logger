@@ -1,8 +1,7 @@
 import { ChangeLogger } from "../src";
 import source from "./source.json";
 import destination from "./destination.json";
-import {OpenAPIObject} from "@nestjs/swagger/dist/interfaces";
-import fs from "fs";
+import { OpenAPIObject } from "@nestjs/swagger/dist/interfaces";
 import * as path from "path";
 
 const changeLogger: ChangeLogger = new ChangeLogger({
@@ -10,4 +9,8 @@ const changeLogger: ChangeLogger = new ChangeLogger({
   newSchema: destination as OpenAPIObject,
 });
 
-fs.writeFileSync(path.join(__dirname, 'diff.json'), JSON.stringify(changeLogger.getJson(), null, '  '));
+changeLogger.saveFiles({
+  htmlFolder: path.join(__dirname, 'files', 'html'),
+  stylesFolder: path.join(__dirname, 'files', 'style'),
+  apiName: 'test-api'
+});
