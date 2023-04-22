@@ -27,6 +27,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "ahahaha",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {

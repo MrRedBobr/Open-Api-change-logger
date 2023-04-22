@@ -208,31 +208,62 @@ export class SchemasDiffer {
     const newNames: string[] = newProperty.map(
       ({ name }: SchemaPropertyType): string => name
     );
-    const generalNames: string[] = oldNames.filter((v: string) =>
-      newNames.includes(v)
+    const generalNames: Set<string> = new Set(
+      oldNames.filter((v: string) => newNames.includes(v))
     );
 
     const propertyNames: string[] = [
       ...new Set<string>([...oldNames, ...newNames]),
     ];
 
-    const added: string[] = propertyNames.filter(
-      (value: string) => !oldNames.includes(value)
+    const added: Set<string> = new Set(
+      propertyNames.filter((value: string) => !oldNames.includes(value))
     );
-    const deleted: string[] = propertyNames.filter(
-      (value: string) => !newNames.includes(value)
+    const deleted: Set<string> = new Set(
+      propertyNames.filter((value: string) => !newNames.includes(value))
     );
 
+    let breakChanges: boolean = false;
+
+    for (const propName of propertyNames) {
+      const oldIndex: number = oldNames.indexOf(propName);
+      const newIndex: number = newNames.indexOf(propName);
+
+      if (
+        added.has(propName) ||
+        (deleted.has(propName) && (oldIndex !== -1 || newIndex !== -1))
+      ) {
+        if (
+          oldIndex !== -1 &&
+          newIndex !== -1 &&
+          oldProperty[oldIndex].required !== newProperty[newIndex].required &&
+          newProperty[newIndex].required
+        ) {
+          breakChanges = true;
+          break;
+        }
+        if (
+          oldIndex === -1 &&
+          newIndex !== -1 &&
+          newProperty[newIndex].required
+        ) {
+          breakChanges = true;
+          break;
+        }
+      }
+    }
+
     return {
-      added,
-      deleted,
+      added: [...added.values()],
+      deleted: [...deleted.values()],
+      ...(breakChanges && { breakChanges }),
       property: [
         ...newProperty.filter(
           ({ name }: SchemaPropertyType) =>
-            generalNames.includes(name) || added.includes(name)
+            generalNames.has(name) || added.has(name)
         ),
         ...oldProperty.filter(({ name }: SchemaPropertyType) =>
-          deleted.includes(name)
+          deleted.has(name)
         ),
       ],
     };

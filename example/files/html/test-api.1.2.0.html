@@ -1,5 +1,5 @@
 
-    <link rel="stylesheet" type="text/css" href="..\style\style.css">    
+    <link rel="stylesheet" type="text/css" href="../style/style.css">    
     <style>
       html {
           box-sizing: border-box;
@@ -459,7 +459,10 @@
                 braceOpen.className = 'brace-open object'
                 braceOpen.innerText = '{';
                 
-                const model = document.querySelector(modelId).querySelector(modelName.toLowerCase().includes('enum') ? 'span.prop-enum' : 'span.inner-object').cloneNode(2);
+                const model = document
+                .querySelector(modelId)
+                .querySelector(modelName.toLowerCase().includes('enum') ? 'span.prop-enum' : 'span.inner-object')
+                .cloneNode(2);
                 
                 const braceClose = document.createElement('span');//<span class="brace-close">}</span>
                 braceClose.className = 'brace-close'

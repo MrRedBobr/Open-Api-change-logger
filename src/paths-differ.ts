@@ -30,6 +30,7 @@ export class PathsDiffer {
   public hasDeleted: boolean = false;
   public hasCreated: boolean = false;
   public hasUpdate: boolean = false;
+  public hasBreakChanges: boolean = false;
 
   private readonly created: Set<string> = new Set<string>([]);
 
@@ -268,6 +269,10 @@ export class PathsDiffer {
           newParameter.property ?? []
         );
 
+      if (schemaPropertyDiff.breakChanges) {
+        this.hasBreakChanges = true;
+      }
+
       return {
         ...schemaDiff,
         changeType:
@@ -289,7 +294,7 @@ export class PathsDiffer {
     const schemaDiff: PathParameterDiff = {
       name: parameter.name,
       placed: parameter.placed,
-      type: parameter.type!,
+      type: parameter.type,
       deprecated: parameter.deprecated ?? parameter.deprecated ?? false,
       ...(parameter.$ref && { $ref: parameter.$ref }),
       required: parameter.required,
@@ -298,7 +303,11 @@ export class PathsDiffer {
       added: [],
       changeType,
     };
-    const type: string = parameter.enum ? "enum" : parameter.type!;
+    const type: string = parameter.enum ? "enum" : parameter.type;
+
+    if (parameter.required && changeType === ChangeTypeEnum.deleted) {
+      this.hasBreakChanges = true;
+    }
 
     if (type === "enum" && parameter.enum) {
       //if type is enum

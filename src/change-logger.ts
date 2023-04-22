@@ -65,14 +65,13 @@ export class ChangeLogger {
     }
 
     if (
-      this.pathDiffer.hasUpdate ||
-      this.modelsDiffer.hasDeleteOrCreate ||
-      this.pathDiffer.hasCreated
+      this.pathDiffer.hasBreakChanges ||
+      this.modelsDiffer.hasDeleteOrCreate
     ) {
       return `${major}.${Number(minor) + 1}.0`;
     }
 
-    if (this.modelsDiffer.hasUpdate) {
+    if (this.modelsDiffer.hasUpdate || this.pathDiffer.hasUpdate) {
       return `${major}.${minor}.${Number(maintenance) + 1}`;
     }
 
@@ -175,6 +174,12 @@ export class ChangeLogger {
     htmlFolder: string;
     apiName: string;
   }): void {
+    if (this.oldVersion === this.currentVersion) {
+      // eslint-disable-next-line no-console
+      console.warn("\u001B[31m\u001B[43m", "Api not have changes", "\u001B[0m");
+      return;
+    }
+
     let stylePath: string = path.relative(`${htmlFolder}`, `${stylesFolder}`);
 
     stylePath = path.join(stylePath, "style.css").replaceAll("\\", "/");
