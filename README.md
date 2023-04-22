@@ -1,21 +1,19 @@
 ### OpenApi change-logger
 ```typescript
-const source: OpenAPIObject = adminSource;
-const destination: OpenAPIObject = dist;
+import { ChangeLogger } from "open-api-change-logger";
+import source from "./source.json";
+import destination from "./destination.json";
+import { OpenAPIObject } from "@nestjs/swagger/dist/interfaces";
+import * as path from "path";
 
-const changeLog: ChangeLogger = new ChangeLogger({
-    oldSchema: oldCustomer,
-    newSchema: newCustomer
+const changeLogger: ChangeLogger = new ChangeLogger({
+  oldSchema: source as OpenAPIObject,
+  newSchema: destination as OpenAPIObject,
 });
 
-const currentVersion: string = changeLog.currentVersion; //7.5.1
-
-changeLog.getJson() //Returns you a json, comparing the two schemes.
-
-changeLog.renderAndSave({
-    path: './',
-    fileName: `apiName`,
-    format: 'html', //isOptional
-    pasteVersionInName: true, // isOptional
+changeLogger.saveFiles({
+  htmlFolder: path.join(__dirname, 'files', 'html'),
+  stylesFolder: path.join(__dirname, 'files', 'style'),
+  apiName: 'test-api'
 });
 ```
